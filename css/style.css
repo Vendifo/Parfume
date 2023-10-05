@@ -1501,3 +1501,72 @@ body {
     padding-top: 2px;
 }
 
+
+/*----------------------------product--------------------------------------*/
+
+.product-discription{
+    display: flex;
+    margin-top: 157px;
+}
+
+.product-discr__title {
+    display: block;
+}
+
+.product_image {
+    
+}
+
+.product-discr__subtitle { 
+    margin-left: 143px;
+}
+
+.product-discr__title__text{
+    font-family: "forum";
+    font-size: 40px;
+}
+
+.product-discr__title__code{
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    margin-top: 30px;
+
+}
+
+.product-discr__title__price {
+    font-family: "Mixed";
+    font-size: 20px;
+    margin-top: 26px;
+}
+
+.product-discr__cart {
+    margin-left: 143px;
+    margin-top: 528px;
+    background-color: #696969;
+    width: 400px;
+    height: 60px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.product-discr__wish { 
+    margin-left: 143px;
+    margin-top: 27px;
+    background-color: #696969;
+    width: 400px;
+    height: 60px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.product-add__cart { 
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    width: 600px;
+    margin-top: 100px;
+    text-align: right;
+    background-color: #F3F3F3;
+    
+}
