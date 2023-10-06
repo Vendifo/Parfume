@@ -48,11 +48,11 @@ const image = document.getElementById("image");
 
 imageContainer.addEventListener("mousemove", (e) => {
     const { left, top, width, height } = imageContainer.getBoundingClientRect();
-    const x = (e.clientX - left) / width;
-    const y = (e.clientY - top) / height;
+    const x = (e.clientX - left) /  width;
+    const y = (e.clientY - top) /  height;
 
     // Уменьшаем масштаб и позицию изображения в зависимости от положения курсора
-    image.style.transform = `scale(1.2) translate(-${x * 25}%, -${y * 25}%)`;
+    image.style.transform = `scale(1.1) translate(-${x * 5}%, -${y * 5}%)`;
 });
 /*Возврат масштаба при отсутствии курсора*/
 imageContainer.addEventListener("mouseleave", () => {
