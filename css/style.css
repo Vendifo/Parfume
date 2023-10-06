@@ -1504,10 +1504,14 @@ body {
 
 /*----------------------------product--------------------------------------*/
 
+.wrapp-menu{
+    width: 80%;
+}
+
 .product-discription{
     display: flex;
     margin-top: 157px;
-    margin-left: 10px;
+    margin-left: 30px;
 }
 
 .product-discr__image-container {
@@ -1612,7 +1616,7 @@ body {
 .product-images { 
     display: flex;
     margin-top: 10px;
-    margin-left: 5px; 
+    margin-left: 25px; 
     
 }
 
@@ -1735,4 +1739,67 @@ body {
 .product-oth__button{
     width: 100%;
     height: 100%;
+}
+
+
+/*------------------------------ABOUT US-------------------*/
+
+.wrapp-menu{
+    width: 95%;
+    
+}
+
+.href { 
+    margin-left: 153px;
+}
+
+.aboutus-title {
+    font-family: "Forum";
+    font-size: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.aboutus-title p {
+    margin-bottom: 30px; /* Задайте желаемый отступ между абзацами (в данном случае, 10px) */
+}
+
+.aboutus-cards { 
+    display: flex;
+}
+
+.aboutus-card1{
+    align-items: center;
+}
+
+.aboutus-card1__img { 
+    margin-top: 251px;
+    margin-left: 130px;
+}
+
+.aboutus-card1__title{
+    font-family: "Forum";
+    font-size: 29px;
+    margin-left: 485px;
+}
+
+.aboutus-card1__subtitle {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: -550px;
+} 
+
+.aboutus-background { 
+    position: static;
+    background-color: #F4F4F4;
+    width: 1790px;
+    height: 827px;
+    margin-top: -527px;
+}
+
+.aboutus-card2__img{
+    margin-left: 1000px;
+    margin-bottom: 300px;
 }
