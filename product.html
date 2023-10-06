@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,48 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/reset.css">
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
             <h1 class="header-language">RU</h1>
-            <div class="header-logo" >
-                <a href="/index.html"> <img class="header-logo__img"  src="/img/Zeyd Perfumes.svg" alt=""></a>
+            <div class="header-logo">
+                <a href="/index.html"> <img class="header-logo__img" src="/img/Zeyd Perfumes.svg" alt=""></a>
             </div>
-            <ul class="header-nav__list" >
-                <a class="header-nav__item"  href=""><li ><img src="/img/search 1.svg" alt="#"></li></a>
-                <a class="header-nav__item" href=""><li ><img src="/img/heart1.svg" alt="#"></li></a>
-                <a class="header-nav__item"  href="/cart.html"><li><img src="/img/bag 1.svg" alt="#"></li></a>
-                <a class="header-nav__item"  href="/my account.html"><li ><img src="/img/person 1.svg"   alt="#"></li></a>
+            <ul class="header-nav__list">
+                <a class="header-nav__item" href="">
+                    <li><img src="/img/search 1.svg" alt="#"></li>
+                </a>
+                <a class="header-nav__item" href="">
+                    <li><img src="/img/heart1.svg" alt="#"></li>
+                </a>
+                <a class="header-nav__item" href="/cart.html">
+                    <li><img src="/img/bag 1.svg" alt="#"></li>
+                </a>
+                <a class="header-nav__item" href="/my account.html">
+                    <li><img src="/img/person 1.svg" alt="#"></li>
+                </a>
             </ul>
         </header>
     </div>
 
     <main>
         <div class="wrapper">
-            <div class="product-add__cart">
+            <div class="product-add__cart " id="cartMessage">
                 Добавлено в корзину
             </div>
+            <div class="product-add__wish" id="wishMessage">
+                Добавлено в понравившееся
+            </div>
             <div class="href">
-                <a class="href-title" href="/index.html">Home <a class="href-title" href="shop.html" > /Shop <a class="href-subtitle" >/Product</a></a></a>
+                <a class="href-title" href="/index.html">Home <a class="href-title" href="shop.html"> /Shop <a
+                            class="href-subtitle">/Product</a></a></a>
             </div>
             <div class="product-discription">
-                <div>
-                    <img class="product-discr__image" src="/img/Product.svg" alt="">
+                <div class="product-discr__image-container" id="imageContainer">
+                    <img class="product-discr__image" src="/img/Parfume1.jpg" alt="" id="image">
                 </div>
+
                 <div class="product-discr__title">
                     <div class="product-discr__subtitle">
                         <p class="product-discr__title__text">Baccarat</p>
@@ -42,72 +57,190 @@
                         <p class="product-discr__title__price">RUB 10000</p>
                     </div>
                     <div>
-                        <button class="product-discr__cart">
+                        <button class="product-discr__cart" onclick="addToCart()">
                             Add to cart
                         </button>
                     </div>
                     <div>
-                        <button  class="product-discr__wish">
+                        <button class="product-discr__wish" onclick="addtoWish()">
                             Add to wish list
                         </button>
                     </div>
                 </div>
             </div>
-            
+            <div class="product-images">
+                <div class="product-images__subtitle" onclick="changeImage('/img/Parfume1.jpg')">
+                    <img src="/img/Parfume1.jpg" alt="">
+                </div>
+                <div class="product-images__subtitle" onclick="changeImage('/img/Parfume2.jpg')">
+                    <img src="/img/Parfume2.jpg" alt="">
+                </div>
+                <div class="product-images__subtitle" onclick="changeImage('/img/Parfume1.jpg')">
+                    <img src="/img/Parfume1.jpg" alt="">
+                </div>
+                <div class="product-images__subtitle" onclick="changeImage('/img/Parfume2.jpg')">
+                    <img src="/img/Parfume2.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="product-sugg">
+                <p class="product-sugg__title">
+                    Suggested for you!
+                </p>
+                <div class="product-sugg__cards">
+                    <div class="product-sugg__card">
+                        <div class="product-sugg__card__img">
+                            <img class="product-sugg__card" src="/img/Rectangle 54.svg" alt="">
+                        </div>
+                        <p class="product-sugg__card__name">
+                            Name product
+                        </p>
+                        <p class="product-sugg__card__disc">
+                            Description product
+                        </p>
+                        <p class="product-sugg__card__price">
+                            Price
+                        </p>
+                        <div class="product-sugg__card__btn">
+                            <button class="product-sugg__card__button" onclick="addToCart()">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-sugg__card">
+                        <div class="product-sugg__card__img">
+                            <img class="product-sugg__card" src="/img/Rectangle 54.svg" alt="">
+                        </div>
+                        <p class="product-sugg__card__name">
+                            Name product
+                        </p>
+                        <p class="product-sugg__card__disc">
+                            Description product
+                        </p>
+                        <p class="product-sugg__card__price">
+                            Price
+                        </p>
+                        <div class="product-sugg__card__btn">
+                            <button class="product-sugg__card__button" onclick="addToCart()">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product-sugg__card">
+                        <div class="product-sugg__card__img">
+                            <img class="product-sugg__card" src="/img/Rectangle 54.svg" alt="">
+                        </div>
+                        <p class="product-sugg__card__name">
+                            Name product
+                        </p>
+                        <p class="product-sugg__card__disc">
+                            Description product
+                        </p>
+                        <p class="product-sugg__card__price">
+                            Price
+                        </p>
+                        <div class="product-sugg__card__btn">
+                            <button class="product-sugg__card__button" onclick="addToCart()">
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-oth">
+                <p class="product-oth__title">
+                    Other category
+                </p>
+                <div class="product-oth__cards">
+                    <div class="product-oth__card">
+                        <div class="product-oth__card__img">
+                            <img class="product-oth__card__image" src="/img/Rectangle 54.svg" alt="">
+                        </div>
+                        <p class="product-oth__card__name">
+                            Baccarat
+                        </p>
+                    </div>
+                    <div class="product-oth__card">
+                        <div class="product-oth__card__img">
+                            <img class="product-oth__card" src="/img/Rectangle 54.svg" alt="">
+                        </div>
+                        <p class="product-oth__card__name">
+                            Baccarat
+                        </p>
+                    </div>
+                    <div class="product-oth__card">
+                        <div class="product-oth__card__img">
+                            <img class="product-oth__card" src="/img/Rectangle 54.svg" alt="">
+                        </div>
+                        <p class="product-oth__card__name">
+                            Baccarat
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="product-oth__btn">
+                <button class="product-oth__button">
+                    DISCOVER
+                </button>
+            </div>
 
         </div>
     </main>
 
-    <footer class="footer" >
+    <footer class="footer">
         <div class="wrapper">
             <div class="footer-main">
-                <div class="footer-line" ></div>
-                <h1 class="footer-main__text" >EXPLORE THE SHOP</h1>
-                <div class="footer-line" ></div>
+                <div class="footer-line"></div>
+                <h1 class="footer-main__text">EXPLORE THE SHOP</h1>
+                <div class="footer-line"></div>
             </div>
             <div class="footer-nav">
-                <ul class="footer-nav__list" >
-                    <li class="footer-nav__item" >
-                        <h1 class="footer-nav-title" >NAVIGATION</h1>
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">NAVIGATION</h1>
                         <a class="footer-nav__subtitle" href="">Informations</a>
                         <a class="footer-nav__subtitle" href="">Informations</a>
                         <a class="footer-nav__subtitle" href="">Informations</a>
                         <a class="footer-nav__subtitle" href="">Informations</a>
                     </li>
-                    <li class="footer-nav__item" >
-                        <h1 class="footer-nav-title" >ACCOUNT</h1>
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">ACCOUNT</h1>
                         <a class="footer-nav__subtitle" href="">Informations</a>
                         <a class="footer-nav__subtitle" href="">Informations</a>
                         <a class="footer-nav__subtitle" href="">Informations</a>
                         <a class="footer-nav__subtitle" href="">informations</a>
                     </li>
-                    <li class="footer-nav__item" >
-                        <h1 class="footer-nav-title" >SHOP</h1>
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">SHOP</h1>
                         <a class="footer-nav__subtitle" href="">informations</a>
                         <a class="footer-nav__subtitle" href="">informations</a>
                         <a class="footer-nav__subtitle" href="">informations</a>
                         <a class="footer-nav__subtitle" href="">informations</a>
                     </li>
-                    <li class="footer-nav__item" >
-                        <h1 class="footer-nav-title" >CONTACT</h1>
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">CONTACT</h1>
                         <a class="footer-nav__subtitle" href="">informations</a>
                         <a class="footer-nav__subtitle" href="">informations</a>
                         <a class="footer-nav__subtitle" href="">informations</a>
                         <a class="footer-nav__subtitle" href="">informations</a>
                     </li>
-                    <li class="footer-nav__item" >
-                        <h1 class="footer-nav-title" >FOLLOW US</h1>
-                        <div class="footer-nav__img__list" >
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">FOLLOW US</h1>
+                        <div class="footer-nav__img__list">
                             <img class="footer-nav__item__img" src="/img/image 18.svg" alt="">
-                            <img class="footer-nav__item__img"  src="/img/telegram 3.svg" alt="">
-                            <img class="footer-nav__item__img"  src="/img/instagram 3.svg" alt="">
-                            <img class="footer-nav__item__img"  src="/img/twitter 3.svg" alt="">
+                            <img class="footer-nav__item__img" src="/img/telegram 3.svg" alt="">
+                            <img class="footer-nav__item__img" src="/img/instagram 3.svg" alt="">
+                            <img class="footer-nav__item__img" src="/img/twitter 3.svg" alt="">
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
-    <script src="/js/product.js"></script>
+    <script src="/js/product-anim.js"></script>
 </body>
+
 </html>
