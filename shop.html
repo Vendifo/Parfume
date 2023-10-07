@@ -21,7 +21,7 @@
                 <a class="header-nav__item" href="">
                     <li><img src="/img/search 1.svg" alt="#" /></li>
                 </a>
-                <a class="header-nav__item" href="">
+                <a class="header-nav__item" href="/wishlist.html">
                     <li><img src="/img/heart1.svg" alt="#" /></li>
                 </a>
                 <a class="header-nav__item" href="/cart.html">
@@ -38,6 +38,14 @@
         <div class="wrapper">
             <div class="href">
                 <a href="/index.html" class="href-title">Home <a class="href-subtitle">/Shop</a></a>
+            </div>
+            <div class="searchbar-place">
+                <div class="searchbar">
+                    <input class="searchbar-info" type="text" placeholder="Search bar">
+                </div>
+                <button class="searchbar-button">
+                    Search
+                </button>
             </div>
             <div class="shop-category__list">
                 <div class="dropdown">
@@ -159,7 +167,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -168,7 +176,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -177,36 +185,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-list">
-                    <div class="shop-item">
-                        <div class="shop-item__img">
-                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
-                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
-                        </div>
-                        <p class="shop-item__name">Name Product</p>
-                        <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
-                    </div>
-                    <div class="shop-item">
-                        <div class="shop-item__img">
-                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
-                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
-                        </div>
-                        <p class="shop-item__name">Name Product</p>
-                        <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
-                    </div>
-                    <div class="shop-item">
-                        <div class="shop-item__img">
-                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
-                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
-                        </div>
-                        <p class="shop-item__name">Name Product</p>
-                        <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-list">
@@ -217,7 +196,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -226,7 +205,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -235,36 +214,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
-                    </div>
-                </div>
-                <div class="shop-list">
-                    <div class="shop-item">
-                        <div class="shop-item__img">
-                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
-                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
-                        </div>
-                        <p class="shop-item__name">Name Product</p>
-                        <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
-                    </div>
-                    <div class="shop-item">
-                        <div class="shop-item__img">
-                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
-                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
-                        </div>
-                        <p class="shop-item__name">Name Product</p>
-                        <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
-                    </div>
-                    <div class="shop-item">
-                        <div class="shop-item__img">
-                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
-                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
-                        </div>
-                        <p class="shop-item__name">Name Product</p>
-                        <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-list">
@@ -275,7 +225,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -284,7 +234,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -293,7 +243,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-list">
@@ -304,7 +254,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -313,7 +263,7 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                     <div class="shop-item">
                         <div class="shop-item__img">
@@ -322,7 +272,65 @@
                         </div>
                         <p class="shop-item__name">Name Product</p>
                         <p class="shop-item__price">Price</p>
-                        <button class="shop-item__button">ADD TO CART</button>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-list">
+                    <div class="shop-item">
+                        <div class="shop-item__img">
+                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
+                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
+                        </div>
+                        <p class="shop-item__name">Name Product</p>
+                        <p class="shop-item__price">Price</p>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__img">
+                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
+                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
+                        </div>
+                        <p class="shop-item__name">Name Product</p>
+                        <p class="shop-item__price">Price</p>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__img">
+                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
+                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
+                        </div>
+                        <p class="shop-item__name">Name Product</p>
+                        <p class="shop-item__price">Price</p>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="shop-list">
+                    <div class="shop-item">
+                        <div class="shop-item__img">
+                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
+                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
+                        </div>
+                        <p class="shop-item__name">Name Product</p>
+                        <p class="shop-item__price">Price</p>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__img">
+                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
+                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
+                        </div>
+                        <p class="shop-item__name">Name Product</p>
+                        <p class="shop-item__price">Price</p>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
+                    </div>
+                    <div class="shop-item">
+                        <div class="shop-item__img">
+                            <a href="/product.html"><img class="product-image" src="/img/Rectangle 54.svg" alt="" /></a>
+                            <button onclick="changeImage(this)"><img class="heart-image" src="/img/heart1.svg" alt=""  /></button>
+                        </div>
+                        <p class="shop-item__name">Name Product</p>
+                        <p class="shop-item__price">Price</p>
+                        <button class="shop-item__button" onclick="addToCart()">ADD TO CART</button>
                     </div>
                 </div>
                 <div class="shop-nav" >
@@ -334,6 +342,15 @@
                     <button class="shop-nav__item" >10</button>
                     <button class="shop-nav__item">➔</button>
                 </div>
+            </div>
+            <div class="product-add__cart " id="cartMessage">
+                Добавлено в корзину
+            </div>
+            <div class="product-add__wish" id="wishMessage">
+                Добавлено в понравившееся
+            </div>
+            <div class="product-add__wish" id="wishMessage1">
+                Удалено из понравившегося
             </div>
         </div>
     </main>

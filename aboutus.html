@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>О нас</title>
-        <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/reset.css">
-    </head>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+</head>
+
 <body>
+    
     <div class="wrapper">
         <header class="header">
             <h1 class="header-language">RU</h1>
@@ -19,7 +21,7 @@
                 <a class="header-nav__item" href="">
                     <li><img src="/img/search 1.svg" alt="#"></li>
                 </a>
-                <a class="header-nav__item" href="">
+                <a class="header-nav__item" href="/wishlist.html">
                     <li><img src="/img/heart1.svg" alt="#"></li>
                 </a>
                 <a class="header-nav__item" href="/cart.html">
@@ -32,63 +34,103 @@
         </header>
     </div>
 
-    <main  class="wrapp-menu">
-        <div class="href">
-            <a class="href-title" href="/index.html">Home <a class="href-titlee" href="shop.html"> /Aboutus </a></a>
-        </div>
-
-        <div class="aboutus-title">
-            <p class="aboutus-title1">
-                Welcome to the world of fragrances, where luxury and beauty are present in 
-            </p>
-            <p class="aboutus-title2">
-                every drop of perfume. We - [Your Store Name] - are passionate about the art 
-            </p>
-            <p class="aboutus-title3">
-                of creating unique and distinctive scents that highlight your personality and 
-            </p>
-            <p class="aboutus-title4">
-                give you confidence.
+    <main class="main">
+        <div class="wrapper">
+            <div class="href">
+                <a class="href-title" href="/index.html">Home<a>/About us</a></a>
+            </div>
+            <p class="aboutus-title">
+                Welcome to the world of fragrances,
+                where luxury and beauty are present
+                in every drop of perfume. We - [Your Store Name] -
+                are passionate about the art of creating unique and
+                distinctive scents that highlight your personality
+                and give you confidence.
             </p>
         </div>
 
-        <div class="aboutus-cards">
-            <div class="aboutus-card1">
-                <div>
+
+        <div class="wrapper">
+            <div class="aboutus-cards">
+                <div class="aboutus-card1">
                     <img class="aboutus-card1__img" src="/img/aboutus1.svg" alt="">
+                    <h1 class="aboutus-card__title">The art of fragrances</h1>
+                    <p class="aboutus-card__subtitle">
+                        We believe that perfume is art.
+                        Each of our fragrances is created
+                        with love and passion to bring joy
+                        and pleasure to our customers.
+                    </p>
                 </div>
-                <p class="aboutus-card1__title">
-                    The art of fragrances
-                </p>
-                <div class="aboutus-card1__subtitle">
-                    <p>
-                        We believe that perfume is art. Each of our fragrances is
-                    </p>
-                    <p>
-                        created with love and passion to bring joy and pleasure to our
-                    </p>
-                    <p>
-                        customers.
-                    </p>
-                    <div class="aboutus-background"></div>
-                </div>
-                
-            <div class="aboutus-card2">
-                <div>
+                <div class="aboutus-card2">
                     <img class="aboutus-card2__img" src="/img/aboutus2.svg" alt="">
+                    <h1 class="aboutus-card__title">Our collections</h1>
+                    <p class="aboutus-card__subtitle">
+                        We believe that perfume is art.
+                        Each of our fragrances is created
+                        with love and passion to bring joy
+                        and pleasure to our customers.
+                    </p>
                 </div>
-                <p>
+            </div>
+            
+        </div>
+        <div class="aboutus-release">
+            <div class="aboutus-releasebox">
+                <div class="aboutus-line">
+                </div>
+                <p class="aboutus-release__title">
+                    Last Release
+                </p>
+                <div class="aboutus-line">
+                </div>
+            </div>
+        </div>
+        <div class="wrapper" >
+            <div class="release-item">
+                <div>
+                    <div class="release-title">
+                        <h1>
+                            ЭТО ЗАГОЛОВОК
+                        </h1>
+                        <p class="release-subtitle">
+                            19 февраля 1703
+                        </p>
+                    </div>
+                    <div class="release-disc">
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
+                        тексттексттексттексттексттексттексттексттекст
 
-                </p>
-                <p>
-                    
-                </p>
-                <p>
-    
-                </p>
-                <p>
-    
-                </p>
+                    </div>
+                </div>
+                <div class="release-img">
+                    <div class="release-title__img__container" id="imageContainer">
+                        <div class="release-title__img" id="image">
+                            <img src="/img/aboutus4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="release-title_imgs" >
+                        <div class="release-title__img1" onclick="changeImage('/img/aboutus5.jpg')">
+                            <img src="/img/aboutus5.jpg" id="image" alt="">
+                        </div>
+                        <div class="release-title__img1" onclick="changeImage('/img/aboutus4.jpg')">
+                            <img src="/img/aboutus4.jpg" alt="">
+                        </div>
+                        <div class="release-title__img1" onclick="changeImage('/img/aboutus5.jpg')">
+                            <img src="/img/aboutus5.jpg" alt="">
+                        </div>
+                        <div class="release-title__img1" onclick="changeImage('/img/aboutus4.jpg')">
+                            <img src="/img/aboutus4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -144,5 +186,7 @@
             </div>
         </div>
     </footer>
+    <script src="/js/aboutus.js"></script>
 </body>
+
 </html>

@@ -214,10 +214,16 @@ body {
 .main-adv__product {
     margin-left: 10%;
     width: 300px;
+    transform-origin: top bottom left right ; /* Устанавливаем точку привязки в левый верхний угол */
+    transition: transform 0.3s ease; /* Добавляем плавную анимацию */
 }
 
 .main-adv__product:first-child {
     margin-left: 0px;
+}
+
+.main-adv__product:hover {
+    transform: scale(0.95);
 }
 
 .main-adv__product__img {
@@ -226,6 +232,7 @@ body {
     border-width: 1px 1px 0px 1px;
     width: 300px;
     height: auto;
+    
 }
 
 .main-adv__product__title {
@@ -559,6 +566,11 @@ body {
     border: solid #000;
     border-width: 1px;
     cursor: pointer;
+    transition: 0.9s;
+}
+
+.blog-card__item:hover {
+    transform: scale(1.009);
 }
 
 .blog-card__item:first-child {
@@ -566,6 +578,7 @@ body {
 }
 
 .blog-card__subtext {
+    color: #000;
     padding-top: 15px;
     font-size: 20px;
     font-family: "Cormorant Garamond", serif;
@@ -580,6 +593,7 @@ body {
 
 .blog-data__text {
     margin-left: 21px;
+    color: #000;
 }
 
 .blog-subtext {
@@ -1337,6 +1351,50 @@ body {
 
 /*---------------------------------SHOP--------------------------------------------*/
 
+.searchbar-place{
+    display: flex;
+}
+
+.searchbar { 
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 24px;
+    border: #000;
+    border-radius: 10px;
+    background-color: #F4F4F4;
+    border: 2px solid transparent;
+    transition: all 0.2s linear;
+    
+}
+
+.searchbar:hover {
+    background-color: #fffbfb;
+    border: 1px solid #000;
+}
+
+.searchbar-info { 
+    padding-left: 20px;
+    padding-top: 3px;
+    width: 100% ;
+}
+
+.searchbar-button {
+    width: 229px;
+    height: 35px;
+    border: 1px solid #000;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 24px;
+    transition: 0.2s;
+}
+
+.searchbar-button:hover{
+    background-color: #F4F4F4;
+    font-size: 25px;
+}
+
 .shop-category__list {
     display: flex;
     justify-content: space-between;
@@ -1428,6 +1486,12 @@ body {
     margin-top: 17px;
     font-family: "Cormorant Garamond", serif;
     font-weight: 200;
+    transition: 0.2s;
+}
+
+.shop-category__button:hover{
+    font-size: 17px;
+    background-color: #1d1d1d;
 }
 
 .shop-item__img {
@@ -1768,62 +1832,229 @@ body {
 
 /*------------------------------ABOUT US-------------------*/
 
-.wrapp-menu{
-    width: 100%;
-    
-}
-
-.href { 
-    margin-left: 153px;
-}
-
 .aboutus-title {
+    padding-top: 46px;
     font-family: "Forum";
-    font-size: 30px;
-    margin-top: 40px;
+    font-size: 32px;
+    line-height: 80px;
+    margin: auto;
+    text-align: center;
+    max-width: 1000px;
+}
+
+
+
+.aboutus-cards {
+    display: flex;
+    margin-top: 300px;
+    background-color: #f4f4f4;
+}
+
+.aboutus-card__title { 
+    padding-top: 20px;
+    font-family: "Forum";
+    font-size: 34px;
     text-align: center;
 }
 
-.aboutus-title p {
-    margin-bottom: 30px; /* Задайте желаемый отступ между абзацами (в данном случае, 10px) */
-}
-
-.aboutus-cards { 
-    display: flex;
-}
-
-.aboutus-card1{
-    align-items: center;
-}
-
-.aboutus-card1__img { 
-    margin-top: 251px;
-    margin-left: 130px;
-}
-
-.aboutus-card1__title{
-    font-family: "Forum";
-    font-size: 29px;
-    margin-left: 485px;
-}
-
-.aboutus-card1__subtitle {
+.aboutus-card__subtitle{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 529px;
     font-family: "Cormorant Garamond", serif;
     font-size: 24px;
     text-align: center;
-    margin-top: 80px;
-    margin-left: -550px;
-} 
-
-.aboutus-background { 
-    position: static;
-    background-color: #F4F4F4;
-    width: 1790px;
-    height: 827px;
-    margin-top: -527px;
+    margin: auto;
 }
 
-.aboutus-card2__img{
-    margin-left: 1000px;
-    margin-bottom: 300px;
+.aboutus-card1{
+    margin-left: 57px;
+    margin-top: 29px;
+}
+
+.aboutus-card2 { 
+    margin-left: 151px;
+    margin-right: 57px;
+    margin-top: 167px;
+}
+
+.aboutus-release__title { 
+    font-family: "Forum";
+    font-size: 40px;
+}
+
+.aboutus-releasebox { 
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.aboutus-line { 
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+
+}
+
+.aboutus-release__title { 
+    width: 500px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.release-title{
+    display: flex;
+    font-family: "Forum";
+    font-size: 40px;
+}
+
+.release-subtitle{
+    margin-left: 214px;
+}
+
+.release-disc { 
+    width: 830px;
+    font-family: "Forum";
+    font-size: 40px;
+    margin-top: 36px;
+}
+
+.release-item { 
+    display: flex;
+    margin-top: 85px;
+}
+
+.release-title_imgs{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+}
+
+.release-title__img__container {
+    overflow: hidden;
+    width: 780px;
+    height: 365px;
+}
+
+
+.release-title__img1{
+    width: 145px;
+    height: 115px;
+}
+
+
+/*----------------------------------------------WISHLIST--------------------------*/
+
+.wishlist-title{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.wishlist-line {
+    
+    width: 100%;
+    height: 1px;
+    background-color: #000 ;
+}
+
+.wishlist-subtitle {
+    font-family: "Forum";
+    font-size: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.wishlist-item {
+    
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    
+    
+}
+
+.wishlist-card__img {
+    width: 458px;
+    height: 531px;
+    transition: 0.7s;
+
+}
+
+.wishlist-card__img:hover {
+    transform: scale(1.05);
+}
+.wishlist-card {
+    display: flex;
+    
+    
+}
+
+.wishlist-card__text {
+    margin-left: 100px; /* Вернуть отступ слева, если это необходимо */
+}
+
+.wishlist-card__title {
+    font-family: "Forum";
+    font-size: 40px;
+    color: #000;
+    transition: 0.5s;
+}
+
+.wishlist-card__title:hover {
+    color: #575757;
+}
+
+.wishlist-card__code {
+    padding-top: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+.wishlist-card__price {
+    padding-top: 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+}
+
+.wishlist-disc__btn {
+    
+    
+    height: auto;
+}
+
+.wishlist-discription {
+    max-width: 800px; /* Устанавливаем ширину контейнера */
+    word-wrap: break-word; /* Разрывать слова, если они не умещаются */
+    text-align: center;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 30px;
+    position: relative;
+}
+
+.wishlist-buttons {
+    margin-top: 40%;
+}
+
+.wishlist-button {
+    
+   margin-bottom: 10px;
+    color: #fff;
+    margin-right: 50px;
+    width: 280px;
+    height: 60px;
+    background-color: #696969;
+    transition: 0.2s;
+}
+
+.wishlist-button:hover {
+    background-color: #333;
+    
+}
+
+.wishlist-button:last-child {
+    margin-right: 0;
 }
