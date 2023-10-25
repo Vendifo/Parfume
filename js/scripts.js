@@ -36,3 +36,14 @@ newrelease_button.addEventListener("click", function() {
     text2.classList.add("fade-in");
   }, 10);
 });
+
+function changeColor(button) {
+  var currentColor = button.style.backgroundColor;
+  if (currentColor === 'white' || currentColor === '') {
+    button.style.backgroundColor = 'black';
+    button.style.color = 'white';
+  } else {
+    button.style.backgroundColor = 'white';
+    button.style.color = 'black';
+  }
+}

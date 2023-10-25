@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аккаунт</title>
+    <title>Корзина</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/reset.css">
 </head>
@@ -11,8 +11,8 @@
     <div class="wrapper">
         <header class="header">
             <h1 class="header-language">RU</h1>
-            <div class="header-logo" >
-                <a href="/index.html"> <img class="header-logo__img"  src="/img/Zeyd Perfumes.svg" alt=""></a>
+            <div class="header-logo"   >
+               <a href="/index.html"><p class="header-logo__text" >Zeyd Perfumes</p></a>
             </div>
             <ul class="header-nav__list" >
                 <a class="header-nav__item"  href=""><li ><img src="/img/search 1.svg" alt="#"></li></a>
@@ -40,9 +40,11 @@
                         </div>
                         <div class="cart-product">
                             <div class="cart-name__product">
-                                <input class="cart-checkbox secondaryCheckbox" type="checkbox">
+                                <div class="secondaryCheckbox" ><input class="cart-checkbox secondaryCheckbox"  id="secondaryCheckbox" type="checkbox"></div>
                                 <img class="cart-product__img" src="/img/image 17.png" alt="">
-                                <p class="cart-product__name">Baccarat</p>
+                                <a href="product.html">
+                                    <p class="cart-product__name">Baccarat</p>
+                                </a>
                             </div>
                             <div class="counter">
                                 <button class="decrement">-</button>
@@ -51,27 +53,29 @@
                             </div>
                               
                             <div class="cart-price__ruble" >
-                                <span class="total-price">0</span>
-                                <img src="/img/currency_ruble.svg" alt="">
+                                <span class="total-price">12000</span>
+                                <img class="currency_ruble"  src="/img/currency_ruble.svg" alt="">
                             </div>
                               
                         </div>
                        
                         <div class="cart-product">
                             <div class="cart-name__product">
-                                <input class="cart-checkbox secondaryCheckbox" type="checkbox">
+                                <div class="secondaryCheckbox" ><input class="cart-checkbox secondaryCheckbox" id="secondaryCheckbox" type="checkbox"></div>
                                 <img class="cart-product__img" src="/img/image 17.png" alt="">
-                                <p class="cart-product__name">Baccarat</p>
+                                <a href="product.html">
+                                    <p class="cart-product__name">Baccarat</p>
+                                </a>
                             </div>
                             <div class="counter">
-                                <button class="decrement">-</button>
-                                <span class="value">1</span>
-                                <button class="increment">+</button>
+                                <button class="decrement1">-</button>
+                                <span class="value1">1</span>
+                                <button class="increment1">+</button>
                             </div>
                               
                             <div class="cart-price__ruble" >
-                                <span class="total-price">10000</span>
-                                <img src="/img/currency_ruble.svg" alt="">
+                                <span class="total-price1">9000</span>
+                                <img class="currency_ruble"  src="/img/currency_ruble.svg" alt="">
                             </div>
                               
                         </div>
@@ -92,7 +96,7 @@
                         <div class="cart-total__price" >
                             <p class="cart-total__price__text" >total</p>
                             <div class="cart-total__price__text__number">
-                                <p class="cart-total__price__ruble" >20000</p>
+                                <p class="cart-total__price__ruble" id="cart-total__price"></p>
                                 <img class="cart-total__price__img" src="/img/currency_ruble.svg" alt="">
                             </div>
                         </div>
@@ -107,7 +111,7 @@
                 <div class="footer-main">
                     <div class="footer-line" ></div>
                     <h1 class="footer-main__text" >EXPLORE THE SHOP</h1>
-                     <div class="footer-line" ></div>
+                    <div class="footer-line" ></div>
                 </div>
                 <div class="footer-nav">
                     <ul class="footer-nav__list" >
@@ -122,8 +126,8 @@
                             <h1 class="footer-nav-title" >ACCOUNT</h1>
                             <a class="footer-nav__subtitle" href="">Informations</a>
                             <a class="footer-nav__subtitle" href="">Informations</a>
-                             <a class="footer-nav__subtitle" href="">Informations</a>
-                             <a class="footer-nav__subtitle" href="">informations</a>
+                            <a class="footer-nav__subtitle" href="">Informations</a>
+                            <a class="footer-nav__subtitle" href="">informations</a>
                         </li>
                         <li class="footer-nav__item" >
                             <h1 class="footer-nav-title" >SHOP</h1>
@@ -131,7 +135,7 @@
                             <a class="footer-nav__subtitle" href="">informations</a>
                             <a class="footer-nav__subtitle" href="">informations</a>
                             <a class="footer-nav__subtitle" href="">informations</a>
-                         </li>
+                        </li>
                         <li class="footer-nav__item" >
                             <h1 class="footer-nav-title" >CONTACT</h1>
                             <a class="footer-nav__subtitle" href="">informations</a>
@@ -141,7 +145,7 @@
                         </li>
                         <li class="footer-nav__item" >
                             <h1 class="footer-nav-title" >FOLLOW US</h1>
-                             <div class="footer-nav__img__list" >
+                            <div class="footer-nav__img__list" >
                                 <img class="footer-nav__item__img" src="/img/image 18.svg" alt="">
                                 <img class="footer-nav__item__img"  src="/img/telegram 3.svg" alt="">
                                 <img class="footer-nav__item__img"  src="/img/instagram 3.svg" alt="">
@@ -152,6 +156,7 @@
                 </div>
             </div>
         </footer>
+
     <script src="/js/counter.js" ></script>
 </body>
 </html>

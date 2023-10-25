@@ -37,28 +37,10 @@ var giftMenu = document.querySelector(".profile-gift");
 
 // Добавляем обработчик события клика на кнопку
 showItemsButton.addEventListener("click", function(event) {
-    // Проверяем состояние меню
-    if (menuVisible) {
-        // Если меню видимо, то скрываем его
-        for (var i = 0; i < listItems.length; i++) {
-            listItems[i].style.display = "none";
-        }
-        profilText.style.display = "block";
-        infoMenu.style.display = "none";
-        orderMenu.style.display = "none";
-        // Сбрасываем состояние меню
-        menuVisible = false;
-    } else {
-        // Если меню не видимо, то показываем его
-        for (var i = 0; i < listItems.length; i++) {
-            listItems[i].style.display = "block";
-        }
-        // Устанавливаем состояние меню
-        menuVisible = true;
-    }
-
-    // Останавливаем всплытие события, чтобы клик на кнопке не закрыл меню сразу после открытия
-    event.stopPropagation();
+    profilText.style.display = "block";
+    infoMenu.style.display = "none";
+    giftMenu.style.display = "none";
+    orderMenu.style.display = "none";
 });
 
 
@@ -66,7 +48,7 @@ showItemsButton.addEventListener("click", function(event) {
 // Добавляем обработчик события клика на кнопку
 showOrderButton.addEventListener("click", function() {
     // Переключаем видимость меню "Orders"
-    if (orderMenu.style.display === "none" || orderMenu.style.display === "" && infoMenu.style.display === "none") {
+    if (orderMenu.style.display === "none" || orderMenu.style.display === "" ) {
         orderMenu.style.display = "block";
         profilText.style.display = "none";
         infoMenu.style.display = "none";

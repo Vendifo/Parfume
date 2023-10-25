@@ -4,6 +4,10 @@
 @import url(https://fonts.googleapis.com/css?family=Suranna:regular);
 @import url(https://fonts.googleapis.com/css?family=Gabriela:regular);
 
+img {
+    width: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -20,7 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 90px;
+    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
@@ -36,18 +40,24 @@ body {
     margin-left: 160px;
 }
 
+.header-logo__text {
+    font-size: 40px;
+    text-decoration: none;
+    color: #000;
+}
+
 .header-nav__list {
     display: flex;
 }
 
 .header-language {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .header-nav__item {
     margin-left: 30px;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
 }
 
 .header-nav__item:first-child {
@@ -64,6 +74,7 @@ body {
 .slide {
     display: none;
     flex: 1;
+    width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
@@ -124,7 +135,7 @@ body {
 
 .main-text__properties {
     font-family: "Cormorant Garamond", serif;
-    font-size: 25px;
+    font-size: 22px;
     padding-top: 32px;
     margin-left: auto;
     margin-right: auto;
@@ -132,12 +143,6 @@ body {
     width: 960px;
 }
 
-.main-backet {
-    width: 40px;
-    height: auto;
-    float: right;
-    padding-top: 250px;
-}
 
 /*-------------------------------------Main-----------------------------------------*/
 
@@ -241,6 +246,7 @@ body {
     text-align: center;
     border: solid;
     border-color: #585858;
+    color: #000;
     border-width: 1px;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -311,13 +317,13 @@ body {
 }
 
 .main-gift__left {
-    margin-right: 20px;
+    padding-left: 130px;
 }
 
 .main-gift__left__img {
-    width: auto;
+    max-width: 650px;
     height: auto;
-    margin-left: 60px;
+    
     padding-right: 70px;
 }
 
@@ -350,6 +356,11 @@ body {
     color: #e1e362;
 }
 
+.main-gift__right {
+    padding-right: 50px;
+    padding-left: 20px;
+}
+
 .main-gift__line {
     margin-right: 10px;
     margin-top: 14px;
@@ -361,9 +372,10 @@ body {
 
 .main-gift_right__img {
     background-color: #000;
-    width: 840px;
-    height: auto;
-    margin-right: 60px;
+    max-width: 650px;
+    
+    
+
 }
 
 .main-gift__right__text {
@@ -379,12 +391,12 @@ body {
 .line {
     margin-top: 50px;
     width: 100%;
-    height: 2px;
+    height: 1px;
     background-color: #000;
 }
 
 .testimonials {
-    padding-top: 90px;
+    padding-top: 50px;
 }
 
 .testimonials-title {
@@ -394,9 +406,10 @@ body {
 
 .testimonials-title__text {
     font-family: "Forum";
-    font-size: 55px;
+    font-size: 45px;
     color: #787878;
     padding-bottom: 20px;
+    
 }
 
 .testimonials-container {
@@ -413,6 +426,7 @@ body {
 }
 
 .testimonials-item {
+    user-select: none;
     flex: 0 0 auto;
     width: 400px;
     /* Ширина каждого отзыва */
@@ -433,20 +447,22 @@ body {
     padding-top: 20px;
     text-align: center;
     color: #787878;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
 }
 
 /*----------------------------------------------------------------------------------------*/
 
 .email {
+    width: 100%;
     padding-top: 55px;
     display: flex;
     justify-content: space-between;
 }
 
 .email-img {
-    max-width: 800px;
+    max-width: 650px;
 }
+
 
 .emai-block {
     width: 100%;
@@ -470,6 +486,7 @@ body {
 }
 
 .email-input {
+    
     padding-left: 40px;
     padding-top: 74px;
 }
@@ -507,11 +524,12 @@ body {
     padding-left: 40px;
     display: flex;
     align-items: center;
+    padding-bottom: 20px;
 }
 
 .circle-button {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     /* Делает кнопку круглой */
     background-color: #e9e9e9;
@@ -530,15 +548,13 @@ body {
 }
 
 /* Стили при активации (клике) */
-.circle-button:focus {
-    background-color: #3c3c3c;
-    /* Новый цвет при клике */
-}
+
 
 .email-policy__text {
     margin-left: 10px;
     font-family: "Cormorant Garamond", serif;
     font-size: 20px;
+    
 }
 
 /*-------------------------------------------------------------------------------*/
@@ -561,12 +577,17 @@ body {
     justify-content: space-between;
 }
 
+.blog-card__img {
+    width: 100%;
+}
+
 .blog-card__item {
     margin-left: 10px;
     border: solid #000;
     border-width: 1px;
     cursor: pointer;
     transition: 0.9s;
+    
 }
 
 .blog-card__item:hover {
@@ -594,6 +615,11 @@ body {
 .blog-data__text {
     margin-left: 21px;
     color: #000;
+}
+
+.blog-data__icon {
+    width: 25px;
+    height: 25px;
 }
 
 .blog-subtext {
@@ -649,7 +675,7 @@ body {
 }
 
 .footer-nav-title {
-    font-size: 30px;
+    font-size: 32px;
     font-family: "Forum";
     color: #c5c753;
     padding-bottom: 15px;
@@ -677,7 +703,7 @@ body {
 
 .href {
     font-family: "Forum";
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     padding-top: 200px;
     padding-left: 20px;
@@ -697,9 +723,10 @@ body {
 
 .name-window {
     color: #000;
-    font-size: 37px;
+    font-size: 30px;
     font-family: "Forum";
     padding-top: 30px;
+    margin-bottom: 20px;
 }
 
 /*-----------------------------------------------------------------------*/
@@ -897,7 +924,7 @@ body {
     padding-bottom: 10px;
     font-size: 24px;
     font-family: "Cormorant Garamond", serif;
-    display: none;
+    display: block;
 }
 
 .profil-nav__item:last-child {
@@ -926,17 +953,17 @@ body {
 
 .profil-mein__text {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Forum";
 }
 
 .profil-mein__title { 
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Forum";
 }
 
 .profil-mein__paragraf {
-    font-size: 24px;
+    font-size: 20px;
     font-family: "Cormorant Garamond", serif;
     max-width: 800px;
 }
@@ -1135,14 +1162,26 @@ body {
     align-items: center;
 }
 
+.secondaryCheckbox { 
+    width: 20px;
+    height: 20px;
+}
+
+
+.currency_ruble {
+    width: 30px;
+    height: 30px;
+}
 .cart-product__img {
     margin-left: 30px;
+    
 }
 
 .cart-product__name {
     margin-left: 75px;
     font-size: 25px;
     font-family: "Cormorant Garamond", serif;
+    color: #000;
 }
 
 .counter {
@@ -1162,7 +1201,17 @@ body {
     margin: 0 10px;
 }
 
+.value1 {
+    font-size: 24px;
+    margin: 0 10px;
+}
+
 .total-price {
+    font-size: 25px;
+    font-family: "Forum";
+}
+
+.total-price1 {
     font-size: 25px;
     font-family: "Forum";
 }
@@ -1476,6 +1525,7 @@ body {
 
 .payment-form__card__info__button__sbp__img {
     margin-left: 23px;
+    width: auto;
 }
 
 /*---------------------------------SHOP--------------------------------------------*/
@@ -1562,6 +1612,7 @@ body {
     position: absolute;
     margin-top: 10px;
     margin-left: -2px;
+    width: 18px;
 }
 
 .dropdown-img:hover { 
@@ -1630,6 +1681,10 @@ body {
     margin-right: 20px;
     position: relative;
     cursor: pointer;
+}
+
+.heart-image {
+    width: 30px;
 }
 
 
@@ -2036,59 +2091,6 @@ body {
     margin-right: 20px;
 }
 
-.release-title{
-    display: flex;
-    font-family: "Forum";
-    font-size: 40px;
-}
-
-.release-subtitle{
-    margin-left: 214px;
-}
-
-.release-disc { 
-    width: 830px;
-    font-family: "Forum";
-    font-size: 40px;
-    margin-top: 36px;
-}
-
-.release-item { 
-    display: flex;
-    margin-top: 100px;
-    max-width: 80%;
-    align-items: center;
-}
-
-
-
-.release-title_imgs{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    
-}
-
-.release-title__img__container {
-    overflow: hidden;
-    width: 780px;
-    height: 365px;
-}
-
-
-.release-title__img1{
-    width: 145px;
-    height: 115px;
-}
-
-.release-background{ 
-    width: 1300px;
-    height: 600px;
-    background-color: #F4F4F4;
-    position: absolute; /* Обязательно установите position, чтобы z-index работал */
-    z-index: -1; 
-    margin-top: -550px;
-}
 
 
 /*----------------------------------------------WISHLIST--------------------------*/
@@ -2177,7 +2179,7 @@ body {
     word-wrap: break-word; /* Разрывать слова, если они не умещаются */
     text-align: center;
     font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
+    font-size: 26px;
     position: relative;
 }
 
