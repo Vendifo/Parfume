@@ -13,56 +13,178 @@ body {
     padding: 0;
 }
 
-.wrapper {
-    height: 100%;
-    margin-left: 130px;
-    margin-right: 130px;
-    position: relative;
+/*------------------------------------Wrapper------------------------------------*/
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        height: 100%;
+        margin-left: 130px;
+        margin-right: 130px;
+        position: relative;
+    }
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    padding: 10px;
-    transition: background-color 0.3s ease;
-    z-index: 999;
-    /* Установите высокий z-index, чтобы заголовок был поверх контента */
+@media screen and (max-width:1199px) and (min-width:768px)  {
+    .wrapper {
+        height: 100%;
+        margin-left: 80px;
+        margin-right: 80px;
+        position: relative;
+    }
 }
 
-.header-logo {
-    margin-left: 160px;
+/*-------------------------------------Header----------------------------------------*/
+
+@media screen and (min-width: 1200px) { 
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+        z-index: 999;
+        /* Установите высокий z-index, чтобы заголовок был поверх контента */
+    }
+    
+    .header-logo {
+        margin-left: 160px;
+    }
+    
+    .header-logo__text {
+        font-size: 40px;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .header-nav__list {
+        display: flex;
+    }
+    
+    .header-language {
+        font-size: 15px;
+    }
+    
+    .header-nav__item {
+        margin-left: 30px;
+        width: 26px;
+        height: 26px;
+    }
+    
+    .header-nav__item:first-child {
+        margin-left: 0px;
+    }
 }
 
-.header-logo__text {
-    font-size: 40px;
-    text-decoration: none;
-    color: #000;
+@media screen and (max-width:1199px) and (min-width:768px)  {
+    .header {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        background-color: #fff;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+        z-index: 999;
+        /* Установите высокий z-index, чтобы заголовок был поверх контента */
+    }
+    
+    .header-logo {
+        margin-left: 80px;
+    }
+    
+    .header-logo__text {
+        font-size: 40px;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .header-nav__list {
+        display: flex;
+        justify-content: right;
+        
+    }
+    
+    .header-language {
+        font-size: 15px;
+    }
+    
+    .header-nav__item {
+        margin-left: 15px;
+        width: 26px;
+        height: 26px;
+    }
+    
+    .header-nav__item:first-child {
+        margin-left: 0px;
+    }
 }
 
-.header-nav__list {
-    display: flex;
+@media screen and (max-width: 767px) {
+    .header {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        background-color: #fff;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+        z-index: 999;
+        /* Установите высокий z-index, чтобы заголовок был поверх контента */
+    }
+    
+    .header-logo {
+        margin-top: 20px;
+        margin-left: 80px;
+    }
+    
+    .header-logo__text {
+        font-size: 21px;
+        text-decoration: none;
+        color: #000;
+        margin-right: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .header-nav__list {
+        display: flex;
+        justify-content: right;
+        
+    }
+    
+    .header-language {
+        font-size: 15px;
+    }
+    
+    .header-nav__item {
+        margin-left: 15px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .header-nav__item:first-child {
+        margin-left: 0px;
+    }
 }
 
-.header-language {
-    font-size: 15px;
-}
-
-.header-nav__item {
-    margin-left: 30px;
-    width: 26px;
-    height: 26px;
-}
-
-.header-nav__item:first-child {
-    margin-left: 0px;
-}
+/*---------------------------------index---------------------------------------*/
 
 .background-slides {
     position: relative;
@@ -634,70 +756,203 @@ body {
 }
 
 /*---------------------------------------------------------------------*/
-
-.footer {
-    background-color: #f3f3f3;
-    height: 400px;
-    width: 100%;
-    margin-top: 120px;
+@media screen and (min-width: 1200px) {
+    .footer {
+        background-color: #f3f3f3;
+        height: 400px;
+        width: 100%;
+        margin-top: 120px;
+    }
+    
+    .footer-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+    }
+    
+    .footer-main__text {
+        font-size: 30px;
+        font-family: "Forum";
+        width: 100%;
+        text-align: center;
+        color: #c5c753;
+    }
+    
+    .footer-line {
+        background-color: #acacac;
+        width: 100%;
+        height: 2px;
+    }
+    
+    .footer-nav__list {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-nav__item {
+        width: 230px;
+        text-align: center;
+    }
+    
+    .footer-nav-title {
+        font-size: 32px;
+        font-family: "Forum";
+        color: #c5c753;
+        padding-bottom: 15px;
+    }
+    
+    .footer-nav__subtitle {
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .footer-nav__img__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-nav__item__img {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
 }
 
-.footer-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 15px;
+@media screen and (max-width:1199px) and (min-width:768px) {
+    .footer {
+        background-color: #f3f3f3;
+        height: 400px;
+        width: 100%;
+        margin-top: 120px;
+    }
+    
+    .footer-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+    }
+    
+    .footer-main__text {
+        font-size: 30px;
+        font-family: "Forum";
+        width: 100%;
+        text-align: center;
+        color: #c5c753;
+    }
+    
+    .footer-line {
+        background-color: #acacac;
+        width: 100%;
+        height: 2px;
+    }
+    
+    .footer-nav__list {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-nav__item {
+        width: 230px;
+        text-align: center;
+    }
+    
+    .footer-nav-title {
+        font-size: 22px;
+        font-family: "Forum";
+        color: #c5c753;
+        padding-bottom: 15px;
+    }
+    
+    .footer-nav__subtitle {
+        font-size: 18px;
+        font-family: "Cormorant Garamond", serif;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .footer-nav__img__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-nav__item__img {
+        width: 26px;
+        height: 26px;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width:767px) {
+    .footer {
+        background-color: #f3f3f3;
+        height: 250px;
+        width: 100%;
+        margin-top: 120px;
+    }
+    
+    .footer-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+    }
+    
+    .footer-main__text {
+        font-size: 20px;
+        font-family: "Forum";
+        width: 100%;
+        text-align: center;
+        color: #c5c753;
+    }
+    
+    .footer-line {
+        background-color: #acacac;
+        width: 100%;
+        height: 2px;
+    }
+    
+    .footer-nav__list {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-nav__item {
+        width: 230px;
+        text-align: center;
+    }
+    
+    .footer-nav-title {
+        font-size: 16px;
+        font-family: "Forum";
+        color: #c5c753;
+        padding-bottom: 15px;
+    }
+    
+    .footer-nav__subtitle {
+        font-size: 13px;
+        font-family: "Cormorant Garamond", serif;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .footer-nav__img__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-nav__item__img {
+        width: 18px;
+        height: 18px;
+        
+    }
 }
 
-.footer-main__text {
-    font-size: 30px;
-    font-family: "Forum";
-    width: 100%;
-    text-align: center;
-    color: #c5c753;
-}
-
-.footer-line {
-    background-color: #acacac;
-    width: 100%;
-    height: 2px;
-}
-
-.footer-nav__list {
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-nav__item {
-    width: 230px;
-    text-align: center;
-}
-
-.footer-nav-title {
-    font-size: 32px;
-    font-family: "Forum";
-    color: #c5c753;
-    padding-bottom: 15px;
-}
-
-.footer-nav__subtitle {
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
-    text-decoration: none;
-    color: #000;
-}
-
-.footer-nav__img__list {
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-nav__item__img {
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
-}
 
 /*------------------------------------------------------------------------*/
 
@@ -1187,7 +1442,7 @@ body {
 .counter {
     display: flex;
     margin-right: auto;
-    margin-left: 150px;
+    margin-left: 100px;
 }
 
 .button {
@@ -1217,25 +1472,40 @@ body {
 }
 
 .cart-price__ruble {
-    margin-right: 115px;
+    margin-right: 25px;
+    
     white-space: nowrap;
+}
+
+.cart-cancel { 
+    margin-right: 50px;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
 }
 
 .cart-total {
     border: 1px solid #000;
     border-radius: 5px;
     max-height: 400px;
-    width: 480px;
+    width: 40%;
     margin-left: auto;
+}
+
+.cart-total__title {
+    text-align: center;
 }
 
 .cart-total__button {
     height: 55px;
-    width: 380px;
+    margin-top: 60px;
+    width: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
     border: 1px solid #000;
     border-radius: 5px;
-    margin: 60px auto;
-    display: block;
+    display: inline;
+    
     transition: 1s;
 }
 
@@ -2016,82 +2286,245 @@ body {
 
 /*------------------------------ABOUT US-------------------*/
 
-.aboutus-title {
-    padding-top: 46px;
-    font-family: "Forum";
-    font-size: 32px;
-    line-height: 80px;
-    margin: auto;
-    text-align: center;
-    max-width: 1000px;
+@media screen and (min-width: 1200px) { 
+    .aboutus-title {
+        
+        padding-top: 46px;
+        font-family: "Forum";
+        font-size: 32px;
+        line-height: 80px;
+        margin: auto;
+        text-align: center;
+        max-width: 1000px;
+    }
+    
+    
+    
+    .aboutus-cards {
+        display: flex;
+        margin-top: 300px;
+        background-color: #f4f4f4;
+    }
+    
+    .aboutus-card__title { 
+        padding-top: 20px;
+        font-family: "Forum";
+        font-size: 34px;
+        text-align: center;
+    }
+    
+    .aboutus-card__subtitle{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-width: 529px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .aboutus-card1{
+        margin-left: 57px;
+        margin-top: 29px;
+    }
+    
+    .aboutus-card2 { 
+        margin-left: 151px;
+        margin-right: 57px;
+        margin-top: 167px;
+    }
+    
+    .aboutus-release__title { 
+        font-family: "Forum";
+        font-size: 40px;
+    }
+    
+    .aboutus-release { 
+        margin-top: 123px;
+    }
+    
+    .aboutus-releasebox { 
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .aboutus-line { 
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    
+    }
+    
+    .aboutus-release__title { 
+        width: 500px;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 }
 
+@media screen and (max-width:1199px) and (min-width:768px) { 
+    .href { 
+        margin-top: -50px;
+    }
 
-
-.aboutus-cards {
-    display: flex;
-    margin-top: 300px;
-    background-color: #f4f4f4;
+    .aboutus-title {
+        padding-top: 24px;
+        font-family: "Forum";
+        font-size: 20px;
+        line-height: 40px;
+        margin: auto;
+        text-align: center;
+        max-width: 500px;
+    }
+    
+    
+    
+    .aboutus-cards {
+        display: flex;
+        margin-top: 30px;
+        background-color: #f4f4f4;
+    }
+    
+    .aboutus-card__title { 
+        padding-top: 10px;
+        font-family: "Forum";
+        font-size: 34px;
+        text-align: center;
+    }
+    
+    .aboutus-card__subtitle{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-width: 269px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 12px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .aboutus-card1{
+        margin-left: 37px;
+        margin-top: 19px;
+    }
+    
+    .aboutus-card2 { 
+        margin-left: 71px;
+        margin-right: 27px;
+        margin-top: 87px;
+    }
+    
+    .aboutus-release__title { 
+        font-family: "Forum";
+        font-size: 20px;
+    }
+    
+    .aboutus-release { 
+        margin-top: 63px;
+    }
+    
+    .aboutus-releasebox { 
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .aboutus-line { 
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    
+    }
+    
+    .aboutus-release__title { 
+        width: 250px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
-.aboutus-card__title { 
-    padding-top: 20px;
-    font-family: "Forum";
-    font-size: 34px;
-    text-align: center;
+@media screen and (max-width:767px)  { 
+    .href { 
+        margin-top: -50px;
+        margin-bottom: 20px;
+    }
+    .aboutus-title {
+        
+        font-family: "Forum";
+        font-size: 20px;
+        line-height: 20px;
+        margin: auto;
+        text-align: center;
+        max-width: 250px;
+    }
+    
+    
+    
+    .aboutus-cards {
+        display: flex;
+        margin-top: 150px;
+        background-color: #f4f4f4;
+    }
+    
+    .aboutus-card__title { 
+        padding-top: 10px;
+        font-family: "Forum";
+        font-size: 16px;
+        text-align: center;
+    }
+    
+    .aboutus-card__subtitle{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        max-width: 139px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 10px;
+        text-align: center;
+        margin: auto;
+    }
+    
+    .aboutus-card1{
+        margin-left: 37px;
+        margin-top: 19px;
+    }
+    
+    .aboutus-card2 { 
+        margin-left: 71px;
+        margin-right: 27px;
+        
+    }
+    
+    .aboutus-release__title { 
+        font-family: "Forum";
+        font-size: 20px;
+    }
+    
+    .aboutus-release { 
+        margin-top: 63px;
+    }
+    
+    .aboutus-releasebox { 
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .aboutus-line { 
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    
+    }
+    
+    .aboutus-release__title { 
+        width: 250px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
-
-.aboutus-card__subtitle{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    max-width: 529px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 24px;
-    text-align: center;
-    margin: auto;
-}
-
-.aboutus-card1{
-    margin-left: 57px;
-    margin-top: 29px;
-}
-
-.aboutus-card2 { 
-    margin-left: 151px;
-    margin-right: 57px;
-    margin-top: 167px;
-}
-
-.aboutus-release__title { 
-    font-family: "Forum";
-    font-size: 40px;
-}
-
-.aboutus-release { 
-    margin-top: 123px;
-}
-
-.aboutus-releasebox { 
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-}
-
-.aboutus-line { 
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-
-}
-
-.aboutus-release__title { 
-    width: 500px;
-    text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-
 
 /*----------------------------------------------WISHLIST--------------------------*/
 
