@@ -33,6 +33,15 @@ body {
     }
 }
 
+@media screen and (max-width: 767px) {
+    .wrapper {
+        height: 100%;
+        margin-left: 20px;
+        margin-right: 20px;
+        position: relative;
+    }
+}
+
 /*-------------------------------------Header----------------------------------------*/
 
 @media screen and (min-width: 1200px) { 
@@ -1357,218 +1366,681 @@ body {
 }
 
 /*-------------------------------------------------------------------------------*/
-.cart-block {
-    display: flex;
-    justify-content: space-between;
-}
-
-.cart {
-    border: 1px solid #000;
-    border-radius: 5px;
-    width: 960px;
-    background-color: #f3f3f3;
-    margin-right: 20px;
-}
-
-.cart-product__title {
-    border-bottom: 1px solid #000;
-}
-
-.cart-product__title__wrapper {
-    display: flex;
-
-    margin-top: 25px;
-    margin-left: 25px;
-    margin-bottom: 25px;
-}
-
-.cart-checkbox {
-    width: 30px;
-    height: 30px;
-}
-
-.cart-select {
-    font-size: 25px;
-    font-family: "Cormorant Garamond", serif;
-    margin-left: 10px;
-}
-
-.cart-delete {
-    margin-right: 80px;
-    margin-left: auto;
-    font-size: 25px;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.cart-product {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    margin-left: 25px;
-    justify-content: space-between;
-}
-
-.cart-product:last-child {
-    margin-bottom: 30px;
-}
-
-.cart-name__product {
-    display: flex;
-    align-items: center;
-}
-
-.secondaryCheckbox { 
-    width: 20px;
-    height: 20px;
-}
-
-
-.currency_ruble {
-    width: 30px;
-    height: 30px;
-}
-.cart-product__img {
-    margin-left: 30px;
+@media screen and (min-width: 1200px) {
+    .cart-block {
+        display: flex;
+        justify-content: space-between;
+    }
     
-}
-
-.cart-product__name {
-    margin-left: 75px;
-    font-size: 25px;
-    font-family: "Cormorant Garamond", serif;
-    color: #000;
-}
-
-.counter {
-    display: flex;
-    margin-right: auto;
-    margin-left: 100px;
-}
-
-.button {
-    font-size: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.value {
-    font-size: 24px;
-    margin: 0 10px;
-}
-
-.value1 {
-    font-size: 24px;
-    margin: 0 10px;
-}
-
-.total-price {
-    font-size: 25px;
-    font-family: "Forum";
-}
-
-.total-price1 {
-    font-size: 25px;
-    font-family: "Forum";
-}
-
-.cart-price__ruble {
-    margin-right: 25px;
+    .cart {
+        border: 1px solid #000;
+        border-radius: 5px;
+        width: 960px;
+        background-color: #f3f3f3;
+        margin-right: 20px;
+    }
     
-    white-space: nowrap;
-}
+    .cart-info {
+        display: flex;
+    }
 
-.cart-cancel { 
-    margin-right: 50px;
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-}
-
-.cart-total {
-    border: 1px solid #000;
-    border-radius: 5px;
-    max-height: 400px;
-    width: 40%;
-    margin-left: auto;
-}
-
-.cart-total__title {
-    text-align: center;
-}
-
-.cart-total__button {
-    height: 55px;
-    margin-top: 60px;
-    width: 300px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    display: inline;
+    .cart-product__title {
+        border-bottom: 1px solid #000;
+    }
     
-    transition: 1s;
+    .cart-product__title__wrapper {
+        display: flex;
+    
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .cart-checkbox {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .cart-select {
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 10px;
+    }
+    
+    .cart-delete {
+        margin-right: 80px;
+        margin-left: auto;
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .cart-product {
+        margin-top: 30px;
+        margin-left: 25px;
+    }
+    
+    .cart-product:last-child {
+        margin-bottom: 30px;
+    }
+    
+    .cart-name__product {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .secondaryCheckbox { 
+        width: 20px;
+        height: 20px;
+    }
+    
+    
+    .currency_ruble {
+        width: 30px;
+        height: 30px;
+        
+    }
+    .cart-product__img {
+        margin-left: 30px;
+        width: 150px;
+        height: 150px;
+        
+    }
+    
+    .cart-product__name {
+        margin-left: 25px;
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+        color: #000;
+    }
+    
+    .counter {
+        display: flex;
+        margin-right: auto;
+        margin-left: 100px;
+    }
+    
+    .button {
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .value {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+    
+    .value1 {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+    
+    .total-price {
+        font-size: 25px;
+        font-family: "Forum";
+    }
+    
+    .total-price1 {
+        font-size: 25px;
+        font-family: "Forum";
+    }
+    
+    .cart-price__ruble {
+        margin-right: 25px;
+        
+        white-space: nowrap;
+    }
+    
+    .cart-cancel { 
+        
+        margin-right: 50px;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+    }
+    
+    .cart-total {
+        border: 1px solid #000;
+        border-radius: 5px;
+        max-height: 400px;
+        width: 40%;
+        margin-left: auto;
+    }
+    
+    .cart-total__title {
+        text-align: center;
+    }
+    
+    .cart-total__button {
+        height: 55px;
+        margin-top: 60px;
+        width: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        display: inline;
+        
+        transition: 1s;
+    }
+    
+    .cart-total__button:hover {
+        background-color: #d9d9d9;
+    }
+    
+    .cart-total__button__text {
+        margin-left: auto;
+        margin-right: auto;
+    
+        font-size: 30px;
+        font-family: "Forum";
+        color: #000;
+    }
+    
+    .cart-total__text__order {
+        margin-top: 40px;
+        margin-left: 80px;
+        font-size: 20px;
+        font-weight: 650;
+        font-family: "Forum";
+    }
+    
+    .cart-total__product__count {
+        display: flex;
+        margin-left: 80px;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .cart-total__product__count__text {
+        font-weight: 650;
+        margin-right: 15px;
+    }
+    
+    .cart-total__line {
+        height: 1px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 35px;
+        background-color: #000;
+    }
+    
+    .cart-total__price {
+        display: flex;
+        margin-top: 70px;
+        justify-content: space-between;
+        font-size: 20px;
+    
+        font-weight: bold;
+    }
+    
+    .cart-total__price__text {
+        margin-left: 90px;
+    }
+    
+    .cart-total__price__text__number {
+        display: flex;
+        margin-right: 36px;
+        margin-bottom: 59px;
+        font-weight: normal;
+    }
 }
 
-.cart-total__button:hover {
-    background-color: #d9d9d9;
+@media screen and (max-width:1199px) and (min-width:768px) {
+    .cart-block {
+        display: flex;
+        justify-content: space-between;
+    }
+     
+    .cart {
+        border: 1px solid #000;
+        border-radius: 5px;
+        width: 960px;
+        background-color: #f3f3f3;
+        margin-right: 20px;
+    }
+
+    .cart-info {
+        display:flex;
+    }
+    
+    .cart-product__title {
+        border-bottom: 1px solid #000;
+    }
+    
+    .cart-product__title__wrapper {
+        display: flex;
+    
+        margin-top: 25px;
+        margin-left: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .cart-checkbox {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .cart-select {
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 10px;
+    }
+    
+    .cart-delete {
+        margin-right: 80px;
+        margin-left: auto;
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .cart-product {
+        
+        margin-top: 30px;
+        margin-left: 25px;
+       
+    }
+    
+    .cart-product:last-child {
+        margin-bottom: 30px;
+    }
+    
+    .cart-name__product {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .secondaryCheckbox { 
+        width: 20px;
+        height: 20px;
+    }
+    
+    
+    .currency_ruble {
+        width: 30px;
+        height: 30px;
+    }
+    .cart-product__img {
+        margin-left: 30px;
+        width: 100px;
+        height: 100px;
+        
+    }
+    
+    .cart-product__name {
+        margin-left: 25px;
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+        color: #000;
+    }
+    
+    .counter {
+        display: flex;
+        margin-right: auto;
+        margin-left: 0px;
+    }
+    
+    .button {
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .value {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+    
+    .value1 {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+    
+    .total-price {
+        font-size: 25px;
+        font-family: "Forum";
+        margin-left: 10px;
+    }
+    
+    .total-price1 {
+        font-size: 25px;
+        font-family: "Forum";
+        margin-left: 10px;
+    }
+    
+    .cart-price__ruble {
+        margin-right: 25px;
+        
+        white-space: nowrap;
+    }
+    
+    .cart-cancel { 
+        margin-right: 50px;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+    }
+    
+    .cart-total {
+        border: 1px solid #000;
+        border-radius: 5px;
+        max-height: 400px;
+        width: 40%;
+        margin-left: auto;
+    }
+    
+    .cart-total__title {
+        text-align: center;
+    }
+    
+    .cart-total__button {
+        
+        margin-top: 60px;
+        max-width: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        display: inline;
+        
+        transition: 1s;
+    }
+    
+    .cart-total__button:hover {
+        background-color: #d9d9d9;
+    }
+    
+    .cart-total__button__text {
+        margin-left: auto;
+        margin-right: auto;
+    
+        font-size: 30px;
+        font-family: "Forum";
+        color: #000;
+    }
+    
+    .cart-total__text__order {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: 650;
+        font-family: "Forum";
+    }
+    
+    .cart-total__product__count {
+        display: flex;
+        margin-left: 20px;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .cart-total__product__count__text {
+        font-weight: 650;
+        margin-right: 15px;
+    }
+    
+    .cart-total__line {
+        height: 1px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 35px;
+        background-color: #000;
+    }
+    
+    .cart-total__price {
+        display: flex;
+        margin-top: 70px;
+        justify-content: space-between;
+        font-size: 20px;
+    
+        font-weight: bold;
+    }
+    
+    .cart-total__price__text {
+        margin-left: 20px;
+    }
+    
+    .cart-total__price__text__number {
+        display: flex;
+        margin-right: 36px;
+        margin-bottom: 59px;
+        font-weight: normal;
+    }
 }
 
-.cart-total__button__text {
-    margin-left: auto;
-    margin-right: auto;
 
-    font-size: 30px;
-    font-family: "Forum";
-    color: #000;
+@media screen and (max-width: 767px) {
+    
+     
+    .cart {
+        border: 1px solid #000;
+        border-radius: 5px;
+        max-width: 960px;
+        background-color: #f3f3f3;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+
+    .cart-info {
+        padding-left: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    
+    .cart-product__title {
+        border-bottom: 1px solid #000;
+    }
+    
+    .cart-product__title__wrapper {
+        display: flex;
+    
+        margin-top: 25px;
+        margin-left: 10px;
+        margin-bottom: 25px;
+    }
+    
+    .cart-checkbox {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .cart-select {
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .cart-delete {
+        margin-right: 80px;
+        margin-left: auto;
+        
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .cart-product {
+        margin-top: 10px;
+        margin-left: 15px;
+    }
+    
+    .cart-product:last-child {
+        margin-bottom: 30px;
+    }
+    
+    .cart-name__product {
+        display: flex;
+        
+        align-items: center;
+        
+    }
+    
+    .secondaryCheckbox { 
+        width: 20px;
+        height: 20px;
+    }
+    
+    
+    .currency_ruble {
+        width: 20px;
+        height: 20px;
+    }
+    .cart-product__img {
+        margin-left: 10px;
+        width: 90px;
+        height: 110px;
+        
+    }
+    
+    .cart-product__name {
+
+        font-size: 25px;
+        font-family: "Cormorant Garamond", serif;
+        color: #000;
+    }
+    
+    .counter {
+        display: flex;
+        
+    }
+    
+    .button {
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    
+    .value {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+    
+    .value1 {
+        font-size: 24px;
+        margin: 0 10px;
+    }
+    
+    .total-price {
+        font-size: 20px;
+        font-family: "Forum";
+        
+    }
+    
+    .total-price1 {
+        font-size: 25px;
+        font-family: "Forum";
+        margin-left: 10px;
+    }
+    
+    .cart-price__ruble {
+        margin-right: 25px;
+        
+        white-space: nowrap;
+    }
+    
+   
+
+    .cart-cancel { 
+        margin-right: 10px;
+        cursor: pointer;
+        height: 24px;
+        width: 24px;
+    }
+    
+    .cart-total {
+        margin-top: 20px;
+        
+        border: 1px solid #000;
+        border-radius: 5px;
+        max-height: 400px;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+    }
+    
+    .cart-total__title {
+        text-align: center;
+    }
+    
+    .cart-total__button {
+        
+        margin-top: 60px;
+        max-width: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        display: inline;
+        
+        transition: 1s;
+    }
+    
+    .cart-total__button:hover {
+        background-color: #d9d9d9;
+    }
+    
+    .cart-total__button__text {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        font-size: 30px;
+        font-family: "Forum";
+        color: #000;
+    }
+    
+    .cart-total__text__order {
+        margin-top: 40px;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: 650;
+        font-family: "Forum";
+    }
+    
+    .cart-total__product__count {
+        display: flex;
+        margin-left: 20px;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .cart-total__product__count__text {
+        font-weight: 650;
+        margin-right: 15px;
+    }
+    
+    .cart-total__line {
+        height: 1px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 35px;
+        background-color: #000;
+    }
+    
+    .cart-total__price {
+        display: flex;
+        margin-top: 70px;
+        justify-content: space-between;
+        font-size: 20px;
+    
+        font-weight: bold;
+    }
+    
+    .cart-total__price__text {
+        margin-left: 20px;
+    }
+    
+    .cart-total__price__text__number {
+        display: flex;
+        margin-right: 36px;
+        margin-bottom: 59px;
+        font-weight: normal;
+    }
 }
 
-.cart-total__text__order {
-    margin-top: 40px;
-    margin-left: 80px;
-    font-size: 20px;
-    font-weight: 650;
-    font-family: "Forum";
-}
-
-.cart-total__product__count {
-    display: flex;
-    margin-left: 80px;
-    font-size: 20px;
-    font-family: "Forum";
-}
-
-.cart-total__product__count__text {
-    font-weight: 650;
-    margin-right: 15px;
-}
-
-.cart-total__line {
-    height: 1px;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-top: 35px;
-    background-color: #000;
-}
-
-.cart-total__price {
-    display: flex;
-    margin-top: 70px;
-    justify-content: space-between;
-    font-size: 20px;
-
-    font-weight: bold;
-}
-
-.cart-total__price__text {
-    margin-left: 90px;
-}
-
-.cart-total__price__text__number {
-    display: flex;
-    margin-right: 36px;
-    margin-bottom: 59px;
-    font-weight: normal;
-}
 
 /*------------------------------------ПЭЙМЭНТ----------------------------*/
 
