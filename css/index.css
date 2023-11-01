@@ -1249,24 +1249,47 @@
         
     }
 
+    .bestsellers-slider { 
+        margin-top: 40px;
+        
+    }
+
     .slider-container1 {
         width: 100%;
         overflow: hidden;
-      }
+        
+    }
       
-      .slider1 {
+    .slider1 {
         display: flex;
         transition: transform 0.3s ease-in-out;
-      }
+    }
       
-      .slide1 {
+    .slide1 {
         flex: 0 0 100%;
         width: 100%;
         height: 300px; /* Высота слайдов, настройте по своему усмотрению */
         background-size: cover;
         background-position: center;
-      }
+    }
+
+    .slider-container2 {
+        width: 100%;
+        overflow: hidden;
+    }
       
+    .slider2 {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+    }
+      
+    .slide2 {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 300px; /* Высота слайдов, настройте по своему усмотрению */
+        background-size: cover;
+        background-position: center;
+    }
       
 
     .main-adv__bestsellers {
