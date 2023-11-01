@@ -1,12 +1,31 @@
 /* Когда пользователь нажимает на кнопку,
 переключение между скрытием и отображением раскрывающегося содержимого */
 
+var dropdown = document.getElementById("myDropdown");
+var dropdown1 = document.getElementById("myDropdown1");
+var dropdown2 = document.getElementById("myDropdown2");
+var dropdown3 = document.getElementById("myDropdown3");
+var dropdown4 = document.getElementById("myDropdown4");
+var dropdown5 = document.getElementById("myDropdown5");
+
 var arrow = document.getElementById("arrowBefore");
+var arrow1 = document.getElementById("arrowBefore1");
+var arrow2 = document.getElementById("arrowBefore2");
+var arrow3 = document.getElementById("arrowBefore3");
+var arrow4 = document.getElementById("arrowBefore4");
+var arrow5 = document.getElementById("arrowBefore5");
 
 function myFunction() {
-  var dropdown = document.getElementById("myDropdown");
-  
-
+  dropdown1.classList.remove ("show");
+  arrow1.src = "img/caret-right.svg";
+  dropdown2.classList.remove ("show");
+  arrow2.src = "img/caret-right.svg";
+  dropdown3.classList.remove ("show");
+  arrow3.src = "img/caret-right.svg";
+  dropdown4.classList.remove ("show");
+  arrow4.src = "img/caret-right.svg";
+  dropdown5.classList.remove ("show");
+  arrow5.src = "img/caret-right.svg";
   if (dropdown.classList.contains("show")) {
     dropdown.classList.remove("show");
     arrow.src = "img/caret-right.svg"; // Возвращаем изображение стрелки вправо при закрытии меню
@@ -26,38 +45,108 @@ reloadButton.addEventListener("click", function() {
 });
 
 function myFunction1() {
-  document.getElementById("myDropdown1").classList.toggle("show");
+  dropdown.classList.remove ("show");
+  arrow.src = "img/caret-right.svg";
+  dropdown2.classList.remove ("show");
+  arrow2.src = "img/caret-right.svg";
+  dropdown3.classList.remove ("show");
+  arrow3.src = "img/caret-right.svg";
+  dropdown4.classList.remove ("show");
+  arrow4.src = "img/caret-right.svg";
+  dropdown5.classList.remove ("show");
+  arrow5.src = "img/caret-right.svg";
+  if (dropdown1.classList.contains("show")) {
+    dropdown1.classList.remove("show");
+    arrow1.src = "img/caret-right.svg"; // Возвращаем изображение стрелки вправо при закрытии меню
+  } else {
+    dropdown1.classList.add("show");
+    arrow1.src = "img/caret-down-fill.svg"; // Меняем изображение стрелки при открытии меню
+  }
 }
 
 function myFunction2() {
-  document.getElementById("myDropdown2").classList.toggle("show");
+  dropdown.classList.remove ("show");
+  arrow.src = "img/caret-right.svg";
+  dropdown1.classList.remove ("show");
+  arrow1.src = "img/caret-right.svg";
+  dropdown3.classList.remove ("show");
+  arrow3.src = "img/caret-right.svg";
+  dropdown4.classList.remove ("show");
+  arrow4.src = "img/caret-right.svg";
+  dropdown5.classList.remove ("show");
+  arrow5.src = "img/caret-right.svg";
+  if (dropdown2.classList.contains("show")) {
+    dropdown2.classList.remove("show");
+    arrow2.src = "img/caret-right.svg"; // Возвращаем изображение стрелки вправо при закрытии меню
+  } else {
+    dropdown2.classList.add("show");
+    arrow2.src = "img/caret-down-fill.svg"; // Меняем изображение стрелки при открытии меню
+  }
 }
 
 function myFunction3() {
-  document.getElementById("myDropdown3").classList.toggle("show");
+  dropdown.classList.remove ("show");
+  arrow.src = "img/caret-right.svg";
+  dropdown1.classList.remove ("show");
+  arrow1.src = "img/caret-right.svg";
+  dropdown2.classList.remove ("show");
+  arrow2.src = "img/caret-right.svg";
+  dropdown4.classList.remove ("show");
+  arrow4.src = "img/caret-right.svg";
+  dropdown5.classList.remove ("show");
+  arrow5.src = "img/caret-right.svg";
+  if (dropdown3.classList.contains("show")) {
+    dropdown3.classList.remove("show");
+    arrow3.src = "img/caret-right.svg"; // Возвращаем изображение стрелки вправо при закрытии меню
+  } else {
+    dropdown3.classList.add("show");
+    arrow3.src = "img/caret-down-fill.svg"; // Меняем изображение стрелки при открытии меню
+  }
 }
 function myFunction4() {
-  document.getElementById("myDropdown4").classList.toggle("show");
+  dropdown1.classList.remove ("show");
+  arrow1.src = "img/caret-right.svg";
+  dropdown2.classList.remove ("show");
+  arrow2.src = "img/caret-right.svg";
+  dropdown3.classList.remove ("show");
+  arrow3.src = "img/caret-right.svg";
+  dropdown.classList.remove ("show");
+  arrow.src = "img/caret-right.svg";
+  dropdown5.classList.remove ("show");
+  arrow5.src = "img/caret-right.svg";
+  if (dropdown4.classList.contains("show")) {
+    dropdown4.classList.remove("show");
+    arrow4.src = "img/caret-right.svg"; // Возвращаем изображение стрелки вправо при закрытии меню
+  } else {
+    dropdown4.classList.add("show");
+    arrow4.src = "img/caret-down-fill.svg"; // Меняем изображение стрелки при открытии меню
+  }
 }
 
 function myFunction5() {
-  document.getElementById("myDropdown5").classList.toggle("show");
+  dropdown1.classList.remove ("show");
+  arrow1.src = "img/caret-right.svg";
+  dropdown2.classList.remove ("show");
+  arrow2.src = "img/caret-right.svg";
+  dropdown3.classList.remove ("show");
+  arrow3.src = "img/caret-right.svg";
+  dropdown4.classList.remove ("show");
+  arrow4.src = "img/caret-right.svg";
+  dropdown.classList.remove ("show");
+  arrow.src = "img/caret-right.svg";
+  if (dropdown5.classList.contains("show")) {
+    dropdown5.classList.remove("show");
+    arrow5.src = "img/caret-right.svg"; // Возвращаем изображение стрелки вправо при закрытии меню
+  } else {
+    dropdown5.classList.add("show");
+    arrow5.src = "img/caret-down-fill.svg"; // Меняем изображение стрелки при открытии меню
+  }
 }
 
 
 // Закройте выпадающее меню, если пользователь щелкает за его пределами
-window.onclick = function (event) {
-  if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains("show")) {
-        openDropdown.classList.remove("show");
-      }
-    }
-  }
-};
+
+
 
 function selectCategory(categoryName) {
   document.getElementById("selectedCategory").textContent = categoryName; // Обновляем текст
