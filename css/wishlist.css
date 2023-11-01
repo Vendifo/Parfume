@@ -1,111 +1,335 @@
-.wishlist-title{
-    display: flex;
-    align-items: center;
-}
-
-
-
-.wishlist-line {
+@media screen and (min-width: 1200px) {
+    .wishlist-title{
+        display: flex;
+        align-items: center;
+    }
     
-    width: 100%;
-    height: 1px;
-    background-color: #000 ;
-}
-
-.wishlist-subtitle {
-    font-family: "Forum";
-    font-size: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-}
-
-.wishlist-item {
+    .wishlist-line {
+        
+        width: 100%;
+        height: 1px;
+        background-color: #000 ;
+    }
     
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
+    .wishlist-subtitle {
+        font-family: "Forum";
+        font-size: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .wishlist-item {
+        
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        
+        
+    }
+    
+    .wishlist-card__img {
+        width: 458px;
+        height: 531px;
+        transition: 0.7s;
+    
+    }
+    
+    .wishlist-card__img:hover {
+        transform: scale(1.05);
+    }
+    .wishlist-card {
+        display: flex;
+        
+        
+    }
+    
+    .wishlist-card__text {
+        margin-left: 100px; /* Вернуть отступ слева, если это необходимо */
+    }
+    
+    .wishlist-card__title {
+        font-family: "Forum";
+        font-size: 40px;
+        color: #000;
+        transition: 0.5s;
+    }
+    
+    .wishlist-card__title:hover {
+        color: #575757;
+    }
+    
+    .wishlist-card__code {
+        padding-top: 20px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+    }
+    
+    .wishlist-card__price {
+        padding-top: 20px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+    }
+    
+    .wishlist-disc__btn {
+        
+        
+        height: auto;
+    }
+    
+    .wishlist-discription {
+        max-width: 800px; /* Устанавливаем ширину контейнера */
+        word-wrap: break-word; /* Разрывать слова, если они не умещаются */
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 26px;
+        position: relative;
+    }
+    
+    .wishlist-buttons {
+        margin-top: 40%;
+    }
+    
+    .wishlist-button {
+        
+       margin-bottom: 10px;
+        color: #fff;
+        margin-right: 50px;
+        width: 280px;
+        height: 60px;
+        background-color: #696969;
+        transition: 0.2s;
+    }
+    
+    .wishlist-button:hover {
+        background-color: #333;
+        
+    }
+    
+    .wishlist-button:last-child {
+        margin-right: 0;
+    }
+}
+
+
+@media screen and (max-width:1200px) and (min-width:768px) {
+    .wishlist-title{
+        display: flex;
+        align-items: center;
+    }
+    
+    .wishlist-line {
+        
+        width: 100%;
+        height: 1px;
+        background-color: #000 ;
+    }
+    
+    .wishlist-subtitle {
+        font-family: "Forum";
+        font-size: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .wishlist-item {
+        
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+        
+        
+    }
+    
+    .wishlist-card__img {
+        width: 200px;
+        height: 300px;
+        transition: 0.7s;
+    
+    }
+    
+    .wishlist-card__img:hover {
+        transform: scale(1.05);
+    }
+    .wishlist-card {
+        display: flex;
+        
+        
+    }
+    
+    .wishlist-card__text {
+        margin-left: 20px; /* Вернуть отступ слева, если это необходимо */
+    }
+    
+    .wishlist-card__title {
+        font-family: "Forum";
+        font-size: 40px;
+        color: #000;
+        transition: 0.5s;
+    }
+    
+    .wishlist-card__title:hover {
+        color: #575757;
+    }
+    
+    .wishlist-card__code {
+        padding-top: 20px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+    }
+    
+    .wishlist-card__price {
+        padding-top: 20px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+    }
+    
+    .wishlist-disc__btn {
+        
+        
+        height: auto;
+    }
+    
+    .wishlist-discription {
+        max-width: 800px; /* Устанавливаем ширину контейнера */
+        word-wrap: break-word; /* Разрывать слова, если они не умещаются */
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        position: relative;
+    }
+    
+    .wishlist-buttons {
+        margin-top: 40%;
+    }
+    
+    .wishlist-button {
+        
+        margin-bottom: 10px;
+        color: #fff;
+        margin-right: 50px;
+        width: 280px;
+        height: 60px;
+        background-color: #696969;
+        transition: 0.2s;
+    }
+    
+    .wishlist-button:hover {
+        background-color: #333;
+        
+    }
+    
+    .wishlist-button:last-child {
+        margin-right: 0;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .wishlist-title{
+        display: flex;
+        align-items: center;
+    }
+    
+    .wishlist-line {
+        
+        width: 100%;
+        height: 1px;
+        background-color: #000 ;
+    }
+    
+    .wishlist-subtitle {
+        font-family: "Forum";
+        font-size: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .wishlist-item {
+        
+        
+        text-align: center;
+        margin-top: 20px;
+        
+        
+    }
+    
+    .wishlist-card__img {
+        width: 100%;
+        height: 450px;
+        transition: 0.7s;
+    
+    }
     
     
-}
-
-.wishlist-card__img {
-    width: 458px;
-    height: 531px;
-    transition: 0.7s;
-
-}
-
-.wishlist-card__img:hover {
-    transform: scale(1.05);
-}
-.wishlist-card {
-    display: flex;
+   
     
+    .wishlist-card__text {
+        margin-left: 20px; /* Вернуть отступ слева, если это необходимо */
+    }
     
-}
-
-.wishlist-card__text {
-    margin-left: 100px; /* Вернуть отступ слева, если это необходимо */
-}
-
-.wishlist-card__title {
-    font-family: "Forum";
-    font-size: 40px;
-    color: #000;
-    transition: 0.5s;
-}
-
-.wishlist-card__title:hover {
-    color: #575757;
-}
-
-.wishlist-card__code {
-    padding-top: 20px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-}
-
-.wishlist-card__price {
-    padding-top: 20px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-}
-
-.wishlist-disc__btn {
+    .wishlist-card__title {
+        
+        
+        font-family: "Forum";
+        font-size: 30px;
+        color: #000;
+        transition: 0.5s;
+    }
     
+    .wishlist-card__title:hover {
+        color: #575757;
+    }
     
-    height: auto;
-}
-
-.wishlist-discription {
-    max-width: 800px; /* Устанавливаем ширину контейнера */
-    word-wrap: break-word; /* Разрывать слова, если они не умещаются */
-    text-align: center;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 26px;
-    position: relative;
-}
-
-.wishlist-buttons {
-    margin-top: 40%;
-}
-
-.wishlist-button {
+    .wishlist-card__code {
+        padding-top: 10px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+    }
     
-   margin-bottom: 10px;
-    color: #fff;
-    margin-right: 50px;
-    width: 280px;
-    height: 60px;
-    background-color: #696969;
-    transition: 0.2s;
-}
-
-.wishlist-button:hover {
-    background-color: #333;
+    .wishlist-card__price {
+        padding-top: 10px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+    }
     
-}
-
-.wishlist-button:last-child {
-    margin-right: 0;
+    .wishlist-disc__btn {
+        
+        
+        height: auto;
+    }
+    
+    .wishlist-discription {
+        max-width: 800px; /* Устанавливаем ширину контейнера */
+        word-wrap: break-word; /* Разрывать слова, если они не умещаются */
+        text-align: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 14px;
+        position: relative;
+    }
+    
+    .wishlist-buttons {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .wishlist-button {
+        font-size: 14px;
+        margin-top: 10px;
+        color: #fff;
+        width: 150px;
+        height: 50px;
+        margin-right: 20px;
+        background-color: #696969;
+        transition: 0.2s;
+    }
+    
+    .wishlist-button:hover {
+        background-color: #333;
+        
+    }
+    
+    .wishlist-button:last-child {
+        margin-right: 0;
+        
+    }
 }
