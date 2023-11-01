@@ -55,14 +55,16 @@ function changeColor(button) {
   }
 }
 
+//Слайдер
 const slider = document.querySelector('.slider1');
 const slides = document.querySelectorAll('.slide1');
-let isDragging = false;
-let startPosition = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
-let animationID = 0;
-let currentIndex = 0;
+let isDragging1 = false;
+let startPosition1 = 0;
+let currentTranslate1 = 0;
+let prevTranslate1 = 0;
+let animationID1 = 0;
+let currentIndex1 = 0;
+const sensitivity1 = 100; // Чувствительность свайпа
 
 slides.forEach((slide, index) => {
   slide.addEventListener('touchstart', touchStart(index));
@@ -74,46 +76,49 @@ window.addEventListener('resize', setPositionByIndex);
 
 function touchStart(index) {
   return function (event) {
-    currentIndex = index;
-    startPosition = event.touches[0].clientX;
-    isDragging = true;
-    animationID = requestAnimationFrame(updateSlider);
+    currentIndex1 = index;
+    startPosition1 = event.touches[0].clientX;
+    isDragging1 = true;
+    cancelAnimationFrame(animationID1);
   };
 }
 
 function touchEnd() {
-  isDragging = false;
-  cancelAnimationFrame(animationID);
+  isDragging1 = false;
 
-  const movedBy = currentTranslate - prevTranslate;
-  if (movedBy < -100 && currentIndex < slides.length - 1) {
-    currentIndex += 1;
-  } else if (movedBy > 100 && currentIndex > 0) {
-    currentIndex -= 1;
+  const movedBy = currentTranslate1 - prevTranslate1;
+
+  if (movedBy < -sensitivity1 && currentIndex1 < slides.length - 1) {
+    currentIndex1 += 1;
+  } else if (movedBy > sensitivity1 && currentIndex1 > 0) {
+    currentIndex1 -= 1;
   }
 
   setPositionByIndex();
 }
 
 function touchMove(event) {
-  if (isDragging) {
-    const currentPosition = event.touches[0].clientX;
-    currentTranslate = prevTranslate + currentPosition - startPosition;
+  if (isDragging1) {
+    const currentPosition1 = event.touches[0].clientX;
+    currentTranslate1 = prevTranslate1 + currentPosition1 - startPosition1;
   }
 }
 
 function updateSlider() {
-  const translateX = currentTranslate * -1;
-  slider.style.transform = `translateX(${translateX}px)`;
-  animationID = requestAnimationFrame(updateSlider);
+  const translateX1 = currentTranslate1 * -1;
+  slider.style.transform = `translateX(${translateX1}px)`;
+  animationID1 = requestAnimationFrame(updateSlider);
 }
 
 function setPositionByIndex() {
-  currentTranslate = currentIndex * -100;
-  prevTranslate = currentTranslate;
+  currentTranslate1 = currentIndex1 * -100;
+  prevTranslate1 = currentTranslate1;
+  slider.style.transition = 'transform 0.3s ease-in-out'; // Добавляем плавную анимацию
   updateSlider();
 }
 
 setPositionByIndex();
+
+
 
 
