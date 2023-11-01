@@ -2121,14 +2121,14 @@ body {
     }
     
     .footer-nav-title {
-        font-size: 16px;
+        font-size: 13px;
         font-family: "Forum";
         color: #c5c753;
         padding-bottom: 15px;
     }
     
     .footer-nav__subtitle {
-        font-size: 13px;
+        font-size: 10px;
         font-family: "Cormorant Garamond", serif;
         text-decoration: none;
         color: #000;
