@@ -1,225 +1,713 @@
-.payment-form {
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
+@media screen and (min-width: 1200px) {
+    .payment-form {
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;
+    }
+    
+    .payment-form__price {
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .payment-form__text {
+        font-size: 26px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__card {
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    
+    .payment-form__card:hover {
+        border-radius: 10px;
+        background-color: #f3f3f3;
+    }
+    
+    .payment-form__card__bank {
+        display: flex;
+        width: 300px;
+        height: 70px;
+    
+        border-radius: 10px;
+    }
+    
+    .payment-form__card__bank__img {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .payment-form__card__bank__text {
+        margin-left: 15px;
+    }
+    
+    .payment-form__card__bank__text__title {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__card__bank__text_subtitle {
+        margin-top: 6px;
+    }
+    
+    .payment-form__card__bank__second {
+        display: flex;
+        width: 300px;
+        height: 70px;
+    
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+    
+    .payment-form__email {
+        width: 470px;
+        height: 160px;
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        margin-top: 32px;
+        margin-left: 20px;
+    }
+    
+    .payment-form__email__title {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+        padding-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .payment-form__email__subtitle {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 19px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__email__input {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        height: 50px;
+    
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 32px;
+        margin-right: 10px;
+    }
+    
+    .payment-form__email__input__text {
+        margin-left: 15px;
+        margin-top: 13px;
+        width: 430px;
+    }
+    
+    .payment-form__card__info {
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-top: 40px;
+        font-family: "Cormorant Garamond", serif;
+        height: 320px;
+    }
+    
+    .payment-form__card__info__text {
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 10px;
+        padding-top: 10px;
+    }
+    
+    .payment-form__card__info__number {
+        background-color: #d9d9d9;
+        border-radius: 20px;
+        border: 1px solid #000;
+        width: 450px;
+        height: 50px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        padding-left: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    
+    .payment-form__card__info__month__cvv {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+    }
+    
+    .payment-form__card__info__month {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 200px;
+        height: 50px;
+        padding-left: 15px;
+    }
+    
+    .payment-form__card__info__cvv {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        width: 200px;
+        height: 50px;
+        margin-left: 50px;
+        padding-left: 15px;
+    }
+    
+    .payment-form__card__info__button {
+        background-color: #3a42ff;
+        border-radius: 20px;
+        color: #fff;
+        border: 1px solid #000;
+        width: 450px;
+        height: 50px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: 0.5s;
+    }
+    
+    .payment-form__card__info__button:hover {
+        background-color: #060cbb;
+    }
+    
+    .payment-form__card__info__lines {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+    
+    .payment-form__card__info__line {
+        height: 1px;
+        background-color: #000;
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .payment-form__card__info__line__text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+    
+    .payment-form__card__info__button__sbp1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222682;
+        border-radius: 20px;
+        border: 1px solid #000;
+        width: 369px;
+        height: 49px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        color: #fff;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        transition: 0.5s;
+    }
+    
+    .payment-form__card__info__button__sbp1:hover {
+        background-color: #131558;
+    }
+    
+    .payment-form__card__info__button__sbp__img {
+        margin-left: 23px;
+        width: auto;
+    }
 }
 
-.payment-form__price {
-    font-size: 20px;
-    font-family: "Forum";
+@media screen and (max-width:1200px) and (min-width:768px) {
+    .payment-form {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        width: 500px;
+    }
+
+    .payment-variant {
+        width: 400px;
+        
+    }
+
+    
+
+    
+    
+    .payment-form__price {
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .payment-form__text {
+        font-size: 26px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__card {
+        cursor: pointer;
+        transition: 0.5s;
+        width: 400px;
+    }
+    
+    .payment-form__card:hover {
+        border-radius: 10px;
+        background-color: #f3f3f3;
+    }
+    
+    .payment-form__card__bank {
+        display: flex;
+        width: 300px;
+        height: 70px;
+    
+        border-radius: 10px;
+    }
+    
+    .payment-form__card__bank__img {
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .payment-form__card__bank__text {
+        margin-left: 15px;
+    }
+    
+    .payment-form__card__bank__text__title {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__card__bank__text_subtitle {
+        margin-top: 6px;
+    }
+    
+    .payment-form__card__bank__second {
+        display: flex;
+        width: 300px;
+        height: 70px;
+    
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+    
+    .payment-form__email {
+        width: 500px;
+        height: 160px;
+        
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        margin-top: 32px;
+        margin-left: 20px;
+    }
+    
+    .payment-form__email__title {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+        padding-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .payment-form__email__subtitle {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 19px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__email__input {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        height: 50px;
+    
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 32px;
+        margin-right: 10px;
+    }
+    
+    .payment-form__email__input__text {
+        margin-left: 15px;
+        margin-top: 13px;
+        width: 430px;
+    }
+    
+    .payment-form__card__info {
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        margin-left: 20px;
+        margin-top: 40px;
+        font-family: "Cormorant Garamond", serif;
+        height: 320px;
+        width: 500px;
+    }
+    
+    .payment-form__card__info__text {
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 10px;
+        padding-top: 10px;
+    }
+    
+    .payment-form__card__info__number {
+        background-color: #d9d9d9;
+        border-radius: 20px;
+        border: 1px solid #000;
+        width: 450px;
+        height: 50px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        padding-left: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    
+    .payment-form__card__info__month__cvv {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+    }
+    
+    .payment-form__card__info__month {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 200px;
+        height: 50px;
+        padding-left: 15px;
+    }
+    
+    .payment-form__card__info__cvv {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        width: 200px;
+        height: 50px;
+        margin-left: 50px;
+        padding-left: 15px;
+    }
+    
+    .payment-form__card__info__button {
+        background-color: #3a42ff;
+        border-radius: 20px;
+        color: #fff;
+        border: 1px solid #000;
+        width: 450px;
+        height: 50px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: 0.5s;
+    }
+    
+    .payment-form__card__info__button:hover {
+        background-color: #060cbb;
+    }
+    
+    .payment-form__card__info__lines {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        
+    }
+    
+    .payment-form__card__info__line {
+        height: 1px;
+        background-color: #000;
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .payment-form__card__info__line__text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+    
+    .payment-form__card__info__button__sbp1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222682;
+        border-radius: 20px;
+        border: 1px solid #000;
+        width: 369px;
+        height: 49px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        color: #fff;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        transition: 0.5s;
+    }
+    
+    .payment-form__card__info__button__sbp1:hover {
+        background-color: #131558;
+    }
+    
+    .payment-form__card__info__button__sbp__img {
+        margin-left: 23px;
+        width: auto;
+    }
 }
 
-.payment-form__text {
-    font-size: 26px;
-    font-family: "Cormorant Garamond", serif;
+@media screen and (max-width: 768px) {
+    .payment-form {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        
+    }
+
+    
+
+    
+
+    
+    
+    .payment-form__price {
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .payment-form__text {
+        font-size: 26px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__card {
+        cursor: pointer;
+        transition: 0.5s;
+        width: 100%;
+    }
+    
+    .payment-form__card:hover {
+        border-radius: 10px;
+        background-color: #f3f3f3;
+    }
+    
+    .payment-form__card__bank {
+        display: flex;
+        width: 100%;
+        height: 70px;
+    
+        border-radius: 10px;
+    }
+    
+    .payment-form__card__bank__img {
+        margin-top: 10px;
+        
+        width: 50px;
+        height: 50px;
+    }
+    
+    .payment-form__card__bank__text {
+        margin-left: 15px;
+    }
+    
+    .payment-form__card__bank__text__title {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__card__bank__text_subtitle {
+        margin-top: 6px;
+    }
+    
+    .payment-form__card__bank__second {
+        display: flex;
+        width: 100%;
+        height: 70px;
+    
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+    
+    .payment-form__email {
+        width: 100%;
+        height: 160px;
+        
+        background-color: #f3f3f3;
+        border-radius: 10px;
+        margin-top: 32px;
+        
+    }
+    
+    .payment-form__email__info {
+        width: 320px;
+    }
+
+    .payment-form__email__title {
+        font-weight: 600;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+        padding-top: 10px;
+        margin-left: 10px;
+    }
+    
+    .payment-form__email__subtitle {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-size: 19px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .payment-form__email__input {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        height: 50px;
+    
+        margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 32px;
+        margin-right: 10px;
+    }
+    
+    .payment-form__email__input__text {
+        margin-left: 15px;
+        margin-top: 13px;
+        width: 350px;
+    }
+    
+    .payment-form__card__info {
+        background-color: #f3f3f3;
+        border-radius: 20px;
+        
+        margin-top: 40px;
+        font-family: "Cormorant Garamond", serif;
+        height: 320px;
+        width: 320px;
+    }
+    
+    .payment-form__card__info__text {
+        font-weight: bold;
+        font-size: 20px;
+        margin-left: 10px;
+        padding-top: 10px;
+    }
+    
+    .payment-form__card__info__number {
+        background-color: #d9d9d9;
+        border-radius: 20px;
+        border: 1px solid #000;
+        width: 90%;
+        height: 50px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        padding-left: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    
+    .payment-form__card__info__month__cvv {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+    }
+    
+    .payment-form__card__info__month {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 100px;
+        height: 50px;
+        padding-left: 15px;
+    }
+    
+    .payment-form__card__info__cvv {
+        background-color: #d9d9d9;
+        border: 1px solid #000;
+        border-radius: 20px;
+        width: 100px;
+        height: 50px;
+        margin-left: 50px;
+        padding-left: 15px;
+    }
+    
+    .payment-form__card__info__button {
+        background-color: #3a42ff;
+        border-radius: 20px;
+        color: #fff;
+        border: 1px solid #000;
+        width: 90% ;
+        height: 50px;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        transition: 0.5s;
+    }
+    
+    .payment-form__card__info__button:hover {
+        background-color: #060cbb;
+    }
+    
+    .payment-form__card__info__lines {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        
+    }
+    
+    .payment-form__card__info__line {
+        height: 1px;
+        background-color: #000;
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .payment-form__card__info__line__text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        margin-bottom: 7px;
+    }
+    
+    .payment-form__card__info__button__sbp1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222682;
+        border-radius: 20px;
+        border: 1px solid #000;
+        width: 90%;
+        height: 49px;
+        margin-left: 10px;
+        margin-right: 50px;
+        margin-bottom: 10px;
+        color: #fff;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        transition: 0.5s;
+    }
+    
+    .payment-form__card__info__button__sbp1:hover {
+        background-color: #131558;
+    }
+    
+    .payment-form__card__info__button__sbp__img {
+        margin-left: 23px;
+        width: auto;
+    }
 }
 
-.payment-form__card {
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-.payment-form__card:hover {
-    border-radius: 10px;
-    background-color: #f3f3f3;
-}
-
-.payment-form__card__bank {
-    display: flex;
-    width: 300px;
-    height: 70px;
-
-    border-radius: 10px;
-}
-
-.payment-form__card__bank__img {
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 50px;
-    height: 50px;
-}
-
-.payment-form__card__bank__text {
-    margin-left: 15px;
-}
-
-.payment-form__card__bank__text__title {
-    font-weight: 600;
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.payment-form__card__bank__text_subtitle {
-    margin-top: 6px;
-}
-
-.payment-form__card__bank__second {
-    display: flex;
-    width: 300px;
-    height: 70px;
-
-    border-radius: 10px;
-    margin-top: 5px;
-}
-
-.payment-form__email {
-    width: 470px;
-    height: 160px;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-    margin-top: 32px;
-    margin-left: 20px;
-}
-
-.payment-form__email__title {
-    font-weight: 600;
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
-    padding-top: 10px;
-    margin-left: 10px;
-}
-
-.payment-form__email__subtitle {
-    margin-top: 5px;
-    margin-left: 10px;
-    font-size: 19px;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.payment-form__email__input {
-    background-color: #d9d9d9;
-    border: 1px solid #000;
-    border-radius: 20px;
-    height: 50px;
-
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-bottom: 32px;
-    margin-right: 10px;
-}
-
-.payment-form__email__input__text {
-    margin-left: 15px;
-    margin-top: 13px;
-    width: 430px;
-}
-
-.payment-form__card__info {
-    background-color: #f3f3f3;
-    border-radius: 20px;
-    margin-left: 20px;
-    margin-top: 40px;
-    font-family: "Cormorant Garamond", serif;
-    height: 320px;
-}
-
-.payment-form__card__info__text {
-    font-weight: bold;
-    font-size: 20px;
-    margin-left: 10px;
-    padding-top: 10px;
-}
-
-.payment-form__card__info__number {
-    background-color: #d9d9d9;
-    border-radius: 20px;
-    border: 1px solid #000;
-    width: 450px;
-    height: 50px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-    padding-left: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-}
-
-.payment-form__card__info__month__cvv {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 19px;
-}
-
-.payment-form__card__info__month {
-    background-color: #d9d9d9;
-    border: 1px solid #000;
-    border-radius: 20px;
-    margin-left: 10px;
-    margin-top: 10px;
-    width: 200px;
-    height: 50px;
-    padding-left: 15px;
-}
-
-.payment-form__card__info__cvv {
-    background-color: #d9d9d9;
-    border: 1px solid #000;
-    border-radius: 20px;
-    width: 200px;
-    height: 50px;
-    margin-left: 50px;
-    padding-left: 15px;
-}
-
-.payment-form__card__info__button {
-    background-color: #3a42ff;
-    border-radius: 20px;
-    color: #fff;
-    border: 1px solid #000;
-    width: 450px;
-    height: 50px;
-    margin-top: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-    transition: 0.5s;
-}
-
-.payment-form__card__info__button:hover {
-    background-color: #060cbb;
-}
-
-.payment-form__card__info__lines {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.payment-form__card__info__line {
-    height: 1px;
-    background-color: #000;
-    width: 100%;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.payment-form__card__info__line__text {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-    margin-bottom: 7px;
-}
-
-.payment-form__card__info__button__sbp1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #222682;
-    border-radius: 20px;
-    border: 1px solid #000;
-    width: 369px;
-    height: 49px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 10px;
-    color: #fff;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-    transition: 0.5s;
-}
-
-.payment-form__card__info__button__sbp1:hover {
-    background-color: #131558;
-}
-
-.payment-form__card__info__button__sbp__img {
-    margin-left: 23px;
-    width: auto;
-}
