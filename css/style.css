@@ -194,575 +194,1729 @@ body {
 }
 
 /*---------------------------------index---------------------------------------*/
-
-.background-slides {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100vh;
-}
-
-.slide {
-    display: none;
-    flex: 1;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    /* Плавная анимация перехода */
-}
-
-.slide.active {
-    display: block;
-    opacity: 1;
-}
-
-/* Стили для контейнера с кнопками */
-.slide-buttons {
-    display: flex;
-    justify-content: center;
-    /* Выравнивание кнопок по центру горизонтально */
-    position: absolute;
-    bottom: 20px;
-    /* Отступ снизу (настройте по вашему желанию) */
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    /* Центрирование контейнера */
-    z-index: 2;
-    /* Уровень z-index для отображения над слайдами */
-}
-
-/* Стили для кнопок */
-.slide-button {
-    width: 80px;
-    /* Ширина кнопки (настройте по вашему желанию) */
-    height: 7px;
-    background-color: #ccc;
-    margin: 0 6px;
-    /* Расстояние между кнопками */
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-/* Стили для активной кнопки */
-.slide-button.active {
-    background-color: #333;
-    /* Цвет активной кнопки */
-}
-
-.main-text {
-    text-align: center;
-    padding-top: 225px;
-}
-
-.main-text__title {
-    font-family: "Petit Formal Script", cursive;
-    color: #000000;
-    font-size: 32px;
-}
-
-.main-text__properties {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 22px;
-    padding-top: 32px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #000000;
-    width: 960px;
-}
-
-
-/*-------------------------------------Main-----------------------------------------*/
-
-.main-adv {
-    padding-top: 50px;
-}
-
-.main-adv__block {
-    margin-left: 15px;
-    display: flex;
-    position: absolute;
-}
-
-.main-adv__bestsellers {
-    font-size: 24px;
-    margin-right: 34px;
-    text-decoration: none;
-    color: #000;
-    transition: font-size 0.8s ease;
-    cursor: pointer;
-}
-
-.main-adv__bestsellers:hover,
-.main-adv__bestsellers:focus {
-    font-size: 30px;
-    border-bottom: 2px solid #000;
-}
-
-.main-adv__newrelease {
-    font-size: 24px;
-    margin-right: 34px;
-    text-decoration: none;
-    color: #000;
-    transition: font-size 0.8s ease;
-    cursor: pointer;
-}
-
-.main-adv__newrelease:hover,
-.main-adv__newrelease:focus {
-    font-size: 30px;
-    border-bottom: 2px solid #000;
-}
-
-.fade-in {
-    opacity: 1;
-    transition: opacity 1s ease-in-out;
-}
-
-.main-adv__sub-title {
-    opacity: 0;
-    display: none;
-    margin-top: 50px;
-    text-align: center;
-    position: absolute;
-}
-
-.main-adv__title {
-    font-size: 32px;
-}
-
-.main-adv__catalog {
-    margin-left: 400px;
-}
-
-.main-adv__catalog__oneline {
-    display: flex;
-    padding-bottom: 30px;
-}
-
-.main-adv__catalog__twoline {
-    display: flex;
-}
-
-.main-adv__product {
-    margin-left: 10%;
-    width: 300px;
-    transform-origin: top bottom left right ; /* Устанавливаем точку привязки в левый верхний угол */
-    transition: transform 0.3s ease; /* Добавляем плавную анимацию */
-}
-
-.main-adv__product:first-child {
-    margin-left: 0px;
-}
-
-.main-adv__product:hover {
-    transform: scale(0.95);
-}
-
-.main-adv__product__img {
-    border: solid;
-    border-color: #585858;
-    border-width: 1px 1px 0px 1px;
-    width: 300px;
-    height: auto;
+@media screen and (min-width: 1200px) {
+    .background-slides {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+    }
     
-}
-
-.main-adv__product__title {
-    font-size: 20px;
-    font-family: "Cormorant Garamond", serif;
-    text-align: center;
-    border: solid;
-    border-color: #585858;
-    color: #000;
-    border-width: 1px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-.catalog-card {
-    border: 1px solid #ccc;
-
-    height: 100%;
-    width: 100%;
-
-    flex-direction: column;
-    position: relative;
-    /* Добавляем позицию относительно родительского элемента */
-    cursor: pointer;
-    /* Добавляем курсор при наведении */
-
-    /* Выравниваем текст в конец карточки по вертикали */
-    justify-content: flex-end;
-    transition: background-color 0.3s, color 0.3s;
-    /* Плавное изменение фона и цвета текста в течение 0.3 секунды */
-}
-
-.catalog-card::before {
-    content: "";
-    /* Создаем псевдоэлемент для занимания всей области карточки */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    /* Помещаем псевдоэлемент под контентом */
-    transition: background-color 0.3s;
-    /* Плавное изменение фона псевдоэлемента в течение 0.3 секунды */
-}
-
-.catalog-card:focus::before,
-/* Применяем стили при фокусе (после клика) */
-.catalog-card:hover::before {
-    /* Применяем стили при наведении */
-    background-color: #f3f3f3;
-    /* Меняем фон псевдоэлемента при фокусе или наведении */
-}
-
-.catalog-card:focus .catalog-card__title,
-/* Применяем стили для текста при фокусе (после клика) */
-.catalog-card:hover .catalog-card__title {
-    /* Применяем стили для текста при наведении */
-    color: #4d2000;
-    /* Меняем цвет текста при фокусе или наведении */
-}
-
-.catalog-card__title {
-    width: 40px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 34px;
-    margin-left: 0px;
-    color: #4d2000;
-    padding: 20px;
-}
-
-/*---------------------------------------------------------------------*/
-.main-gift {
-    padding-top: 52px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.main-gift__left {
-    padding-left: 130px;
-}
-
-.main-gift__left__img {
-    max-width: 650px;
-    height: auto;
+    .slide {
+        display: none;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        /* Плавная анимация перехода */
+    }
     
-    padding-right: 70px;
-}
-
-.main-gift__left__text {
-    align-items: center;
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 20px;
-}
-
-.main-gift__name {
-    font-size: 40px;
-    font-family: "forum";
-    color: #787878;
-}
-
-.main-gift__shop {
-    display: flex;
-    font-size: 25px;
-    color: #c5c753;
-}
-
-.main-gift__shop__href {
-    text-decoration: none;
-    color: #9d9f1e;
-}
-
-.main-gift__shop__href:hover {
-    color: #e1e362;
-}
-
-.main-gift__right {
-    padding-right: 50px;
-    padding-left: 20px;
-}
-
-.main-gift__line {
-    margin-right: 10px;
-    margin-top: 14px;
-    float: inline-end;
-    width: 100px;
-    height: 2px;
-    background-color: #c5c753;
-}
-
-.main-gift_right__img {
-    background-color: #000;
-    max-width: 650px;
+    .slide.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Стили для контейнера с кнопками */
+    .slide-buttons {
+        display: flex;
+        justify-content: center;
+        /* Выравнивание кнопок по центру горизонтально */
+        position: absolute;
+        bottom: 20px;
+        /* Отступ снизу (настройте по вашему желанию) */
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Центрирование контейнера */
+        z-index: 2;
+        /* Уровень z-index для отображения над слайдами */
+    }
+    
+    /* Стили для кнопок */
+    .slide-button {
+        width: 80px;
+        /* Ширина кнопки (настройте по вашему желанию) */
+        height: 7px;
+        background-color: #ccc;
+        margin: 0 6px;
+        /* Расстояние между кнопками */
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    /* Стили для активной кнопки */
+    .slide-button.active {
+        background-color: #333;
+        /* Цвет активной кнопки */
+    }
+    
+    .main-text {
+        text-align: center;
+        padding-top: 225px;
+    }
+    
+    .main-text__title {
+        font-family: "Petit Formal Script", cursive;
+        color: #000000;
+        font-size: 32px;
+    }
+    
+    .main-text__properties {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        padding-top: 32px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #000000;
+        width: 960px;
+    }
     
     
-
-}
-
-.main-gift__right__text {
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 40px;
-}
-
-/*---------------------------------------------------------------------------------*/
-
-.line {
-    margin-top: 50px;
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-}
-
-.testimonials {
-    padding-top: 50px;
-}
-
-.testimonials-title {
-    display: flex;
-    justify-content: space-between;
-}
-
-.testimonials-title__text {
-    font-family: "Forum";
-    font-size: 45px;
-    color: #787878;
-    padding-bottom: 20px;
+    /*-------------------------------------Main-----------------------------------------*/
     
-}
-
-.testimonials-container {
-    width: 100%;
-    overflow: hidden;
-    /* Чтобы скрыть содержимое, выходящее за границы контейнера */
-}
-
-.testimonials-list {
-    display: inline-flex;
-    /* Располагать элементы горизонтально */
-    gap: 20px;
-    /* Расстояние между отзывами */
-}
-
-.testimonials-item {
-    user-select: none;
-    flex: 0 0 auto;
-    width: 400px;
-    /* Ширина каждого отзыва */
-    padding: 10px;
-}
-
-.testimonials-text {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-    text-align: center;
-    max-width: 520px;
-    color: #787878;
-}
-
-.testimonials-sub__text {
-    font-family: "Forum";
-    font-size: 20px;
-    padding-top: 20px;
-    text-align: center;
-    color: #787878;
-    padding-bottom: 20px;
-}
-
-/*----------------------------------------------------------------------------------------*/
-
-.email {
-    width: 100%;
-    padding-top: 55px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.email-img {
-    max-width: 650px;
-}
-
-
-.emai-block {
-    width: 100%;
-    background-color: #f3f3f3;
-}
-
-.email-title {
-    font-family: "Forum";
-    font-size: 36px;
-    padding-left: 40px;
-    padding-top: 32px;
-    color: #777777;
-}
-
-.email-sub__title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-    color: #787878;
-    padding-left: 40px;
-    padding-top: 34px;
-}
-
-.email-input {
+    .main-adv {
+        padding-top: 50px;
+    }
     
-    padding-left: 40px;
-    padding-top: 74px;
-}
-
-.email-input__line {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 30px;
-    width: 340px;
-    border: solid #000000;
-    border-width: 0px 0px 2px 0px;
-}
-
-.email-input__button {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
-    background-color: #9b9b9b;
-    width: 200px;
-    height: 40px;
-    margin-left: 40px;
-    margin-top: 20px;
-}
-
-.email-input__button:hover {
-    background-color: #b5b5b5;
-    /* Новый цвет при наведении */
-}
-
-.email-input__button:focus {
-    background-color: #575757;
-    /* Новый цвет при наведении */
-}
-
-.email-policy {
-    padding-top: 10px;
-    padding-left: 40px;
-    display: flex;
-    align-items: center;
-    padding-bottom: 20px;
-}
-
-.circle-button {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    /* Делает кнопку круглой */
-    background-color: #e9e9e9;
-    /* Цвет кнопки в обычном состоянии */
-    border: solid #000;
-    border-width: 1px;
-    cursor: pointer;
-    outline: none;
-    /* Убирает контур при фокусе */
-}
-
-/* Стили при наведении */
-.circle-button:hover {
-    background-color: #b5b5b5;
-    /* Новый цвет при наведении */
-}
-
-/* Стили при активации (клике) */
-
-
-.email-policy__text {
-    margin-left: 10px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
+    .main-adv__block {
+        margin-left: 15px;
+        display: flex;
+        position: absolute;
+    }
     
-}
-
-/*-------------------------------------------------------------------------------*/
-
-.blog-text {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 55px;
-}
-
-.blog-text__title {
-    color: #777777;
-    font-size: 32px;
-    font-family: "Forum";
-}
-
-.blog-card__list {
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.blog-card__img {
-    width: 100%;
-}
-
-.blog-card__item {
-    margin-left: 10px;
-    border: solid #000;
-    border-width: 1px;
-    cursor: pointer;
-    transition: 0.9s;
+    .main-adv__bestsellers {
+        font-size: 24px;
+        margin-right: 34px;
+        text-decoration: none;
+        color: #000;
+        transition: font-size 0.8s ease;
+        cursor: pointer;
+    }
     
+    .main-adv__bestsellers:hover,
+    .main-adv__bestsellers:focus {
+        font-size: 30px;
+        border-bottom: 2px solid #000;
+    }
+    
+    .main-adv__newrelease {
+        font-size: 24px;
+        margin-right: 34px;
+        text-decoration: none;
+        color: #000;
+        transition: font-size 0.8s ease;
+        cursor: pointer;
+    }
+    
+    .main-adv__newrelease:hover,
+    .main-adv__newrelease:focus {
+        font-size: 30px;
+        border-bottom: 2px solid #000;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .main-adv__sub-title {
+        opacity: 0;
+        display: none;
+        margin-top: 50px;
+        text-align: center;
+        position: absolute;
+    }
+    
+    .main-adv__title {
+        font-size: 32px;
+    }
+    
+    .main-adv__catalog {
+        margin-left: 400px;
+    }
+    
+    .main-adv__catalog__oneline {
+        display: flex;
+        padding-bottom: 30px;
+    }
+    
+    .main-adv__catalog__twoline {
+        display: flex;
+    }
+    
+    .main-adv__product {
+        margin-left: 10%;
+        width: 300px;
+        transform-origin: top bottom left right ; /* Устанавливаем точку привязки в левый верхний угол */
+        transition: transform 0.3s ease; /* Добавляем плавную анимацию */
+    }
+    
+    .main-adv__product:first-child {
+        margin-left: 0px;
+    }
+    
+    .main-adv__product:hover {
+        transform: scale(0.95);
+    }
+    
+    .main-adv__product__img {
+        border: solid;
+        border-color: #585858;
+        border-width: 1px 1px 0px 1px;
+        width: 300px;
+        height: auto;
+        
+    }
+    
+    .main-adv__product__title {
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        text-align: center;
+        border: solid;
+        border-color: #585858;
+        color: #000;
+        border-width: 1px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    .catalog-card {
+        border: 1px solid #ccc;
+    
+        height: 100%;
+        width: 100%;
+    
+        flex-direction: column;
+        position: relative;
+        /* Добавляем позицию относительно родительского элемента */
+        cursor: pointer;
+        /* Добавляем курсор при наведении */
+    
+        /* Выравниваем текст в конец карточки по вертикали */
+        justify-content: flex-end;
+        transition: background-color 0.3s, color 0.3s;
+        /* Плавное изменение фона и цвета текста в течение 0.3 секунды */
+    }
+    
+    .catalog-card::before {
+        content: "";
+        /* Создаем псевдоэлемент для занимания всей области карточки */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Помещаем псевдоэлемент под контентом */
+        transition: background-color 0.3s;
+        /* Плавное изменение фона псевдоэлемента в течение 0.3 секунды */
+    }
+    
+    .catalog-card:focus::before,
+    /* Применяем стили при фокусе (после клика) */
+    .catalog-card:hover::before {
+        /* Применяем стили при наведении */
+        background-color: #f3f3f3;
+        /* Меняем фон псевдоэлемента при фокусе или наведении */
+    }
+    
+    .catalog-card:focus .catalog-card__title,
+    /* Применяем стили для текста при фокусе (после клика) */
+    .catalog-card:hover .catalog-card__title {
+        /* Применяем стили для текста при наведении */
+        color: #4d2000;
+        /* Меняем цвет текста при фокусе или наведении */
+    }
+    
+    .catalog-card__title {
+        width: 40px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 34px;
+        margin-left: 0px;
+        color: #4d2000;
+        padding: 20px;
+    }
+    
+    /*---------------------------------------------------------------------*/
+    .main-gift {
+        padding-top: 52px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .main-gift__left {
+        padding-left: 130px;
+    }
+    
+    .main-gift__left__img {
+        max-width: 650px;
+        height: auto;
+        
+        padding-right: 70px;
+    }
+    
+    .main-gift__left__text {
+        align-items: center;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    
+    .main-gift__name {
+        font-size: 40px;
+        font-family: "forum";
+        color: #787878;
+    }
+    
+    .main-gift__shop {
+        display: flex;
+        font-size: 25px;
+        color: #c5c753;
+    }
+    
+    .main-gift__shop__href {
+        text-decoration: none;
+        color: #9d9f1e;
+    }
+    
+    .main-gift__shop__href:hover {
+        color: #e1e362;
+    }
+    
+    .main-gift__right {
+        padding-right: 50px;
+        padding-left: 20px;
+    }
+    
+    .main-gift__line {
+        margin-right: 10px;
+        margin-top: 14px;
+        float: inline-end;
+        width: 100px;
+        height: 2px;
+        background-color: #c5c753;
+    }
+    
+    .main-gift_right__img {
+        background-color: #000;
+        max-width: 650px;
+        
+        
+    
+    }
+    
+    .main-gift__right__text {
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 40px;
+    }
+    
+    /*---------------------------------------------------------------------------------*/
+    
+    .line {
+        margin-top: 50px;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    }
+    
+    .testimonials {
+        padding-top: 50px;
+    }
+    
+    .testimonials-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .testimonials-title__text {
+        font-family: "Forum";
+        font-size: 45px;
+        color: #787878;
+        padding-bottom: 20px;
+        
+    }
+    
+    .testimonials-container {
+        width: 100%;
+        overflow: hidden;
+        /* Чтобы скрыть содержимое, выходящее за границы контейнера */
+    }
+    
+    .testimonials-list {
+        display: inline-flex;
+        /* Располагать элементы горизонтально */
+        gap: 20px;
+        /* Расстояние между отзывами */
+    }
+    
+    .testimonials-item {
+        user-select: none;
+        flex: 0 0 auto;
+        width: 400px;
+        /* Ширина каждого отзыва */
+        padding: 10px;
+    }
+    
+    .testimonials-text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        text-align: center;
+        max-width: 520px;
+        color: #787878;
+    }
+    
+    .testimonials-sub__text {
+        font-family: "Forum";
+        font-size: 20px;
+        padding-top: 20px;
+        text-align: center;
+        color: #787878;
+        padding-bottom: 20px;
+    }
+    
+    /*----------------------------------------------------------------------------------------*/
+    
+    .email {
+        width: 100%;
+        padding-top: 55px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .email-img {
+        max-width: 650px;
+    }
+    
+    
+    .emai-block {
+        width: 100%;
+        background-color: #f3f3f3;
+    }
+    
+    .email-title {
+        font-family: "Forum";
+        font-size: 36px;
+        padding-left: 40px;
+        padding-top: 32px;
+        color: #777777;
+    }
+    
+    .email-sub__title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        color: #787878;
+        padding-left: 40px;
+        padding-top: 34px;
+    }
+    
+    .email-input {
+        
+        padding-left: 40px;
+        padding-top: 74px;
+    }
+    
+    .email-input__line {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        width: 340px;
+        border: solid #000000;
+        border-width: 0px 0px 2px 0px;
+    }
+    
+    .email-input__button {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        background-color: #9b9b9b;
+        width: 200px;
+        height: 40px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    
+    .email-input__button:hover {
+        background-color: #b5b5b5;
+        /* Новый цвет при наведении */
+    }
+    
+    .email-input__button:focus {
+        background-color: #575757;
+        /* Новый цвет при наведении */
+    }
+    
+    .email-policy {
+        padding-top: 10px;
+        padding-left: 40px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    
+    .circle-button {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        /* Делает кнопку круглой */
+        background-color: #e9e9e9;
+        /* Цвет кнопки в обычном состоянии */
+        border: solid #000;
+        border-width: 1px;
+        cursor: pointer;
+        outline: none;
+        /* Убирает контур при фокусе */
+    }
+    
+    /* Стили при наведении */
+    .circle-button:hover {
+        background-color: #b5b5b5;
+        /* Новый цвет при наведении */
+    }
+    
+    /* Стили при активации (клике) */
+    
+    
+    .email-policy__text {
+        margin-left: 10px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        
+    }
+    
+    /*-------------------------------------------------------------------------------*/
+    
+    .blog-text {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 55px;
+    }
+    
+    .blog-text__title {
+        color: #777777;
+        font-size: 32px;
+        font-family: "Forum";
+    }
+    
+    .blog-card__list {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .blog-card__img {
+        width: 100%;
+    }
+    
+    .blog-card__item {
+        margin-left: 10px;
+        border: solid #000;
+        border-width: 1px;
+        cursor: pointer;
+        transition: 0.9s;
+        
+    }
+    
+    .blog-card__item:hover {
+        transform: scale(1.009);
+    }
+    
+    .blog-card__item:first-child {
+        margin-left: 0px;
+    }
+    
+    .blog-card__subtext {
+        color: #000;
+        padding-top: 15px;
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 10px;
+    }
+    
+    .blog-data {
+        display: flex;
+        padding-top: 24px;
+        margin-left: 17px;
+    }
+    
+    .blog-data__text {
+        margin-left: 21px;
+        color: #000;
+    }
+    
+    .blog-data__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .blog-subtext {
+        padding-top: 10px;
+        margin-left: 17px;
+       
+    }
+    
+    .blog-subtext__href {
+        text-decoration: none;
+        color: #000;
+    }
 }
 
-.blog-card__item:hover {
-    transform: scale(1.009);
+
+@media screen and (max-width:1200px) and (min-width:768px) {
+    .background-slides {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 700px;
+    }
+    
+    .slide {
+        display: none;
+        flex: 1;
+        max-width: 1200px;
+        max-height: 800px;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        /* Плавная анимация перехода */
+    }
+    
+    .slide.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Стили для контейнера с кнопками */
+    .slide-buttons {
+        display: flex;
+        justify-content: center;
+        /* Выравнивание кнопок по центру горизонтально */
+        position: absolute;
+        
+        /* Отступ снизу (настройте по вашему желанию) */
+        top: 650px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Центрирование контейнера */
+        z-index: 2;
+        /* Уровень z-index для отображения над слайдами */
+    }
+    
+    /* Стили для кнопок */
+    .slide-button {
+        width: 50px;
+        /* Ширина кнопки (настройте по вашему желанию) */
+        height: 10px;
+        background-color: #ccc;
+        margin: 0 6px;
+        /* Расстояние между кнопками */
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    /* Стили для активной кнопки */
+    .slide-button.active {
+        background-color: #333;
+        /* Цвет активной кнопки */
+    }
+    
+    .main-text {
+        text-align: center;
+        padding-top: 225px;
+    }
+    
+    .main-text__title {
+        font-family: "Petit Formal Script", cursive;
+        color: #000000;
+        font-size: 32px;
+    }
+    
+    .main-text__properties {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        padding-top: 32px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #000000;
+        width: 100%;
+    }
+    
+    
+    /*-------------------------------------Main-----------------------------------------*/
+    
+    .main-adv {
+        padding-top: 50px;
+    }
+    
+    .main-adv__block {
+        margin-left: 15px;
+        display: flex;
+        position: absolute;
+    }
+    
+    .main-adv__bestsellers {
+        font-size: 20px;
+        margin-right: 34px;
+        text-decoration: none;
+        color: #000;
+        transition: font-size 0.8s ease;
+        cursor: pointer;
+    }
+    
+    .main-adv__bestsellers:hover,
+    .main-adv__bestsellers:focus {
+        font-size: 24px;
+        border-bottom: 2px solid #000;
+    }
+    
+    .main-adv__newrelease {
+        font-size: 20px;
+        margin-right: 34px;
+        text-decoration: none;
+        color: #000;
+        transition: font-size 0.8s ease;
+        cursor: pointer;
+    }
+    
+    .main-adv__newrelease:hover,
+    .main-adv__newrelease:focus {
+        font-size: 24px;
+        border-bottom: 2px solid #000;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .main-adv__sub-title {
+        opacity: 0;
+        display: none;
+        margin-top: 50px;
+        text-align: center;
+        position: absolute;
+    }
+    
+    .main-adv__title {
+        font-size: 20px;
+    }
+    
+    .main-adv__catalog {
+        margin-left: 350px;
+    }
+    
+    .main-adv__catalog__oneline {
+        display: flex;
+        padding-bottom: 30px;
+    }
+    
+    .main-adv__catalog__twoline {
+        display: flex;
+    }
+    
+    .main-adv__product {
+        margin-left: 10%;
+        width: 200px;
+        transform-origin: top bottom left right ; /* Устанавливаем точку привязки в левый верхний угол */
+        transition: transform 0.3s ease; /* Добавляем плавную анимацию */
+    }
+    
+    .main-adv__product:first-child {
+        margin-left: 0px;
+    }
+    
+    .main-adv__product:hover {
+        transform: scale(0.95);
+    }
+    
+    .main-adv__product__img {
+        border: solid;
+        border-color: #585858;
+        border-width: 1px 1px 0px 1px;
+        width: 300px;
+        height: auto;
+        
+    }
+    
+    .main-adv__product__title {
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        text-align: center;
+        border: solid;
+        border-color: #585858;
+        color: #000;
+        border-width: 1px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    .catalog-card {
+        border: 1px solid #ccc;
+    
+        height: 100%;
+        width: 100%;
+    
+        flex-direction: column;
+        position: relative;
+        /* Добавляем позицию относительно родительского элемента */
+        cursor: pointer;
+        /* Добавляем курсор при наведении */
+    
+        /* Выравниваем текст в конец карточки по вертикали */
+        justify-content: flex-end;
+        transition: background-color 0.3s, color 0.3s;
+        /* Плавное изменение фона и цвета текста в течение 0.3 секунды */
+    }
+    
+    .catalog-card::before {
+        content: "";
+        /* Создаем псевдоэлемент для занимания всей области карточки */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Помещаем псевдоэлемент под контентом */
+        transition: background-color 0.3s;
+        /* Плавное изменение фона псевдоэлемента в течение 0.3 секунды */
+    }
+    
+    .catalog-card:focus::before,
+    /* Применяем стили при фокусе (после клика) */
+    .catalog-card:hover::before {
+        /* Применяем стили при наведении */
+        background-color: #f3f3f3;
+        /* Меняем фон псевдоэлемента при фокусе или наведении */
+    }
+    
+    .catalog-card:focus .catalog-card__title,
+    /* Применяем стили для текста при фокусе (после клика) */
+    .catalog-card:hover .catalog-card__title {
+        /* Применяем стили для текста при наведении */
+        color: #4d2000;
+        /* Меняем цвет текста при фокусе или наведении */
+    }
+    
+    .catalog-card__title {
+        width: 40px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+        margin-left: 0px;
+        color: #4d2000;
+        padding: 20px;
+    }
+    
+    /*---------------------------------------------------------------------*/
+    .main-gift {
+        padding-top: 52px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .main-gift__left {
+        padding-left: 130px;
+    }
+    
+    .main-gift__left__img {
+        max-width: 650px;
+        height: auto;
+        
+        padding-right: 70px;
+    }
+    
+    .main-gift__left__text {
+        align-items: center;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    
+    .main-gift__name {
+        font-size: 24px;
+        font-family: "forum";
+        color: #787878;
+    }
+    
+    .main-gift__shop {
+        display: flex;
+        font-size: 22px;
+        color: #c5c753;
+    }
+    
+    .main-gift__shop__href {
+        text-decoration: none;
+        color: #9d9f1e;
+    }
+    
+    .main-gift__shop__href:hover {
+        color: #e1e362;
+    }
+    
+    .main-gift__right {
+        padding-right: 50px;
+        padding-left: 20px;
+    }
+    
+    .main-gift__line {
+        margin-right: 10px;
+        margin-top: 14px;
+        float: inline-end;
+        width: 100px;
+        height: 2px;
+        background-color: #c5c753;
+    }
+    
+    .main-gift_right__img {
+        background-color: #000;
+        max-width: 650px;
+        
+        
+    
+    }
+    
+    .main-gift__right__text {
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 40px;
+    }
+    
+    /*---------------------------------------------------------------------------------*/
+    
+    .line {
+        margin-top: 50px;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    }
+    
+    .testimonials {
+        padding-top: 50px;
+    }
+    
+    .testimonials-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .testimonials-title__text {
+        font-family: "Forum";
+        font-size: 45px;
+        color: #787878;
+        padding-bottom: 20px;
+        
+    }
+    
+    .testimonials-container {
+        width: 100%;
+        overflow: hidden;
+        /* Чтобы скрыть содержимое, выходящее за границы контейнера */
+    }
+    
+    .testimonials-list {
+        display: inline-flex;
+        /* Располагать элементы горизонтально */
+        gap: 20px;
+        /* Расстояние между отзывами */
+    }
+    
+    .testimonials-item {
+        user-select: none;
+        flex: 0 0 auto;
+        width: 400px;
+        /* Ширина каждого отзыва */
+        padding: 10px;
+    }
+    
+    .testimonials-text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        text-align: center;
+        max-width: 520px;
+        color: #787878;
+    }
+    
+    .testimonials-sub__text {
+        font-family: "Forum";
+        font-size: 20px;
+        padding-top: 20px;
+        text-align: center;
+        color: #787878;
+        padding-bottom: 20px;
+    }
+    
+    /*----------------------------------------------------------------------------------------*/
+    
+    .email {
+        width: 100%;
+        padding-top: 55px;
+        display: flex;
+        justify-content: space-between;
+        max-height: 300px;
+    }
+    
+    .email-img {
+        max-width: 450px;
+        
+    }
+    
+    
+    .emai-block {
+        width: 100%;
+        background-color: #f3f3f3;
+    }
+    
+    .email-title {
+        font-family: "Forum";
+        font-size: 26px;
+        padding-left: 40px;
+        padding-top: 20px;
+        color: #777777;
+    }
+    
+    .email-sub__title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: #787878;
+        padding-left: 40px;
+        padding-top: 15px;
+    }
+    
+    .email-input {
+        
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+    
+    .email-input__line {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        width: 90%;
+        
+        border: solid #000000;
+        border-width: 0px 0px 2px 0px;
+    }
+    
+    .email-input__button {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        background-color: #9b9b9b;
+        width: 200px;
+        height: 30px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    
+    .email-input__button:hover {
+        background-color: #b5b5b5;
+        /* Новый цвет при наведении */
+    }
+    
+    .email-input__button:focus {
+        background-color: #575757;
+        /* Новый цвет при наведении */
+    }
+    
+    .email-policy {
+        padding-top: 10px;
+        padding-left: 40px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    
+    .circle-button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        /* Делает кнопку круглой */
+        background-color: #e9e9e9;
+        /* Цвет кнопки в обычном состоянии */
+        border: solid #000;
+        border-width: 1px;
+        cursor: pointer;
+        outline: none;
+        /* Убирает контур при фокусе */
+    }
+    
+    /* Стили при наведении */
+    .circle-button:hover {
+        background-color: #b5b5b5;
+        /* Новый цвет при наведении */
+    }
+    
+    /* Стили при активации (клике) */
+    
+    
+    .email-policy__text {
+        margin-left: 10px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        
+    }
+    
+    /*-------------------------------------------------------------------------------*/
+    
+    .blog-text {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5px;
+    }
+    
+    .blog-text__title {
+        color: #777777;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .blog-card__list {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .blog-card__img {
+        width: 100%;
+    }
+    
+    .blog-card__item {
+        margin-left: 10px;
+        border: solid #000;
+        border-width: 1px;
+        cursor: pointer;
+        transition: 0.9s;
+        
+    }
+    
+    .blog-card__item:hover {
+        transform: scale(1.009);
+    }
+    
+    .blog-card__item:first-child {
+        margin-left: 0px;
+    }
+    
+    .blog-card__subtext {
+        color: #000;
+        padding-top: 15px;
+        font-size: 16px;
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 10px;
+    }
+    
+    .blog-data {
+        display: flex;
+        padding-top: 24px;
+        margin-left: 17px;
+    }
+    
+    .blog-data__text {
+        margin-left: 21px;
+        color: #000;
+    }
+    
+    .blog-data__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .blog-subtext {
+        padding-top: 10px;
+        margin-left: 17px;
+        
+    }
+    
+    .blog-subtext__href {
+        text-decoration: none;
+        color: #000;
+    }
 }
 
-.blog-card__item:first-child {
-    margin-left: 0px;
+
+@media screen and (max-width: 767px) {
+    .background-slides {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 700px;
+    }
+    
+    .slide {
+        display: none;
+        flex: 1;
+        max-width: 1200px;
+        max-height: 800px;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        /* Плавная анимация перехода */
+    }
+    
+    .slide.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Стили для контейнера с кнопками */
+    .slide-buttons {
+        display: flex;
+        justify-content: center;
+        /* Выравнивание кнопок по центру горизонтально */
+        position: absolute;
+        
+        /* Отступ снизу (настройте по вашему желанию) */
+        top: 650px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        /* Центрирование контейнера */
+        z-index: 2;
+        /* Уровень z-index для отображения над слайдами */
+    }
+    
+    /* Стили для кнопок */
+    .slide-button {
+        width: 50px;
+        /* Ширина кнопки (настройте по вашему желанию) */
+        height: 10px;
+        background-color: #ccc;
+        margin: 0 6px;
+        /* Расстояние между кнопками */
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+    
+    /* Стили для активной кнопки */
+    .slide-button.active {
+        background-color: #333;
+        /* Цвет активной кнопки */
+    }
+    
+    .main-text {
+        text-align: center;
+        padding-top: 225px;
+    }
+    
+    .main-text__title {
+        font-family: "Petit Formal Script", cursive;
+        color: #000000;
+        font-size: 32px;
+    }
+    
+    .main-text__properties {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        padding-top: 32px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #000000;
+        width: 100%;
+    }
+    
+    
+    /*-------------------------------------Main-----------------------------------------*/
+    
+    .main-adv {
+        padding-top: 50px;
+    }
+    
+    .main-adv__block {
+        margin-left: 15px;
+        display: flex;
+        position: absolute;
+    }
+    
+    .main-adv__bestsellers {
+        font-size: 20px;
+        margin-right: 34px;
+        text-decoration: none;
+        color: #000;
+        transition: font-size 0.8s ease;
+        cursor: pointer;
+    }
+    
+    .main-adv__bestsellers:hover,
+    .main-adv__bestsellers:focus {
+        font-size: 24px;
+        border-bottom: 2px solid #000;
+    }
+    
+    .main-adv__newrelease {
+        font-size: 20px;
+        margin-right: 34px;
+        text-decoration: none;
+        color: #000;
+        transition: font-size 0.8s ease;
+        cursor: pointer;
+    }
+    
+    .main-adv__newrelease:hover,
+    .main-adv__newrelease:focus {
+        font-size: 24px;
+        border-bottom: 2px solid #000;
+    }
+    
+    .fade-in {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+    
+    .main-adv__sub-title {
+        opacity: 0;
+        display: none;
+        margin-top: 50px;
+        text-align: center;
+        position: absolute;
+    }
+    
+    .main-adv__title {
+        font-size: 20px;
+    }
+    
+    .main-adv__catalog {
+        margin-left: 350px;
+    }
+    
+    .main-adv__catalog__oneline {
+        display: flex;
+        padding-bottom: 30px;
+    }
+    
+    .main-adv__catalog__twoline {
+        display: flex;
+    }
+    
+    .main-adv__product {
+        margin-left: 10%;
+        width: 200px;
+        transform-origin: top bottom left right ; /* Устанавливаем точку привязки в левый верхний угол */
+        transition: transform 0.3s ease; /* Добавляем плавную анимацию */
+    }
+    
+    .main-adv__product:first-child {
+        margin-left: 0px;
+    }
+    
+    .main-adv__product:hover {
+        transform: scale(0.95);
+    }
+    
+    .main-adv__product__img {
+        border: solid;
+        border-color: #585858;
+        border-width: 1px 1px 0px 1px;
+        width: 300px;
+        height: auto;
+        
+    }
+    
+    .main-adv__product__title {
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        text-align: center;
+        border: solid;
+        border-color: #585858;
+        color: #000;
+        border-width: 1px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    
+    .catalog-card {
+        border: 1px solid #ccc;
+    
+        height: 100%;
+        width: 100%;
+    
+        flex-direction: column;
+        position: relative;
+        /* Добавляем позицию относительно родительского элемента */
+        cursor: pointer;
+        /* Добавляем курсор при наведении */
+    
+        /* Выравниваем текст в конец карточки по вертикали */
+        justify-content: flex-end;
+        transition: background-color 0.3s, color 0.3s;
+        /* Плавное изменение фона и цвета текста в течение 0.3 секунды */
+    }
+    
+    .catalog-card::before {
+        content: "";
+        /* Создаем псевдоэлемент для занимания всей области карточки */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        /* Помещаем псевдоэлемент под контентом */
+        transition: background-color 0.3s;
+        /* Плавное изменение фона псевдоэлемента в течение 0.3 секунды */
+    }
+    
+    .catalog-card:focus::before,
+    /* Применяем стили при фокусе (после клика) */
+    .catalog-card:hover::before {
+        /* Применяем стили при наведении */
+        background-color: #f3f3f3;
+        /* Меняем фон псевдоэлемента при фокусе или наведении */
+    }
+    
+    .catalog-card:focus .catalog-card__title,
+    /* Применяем стили для текста при фокусе (после клика) */
+    .catalog-card:hover .catalog-card__title {
+        /* Применяем стили для текста при наведении */
+        color: #4d2000;
+        /* Меняем цвет текста при фокусе или наведении */
+    }
+    
+    .catalog-card__title {
+        width: 40px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+        margin-left: 0px;
+        color: #4d2000;
+        padding: 20px;
+    }
+    
+    /*---------------------------------------------------------------------*/
+    .main-gift {
+        padding-top: 52px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .main-gift__left {
+        padding-left: 130px;
+    }
+    
+    .main-gift__left__img {
+        max-width: 650px;
+        height: auto;
+        
+        padding-right: 70px;
+    }
+    
+    .main-gift__left__text {
+        align-items: center;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    
+    .main-gift__name {
+        font-size: 24px;
+        font-family: "forum";
+        color: #787878;
+    }
+    
+    .main-gift__shop {
+        display: flex;
+        font-size: 22px;
+        color: #c5c753;
+    }
+    
+    .main-gift__shop__href {
+        text-decoration: none;
+        color: #9d9f1e;
+    }
+    
+    .main-gift__shop__href:hover {
+        color: #e1e362;
+    }
+    
+    .main-gift__right {
+        padding-right: 50px;
+        padding-left: 20px;
+    }
+    
+    .main-gift__line {
+        margin-right: 10px;
+        margin-top: 14px;
+        float: inline-end;
+        width: 100px;
+        height: 2px;
+        background-color: #c5c753;
+    }
+    
+    .main-gift_right__img {
+        background-color: #000;
+        max-width: 650px;
+        
+        
+    
+    }
+    
+    .main-gift__right__text {
+        padding-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 40px;
+    }
+    
+    /*---------------------------------------------------------------------------------*/
+    
+    .line {
+        margin-top: 50px;
+        width: 100%;
+        height: 1px;
+        background-color: #000;
+    }
+    
+    .testimonials {
+        padding-top: 50px;
+    }
+    
+    .testimonials-title {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .testimonials-title__text {
+        font-family: "Forum";
+        font-size: 45px;
+        color: #787878;
+        padding-bottom: 20px;
+        
+    }
+    
+    .testimonials-container {
+        width: 100%;
+        overflow: hidden;
+        /* Чтобы скрыть содержимое, выходящее за границы контейнера */
+    }
+    
+    .testimonials-list {
+        display: inline-flex;
+        /* Располагать элементы горизонтально */
+        gap: 20px;
+        /* Расстояние между отзывами */
+    }
+    
+    .testimonials-item {
+        user-select: none;
+        flex: 0 0 auto;
+        width: 400px;
+        /* Ширина каждого отзыва */
+        padding: 10px;
+    }
+    
+    .testimonials-text {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        text-align: center;
+        max-width: 520px;
+        color: #787878;
+    }
+    
+    .testimonials-sub__text {
+        font-family: "Forum";
+        font-size: 20px;
+        padding-top: 20px;
+        text-align: center;
+        color: #787878;
+        padding-bottom: 20px;
+    }
+    
+    /*----------------------------------------------------------------------------------------*/
+    
+    .email {
+        width: 100%;
+        padding-top: 55px;
+        display: flex;
+        justify-content: space-between;
+        max-height: 300px;
+    }
+    
+    .email-img {
+        max-width: 450px;
+        
+    }
+    
+    
+    .emai-block {
+        width: 100%;
+        background-color: #f3f3f3;
+    }
+    
+    .email-title {
+        font-family: "Forum";
+        font-size: 26px;
+        padding-left: 40px;
+        padding-top: 20px;
+        color: #777777;
+    }
+    
+    .email-sub__title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 18px;
+        color: #787878;
+        padding-left: 40px;
+        padding-top: 15px;
+    }
+    
+    .email-input {
+        
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+    
+    .email-input__line {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 20px;
+        width: 90%;
+        
+        border: solid #000000;
+        border-width: 0px 0px 2px 0px;
+    }
+    
+    .email-input__button {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        background-color: #9b9b9b;
+        width: 200px;
+        height: 30px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+    
+    .email-input__button:hover {
+        background-color: #b5b5b5;
+        /* Новый цвет при наведении */
+    }
+    
+    .email-input__button:focus {
+        background-color: #575757;
+        /* Новый цвет при наведении */
+    }
+    
+    .email-policy {
+        padding-top: 10px;
+        padding-left: 40px;
+        display: flex;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    
+    .circle-button {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        /* Делает кнопку круглой */
+        background-color: #e9e9e9;
+        /* Цвет кнопки в обычном состоянии */
+        border: solid #000;
+        border-width: 1px;
+        cursor: pointer;
+        outline: none;
+        /* Убирает контур при фокусе */
+    }
+    
+    /* Стили при наведении */
+    .circle-button:hover {
+        background-color: #b5b5b5;
+        /* Новый цвет при наведении */
+    }
+    
+    /* Стили при активации (клике) */
+    
+    
+    .email-policy__text {
+        margin-left: 10px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 15px;
+        
+    }
+    
+    /*-------------------------------------------------------------------------------*/
+    
+    .blog-text {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5px;
+    }
+    
+    .blog-text__title {
+        color: #777777;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .blog-card__list {
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .blog-card__img {
+        width: 100%;
+    }
+    
+    .blog-card__item {
+        margin-left: 10px;
+        border: solid #000;
+        border-width: 1px;
+        cursor: pointer;
+        transition: 0.9s;
+        
+    }
+    
+    .blog-card__item:hover {
+        transform: scale(1.009);
+    }
+    
+    .blog-card__item:first-child {
+        margin-left: 0px;
+    }
+    
+    .blog-card__subtext {
+        color: #000;
+        padding-top: 15px;
+        font-size: 16px;
+        font-family: "Cormorant Garamond", serif;
+        margin-left: 10px;
+    }
+    
+    .blog-data {
+        display: flex;
+        padding-top: 24px;
+        margin-left: 17px;
+    }
+    
+    .blog-data__text {
+        margin-left: 21px;
+        color: #000;
+    }
+    
+    .blog-data__icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .blog-subtext {
+        padding-top: 10px;
+        margin-left: 17px;
+        
+    }
+    
+    .blog-subtext__href {
+        text-decoration: none;
+        color: #000;
+    }
 }
 
-.blog-card__subtext {
-    color: #000;
-    padding-top: 15px;
-    font-size: 20px;
-    font-family: "Cormorant Garamond", serif;
-    margin-left: 10px;
-}
-
-.blog-data {
-    display: flex;
-    padding-top: 24px;
-    margin-left: 17px;
-}
-
-.blog-data__text {
-    margin-left: 21px;
-    color: #000;
-}
-
-.blog-data__icon {
-    width: 25px;
-    height: 25px;
-}
-
-.blog-subtext {
-    padding-top: 44px;
-    margin-left: 17px;
-    margin-bottom: 43px;
-}
-
-.blog-subtext__href {
-    text-decoration: none;
-    color: #000;
-}
 
 /*---------------------------------------------------------------------*/
 @media screen and (min-width: 1200px) {
