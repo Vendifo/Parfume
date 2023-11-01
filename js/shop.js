@@ -58,6 +58,7 @@ window.onclick = function (event) {
     }
   }
 };
+//edg
 
 function selectCategory(categoryName) {
   document.getElementById("selectedCategory").textContent = categoryName; // Обновляем текст
