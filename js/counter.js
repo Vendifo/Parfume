@@ -60,11 +60,8 @@ function updateValue1() {
 updateValue1();
 
 
-
-
-
 const mainCheckbox = document.getElementById('mainCheckbox');
-const secondaryCheckboxes = document.querySelectorAll('.secondaryCheckbox');
+const secondaryCheckboxes = document.querySelectorAll('.secondaryCheckbox input');
 
 // Слушаем изменения состояния главной галочки
 mainCheckbox.addEventListener('change', () => {
