@@ -287,6 +287,10 @@ body {
         position: absolute;
     }
     
+    .bestsellers-slider {
+        display: none;        
+    }
+
     .main-adv__bestsellers {
         font-size: 24px;
         margin-right: 34px;
@@ -858,6 +862,10 @@ body {
         margin-left: 15px;
         display: flex;
         position: absolute;
+    }
+
+    .bestsellers-slider {
+        display: none;        
     }
     
     .main-adv__bestsellers {
@@ -1431,14 +1439,35 @@ body {
     }
     
     .main-adv__block {
+        text-align: center;
+        justify-content: center;
         margin-left: 15px;
         
-        position: absolute;
     }
-    
+
+    .slider-container1 {
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      .slider1 {
+        display: flex;
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .slide1 {
+        flex: 0 0 100%;
+        width: 100%;
+        height: 300px; /* Высота слайдов, настройте по своему усмотрению */
+        background-size: cover;
+        background-position: center;
+      }
+      
+      
+
     .main-adv__bestsellers {
-        font-size: 20px;
-        
+        font-size: 24px;
+        border-bottom: 2px solid #000;
         margin-right: 34px;
         text-decoration: none;
         color: #000;
@@ -1446,26 +1475,16 @@ body {
         cursor: pointer;
     }
     
-    .main-adv__bestsellers:hover,
-    .main-adv__bestsellers:focus {
-        font-size: 24px;
-        border-bottom: 2px solid #000;
-    }
+    
     
     .main-adv__newrelease {
-        font-size: 20px;
+        font-size: 24px;
+        border-bottom: 2px solid #000;
         margin-right: 34px;
-        margin-top: 20px;
         text-decoration: none;
         color: #000;
         transition: font-size 0.8s ease;
         cursor: pointer;
-    }
-    
-    .main-adv__newrelease:hover,
-    .main-adv__newrelease:focus {
-        font-size: 24px;
-        border-bottom: 2px solid #000;
     }
     
     .fade-in {
@@ -1475,14 +1494,19 @@ body {
     
     .main-adv__sub-title {
         opacity: 0;
-        display: none;
+        display: block;
         margin-top: 100px;
         text-align: center;
         position: absolute;
     }
     
     .main-adv__title {
+        display: none;
         font-size: 20px;
+    }
+
+    .main-adv__properties { 
+        display: none;
     }
     
     .main-adv__catalog {
