@@ -1448,11 +1448,11 @@ body {
     .slider-container1 {
         width: 100%;
         overflow: hidden;
+        position: relative;
       }
       
       .slider1 {
         display: flex;
-        transition: transform 0.3s ease-in-out;
       }
       
       .slide1 {
@@ -1461,9 +1461,8 @@ body {
         height: 300px; /* Высота слайдов, настройте по своему усмотрению */
         background-size: cover;
         background-position: center;
+        transition: transform 0.3s ease-in-out;
       }
-      
-      
 
     .main-adv__bestsellers {
         font-size: 24px;
