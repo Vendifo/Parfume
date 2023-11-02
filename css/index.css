@@ -1272,19 +1272,7 @@
         
     }
 
-    .phone-bestseller { 
-        border-bottom: 0px solid #000;
-        transition: opacity 0.5s ease-in-out;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 24px;
-    }
-
-    .phone-newrelease { 
-        border-bottom: 0px solid #000;
-        padding-left: 19px;
-        font-family: "Cormorant Garamond", serif;
-        font-size: 22px;
-    }
+    
 
     .main-adv__block__var { 
         display: flex;
@@ -1366,16 +1354,14 @@
     }
     
     .main-adv__title {
-        display: none;
         font-size: 20px;
     }
 
-    .main-adv__properties { 
-        display: none;
-    }
     
     .main-adv__catalog {
-        margin-top: 200px;
+        /* Например, измените отображение карточек на горизонтальное прокручивание */
+        display: flex;
+        overflow-x: auto;
     }
     
     .main-adv__catalog__oneline {
