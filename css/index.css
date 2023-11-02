@@ -1251,9 +1251,8 @@
     }
     
     .main-adv__block {
-        margin-left: 15px;
         display: flex;
-        position: absolute;
+        justify-content: center;
     }
 
     .bestsellers-slider {
@@ -1281,7 +1280,7 @@
     
     .main-adv__newrelease {
         font-size: 20px;
-        margin-right: 34px;
+        
         text-decoration: none;
         color: #000;
         transition: font-size 0.8s ease;
@@ -1312,7 +1311,9 @@
     }
     
     .main-adv__catalog {
-        margin-left: 350px;
+        margin-top: 120px;
+        display: flex;
+        overflow-x: auto;
     }
     
     .main-adv__catalog__oneline {
@@ -1325,7 +1326,7 @@
     }
     
     .main-adv__product {
-        margin-left: 10%;
+        margin-right: 20px;
         width: 200px;
         transform-origin: top bottom left right ; /* Устанавливаем точку привязки в левый верхний угол */
         transition: transform 0.3s ease; /* Добавляем плавную анимацию */
@@ -1361,21 +1362,9 @@
     }
     
     .catalog-card {
-        border: 1px solid #ccc;
-    
-        height: 100%;
+        border: solid 1px #000;
+        height: 306px;
         width: 100%;
-    
-        flex-direction: column;
-        position: relative;
-        /* Добавляем позицию относительно родительского элемента */
-        cursor: pointer;
-        /* Добавляем курсор при наведении */
-    
-        /* Выравниваем текст в конец карточки по вертикали */
-        justify-content: flex-end;
-        transition: background-color 0.3s, color 0.3s;
-        /* Плавное изменение фона и цвета текста в течение 0.3 секунды */
     }
     
     .catalog-card::before {
@@ -1420,19 +1409,19 @@
     /*---------------------------------------------------------------------*/
     .main-gift {
         padding-top: 52px;
-        display: flex;
-        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        
     }
     
     .main-gift__left {
-        padding-left: 130px;
+        margin-bottom: 30px;
     }
     
+    
+    
     .main-gift__left__img {
-        max-width: 650px;
-        height: auto;
-        
-        padding-right: 70px;
+        width: 100%;
     }
     
     .main-gift__left__text {
@@ -1440,7 +1429,8 @@
         padding-top: 30px;
         display: flex;
         justify-content: space-between;
-        margin-left: 20px;
+        
+       
     }
     
     .main-gift__name {
@@ -1451,23 +1441,21 @@
     
     .main-gift__shop {
         display: flex;
-        font-size: 22px;
+        font-size: 18px;
         color: #c5c753;
     }
     
     .main-gift__shop__href {
         text-decoration: none;
         color: #9d9f1e;
+        
     }
     
     .main-gift__shop__href:hover {
         color: #e1e362;
     }
     
-    .main-gift__right {
-        padding-right: 50px;
-        padding-left: 20px;
-    }
+    
     
     .main-gift__line {
         margin-right: 10px;
@@ -1480,24 +1468,21 @@
     
     .main-gift_right__img {
         background-color: #000;
-        max-width: 650px;
-        
-        
-    
+
     }
     
     .main-gift__right__text {
         padding-bottom: 30px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-right: 40px;
+        
+        
     }
     
     /*---------------------------------------------------------------------------------*/
     
     .line {
-        margin-top: 50px;
+        margin-top: 20px;
         width: 100%;
         height: 1px;
         background-color: #000;
@@ -1514,7 +1499,7 @@
     
     .testimonials-title__text {
         font-family: "Forum";
-        font-size: 45px;
+        font-size: 30px;
         color: #787878;
         padding-bottom: 20px;
         
@@ -1562,20 +1547,19 @@
     
     .email {
         width: 100%;
-        padding-top: 55px;
-        display: flex;
-        justify-content: space-between;
-        max-height: 300px;
+        padding-top: 25px;
+        
     }
     
     .email-img {
-        max-width: 450px;
+        
+        
         
     }
     
     
     .emai-block {
-        width: 100%;
+        
         background-color: #f3f3f3;
     }
     
@@ -1673,6 +1657,7 @@
     .blog-text {
         display: flex;
         justify-content: space-between;
+        
         padding-top: 5px;
     }
     
@@ -1685,6 +1670,7 @@
     .blog-card__list {
         padding-top: 50px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     
@@ -1693,6 +1679,7 @@
     }
     
     .blog-card__item {
+        margin-bottom: 20px;
         margin-left: 10px;
         border: solid #000;
         border-width: 1px;
