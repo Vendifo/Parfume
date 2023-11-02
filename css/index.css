@@ -95,6 +95,10 @@
         display: none;        
     }
 
+    .main-variant { 
+        display: none;
+    }
+
     .main-adv__bestsellers {
         font-size: 24px;
         margin-right: 34px;
@@ -670,6 +674,10 @@
 
     .bestsellers-slider {
         display: none;        
+    }
+
+    .main-variant { 
+        display: none;
     }
     
     .main-adv__bestsellers {
@@ -1249,9 +1257,38 @@
         
     }
 
-    .bestsellers-slider { 
-        margin-top: 40px;
+    .main-adv__bestsellers { 
+        display: none;
+    }
+
+    .main-adv__newrelease { 
+        display: none;
+    }
+
+    .main-variant { 
+        display: flex;
+        margin-bottom: 10px;
         
+        
+    }
+
+    .phone-bestseller { 
+        border-bottom: 0px solid #000;
+        transition: opacity 0.5s ease-in-out;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 24px;
+    }
+
+    .phone-newrelease { 
+        border-bottom: 0px solid #000;
+        padding-left: 19px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+    }
+
+    .main-adv__block__var { 
+        display: flex;
+        justify-content: space-between;
     }
 
     .slider-container1 {
@@ -1263,6 +1300,7 @@
     .slider1 {
         display: flex;
         transition: transform 0.3s ease-in-out;
+        
     }
       
     .slide1 {
@@ -1279,7 +1317,7 @@
     }
       
     .slider2 {
-        display: flex;
+        display: none;
         transition: transform 0.3s ease-in-out;
     }
       

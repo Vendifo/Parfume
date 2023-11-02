@@ -56,6 +56,15 @@ function changeColor(button) {
   }
 }
 
+const phoneBest = document.getElementById ("phone-bestseller") ;
+const phoneNew = document.getElementById ("phone-newrelease");
+
+const phoneBestsellers = document.getElementById('phone-bestseller');
+const phoneNewRelease = document.getElementById('phone-newrelease');
+
+
+
+
 //Слайдер
 const slider1 = document.querySelector('.slider1');
 const slides1 = document.querySelectorAll('.slide1');
@@ -122,9 +131,7 @@ function setPositionByIndex() {
 
 setPositionByIndex();
 
-
 //f
-
 
 const slider2 = document.querySelector('.slider2');
 const slides2 = document.querySelectorAll('.slide2');
@@ -191,3 +198,57 @@ function setPositionByIndex2() {
 
 setPositionByIndex2();
 
+function hideAllSliders() {
+  slider1.style.display = 'none';
+  slider2.style.display = 'none';
+}
+
+phoneBestsellers.addEventListener('click', function () {
+  hideAllSliders();
+  slider1.style.display = 'flex';
+  slider2.style.display = 'none';
+  
+});
+
+phoneNewRelease.addEventListener('click', function () {
+  hideAllSliders();
+  slider1.style.display = 'none';
+  slider2.style.display = 'flex';
+  
+});
+
+phoneBestsellers.addEventListener('click', function () {
+  
+  toggleTextStyle(phoneBestsellers, true);
+  toggleTextStyle(phoneNewRelease, false);
+});
+
+phoneNewRelease.addEventListener('click', function () {
+  
+  toggleTextStyle(phoneNewRelease, true);
+  toggleTextStyle(phoneBestsellers, false);
+});
+
+// Функция для переключения стилей кнопок
+function toggleButtonStyle(button, isActive) {
+  if (isActive) {
+    button.style.fontSize = '24px'; // Увеличиваем размер шрифта
+    button.style.borderBottom = '2px solid #000'; // Отображаем нижнюю линию
+    button.style.transition = 'font-size 0.3s, border-bottom 0.3s'; // Добавляем плавные переходы
+  } else {
+    button.style.fontSize = '22px'; // Восстанавливаем размер шрифта
+    button.style.borderBottom = 'none'; // Скрываем нижнюю линию
+    button.style.transition = 'font-size 0.3s, border-bottom 0.3s'; // Добавляем плавные переходы
+  }
+}
+
+// Функция для переключения стилей текста
+function toggleTextStyle(textElement, isActive) {
+  if (isActive) {
+    textElement.style.fontSize = '24px'; // Увеличиваем размер шрифта
+    textElement.style.transition = 'font-size 0.3s'; // Добавляем плавные переходы
+  } else {
+    textElement.style.fontSize = '22px'; // Восстанавливаем размер шрифта
+    textElement.style.transition = 'font-size 0.3s'; // Добавляем плавные переходы
+  }
+}
