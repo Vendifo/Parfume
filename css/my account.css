@@ -1,171 +1,555 @@
-.profil-block {
-    display: flex;
-    margin-top: 20px;
+@media screen and (min-width: 1200px) { 
+    .profil-block {
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    .profil-nav__list {
+        border: solid #000;
+        border-width: 1px;
+        background-color: #f6f6f6;
+    }
+    
+    .profil-nav__item__main { 
+        border: solid #000;
+        border-width: 0px 0px 1px 0px;
+        width: 340px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profil-nav__item {
+        border: solid #000;
+        border-width: 0px 0px 1px 0px;
+        width: 340px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+        display: block;
+    }
+    
+    .profil-nav__item:last-child {
+        border-width: 0px 0px 0px 0px;
+    }
+    
+    .profil-nav__item__button { 
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .profil-nav__item__button:hover {
+        font-size: 25px;
+        }
+    
+    .profil-nav__list__var { 
+        transition: 0.2s;
+    }
+    
+    .profil-text {
+        margin-left: 90px;
+        display: block;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    }
+    
+    .profil-mein__text {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .profil-mein__title { 
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .profil-mein__paragraf {
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        max-width: 800px;
+    }
+    
+    .profile-order { 
+        margin-left: 90px;
+        display: none;
+    }
+    
+    .profile-order__list {
+        list-style-type: none;
+        padding: 0;
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profil-order__text{ 
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profile-order__item__head,
+    .profile-order__item {
+        display: flex;
+        width: 600px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+    }
+    
+    .profile-order__item:last-child { 
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .profile-order__item__head div,
+    .profile-order__item div {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .profile-order__item__head .profil-order__item__status,
+    .profile-order__item .profil-order__item__status {
+        flex: 1.5; /* Примените необходимую ширину для статуса */
+        text-align: center;
+    }
+    
+    .profile-info { 
+        display: none;
+        margin-left: 90px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profile-info__title { 
+        display: flex;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .profile-info__head  { 
+        border: 1px solid #ccc;
+    }
+    
+    .profile-info__subtitle { 
+        margin-left: 20px;  
+        
+    }
+    
+    .profile-info__subtitle__address__block { 
+        display: flex;
+    }
+    
+    .profile-info__edit { 
+        padding-left: 100px; 
+    }
+    
+    .profile-info__edit { 
+        max-height: 29px;
+        align-items: center;
+    }
+    
+    
+    
+    .profil-info__editimg { 
+        display: block;
+    }
+    
+    .profil-info__input{ 
+        display: none;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        width: calc(100% + 50px);
+    }
+    
+    .profile-gift { 
+        display: none;
+        margin-left: 90px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
 }
 
-.profil-nav__list {
-    border: solid #000;
-    border-width: 1px;
-    background-color: #f6f6f6;
+@media screen and (max-width:1199px) and (min-width: 768px) {
+    .profil-block {
+        display: flex;
+        margin-top: 20px;
+    }
+    
+    .profil-nav__list {
+        border: solid #000;
+        border-width: 1px;
+        background-color: #f6f6f6;
+        width: 160px;
+    }
+    
+    .profil-nav__item__main { 
+        border: solid #000;
+        border-width: 0px 0px 1px 0px;
+        width: 160px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profil-nav__item {
+        border: solid #000;
+        border-width: 0px 0px 1px 0px;
+        width: 160px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+        display: block;
+    }
+    
+    .profil-nav__item:last-child {
+        border-width: 0px 0px 0px 0px;
+    }
+    
+    .profil-nav__item__button { 
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .profil-nav__item__button:hover {
+        font-size: 25px;
+        }
+
+    
+    
+    .profil-nav__list__var { 
+        transition: 0.2s;
+    }
+    
+    .profil-text {
+        margin-left: 20px;
+        margin-top: 10px;
+        display: block;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    }
+    
+    .profil-mein__text {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .profil-mein__title { 
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .profil-mein__paragraf {
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        max-width: 800px;
+    }
+    
+    .profile-order { 
+        margin-left: 20px;
+        margin-top: 10px;
+        display: none;
+    }
+    
+    .profile-order__list {
+        list-style-type: none;
+        padding: 0;
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profil-order__text{ 
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profile-order__item__head,
+    .profile-order__item {
+        display: flex;
+        width: 450px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+    }
+    
+    .profile-order__item:last-child { 
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .profile-order__item__head div,
+    .profile-order__item div {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .profile-order__item__head .profil-order__item__status,
+    .profile-order__item .profil-order__item__status {
+        flex: 1.5; /* Примените необходимую ширину для статуса */
+        text-align: center;
+    }
+    
+    .profile-info { 
+        display: none;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profile-info__title { 
+        display: flex;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .profile-info__head  { 
+        border: 1px solid #ccc;
+    }
+    
+    .profile-info__subtitle { 
+        margin-left: 20px;  
+        
+    }
+    
+    .profile-info__subtitle__address__block { 
+        display: flex;
+    }
+    
+    
+    
+    .profile-info__edit { 
+        padding-left: 10px; 
+    }
+    
+     
+    
+    
+    
+    
+    .profil-info__editimg { 
+        display: block;
+    }
+    
+    .profil-info__input{ 
+        display: none;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        
+    }
+    
+    .profile-gift { 
+        display: none;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
 }
 
-.profil-nav__item__main { 
-    border: solid #000;
-    border-width: 0px 0px 1px 0px;
-    width: 340px;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.profil-nav__item {
-    border: solid #000;
-    border-width: 0px 0px 1px 0px;
-    width: 340px;
-    margin-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
-    display: block;
-}
-
-.profil-nav__item:last-child {
-    border-width: 0px 0px 0px 0px;
-}
-
-.profil-nav__item__button { 
-    width: 100%;
-    height: 100%;
-    text-align: left;
-    transition: all 0.2s ease-in-out;
-}
-
-.profil-nav__item__button:hover {
-    font-size: 25px;
+/* -------------------------------------- PHONE VERSION ----------------------------- */
+@media screen and (max-width:767px) {
+    .profil-block {
+        display: block;
+        margin-top: 20px;
     }
 
-.profil-nav__list__var { 
-    transition: 0.2s;
-}
+    .prodil-nav { 
+        
 
-.profil-text {
-    margin-left: 90px;
-    display: block;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-}
-
-.profil-mein__text {
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-family: "Forum";
-}
-
-.profil-mein__title { 
-    font-size: 20px;
-    font-family: "Forum";
-}
-
-.profil-mein__paragraf {
-    font-size: 20px;
-    font-family: "Cormorant Garamond", serif;
-    max-width: 800px;
-}
-
-.profile-order { 
-    margin-left: 90px;
-    display: none;
-}
-
-.profile-order__list {
-    list-style-type: none;
-    padding: 0;
-    font-size: 20px;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.profil-order__text{ 
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.profile-order__item__head,
-.profile-order__item {
-    display: flex;
-    width: 600px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    border-top: 1px solid #ccc;
-}
-
-.profile-order__item:last-child { 
-    border-bottom: 1px solid #ccc;
-}
-
-.profile-order__item__head div,
-.profile-order__item div {
-    flex: 1;
-    text-align: center;
-}
-
-.profile-order__item__head .profil-order__item__status,
-.profile-order__item .profil-order__item__status {
-    flex: 1.5; /* Примените необходимую ширину для статуса */
-    text-align: center;
-}
-
-.profile-info { 
-    display: none;
-    margin-left: 90px;
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
-}
-
-.profile-info__title { 
-    display: flex;
-    border-bottom: 1px solid #ccc;
-}
-
-.profile-info__head  { 
-    border: 1px solid #ccc;
-}
-
-.profile-info__subtitle { 
-    margin-left: 20px;  
+    }
     
-}
+    .profil-nav__list {
+        border: solid #000;
+        border-width: 1px;
+        background-color: #f6f6f6;
+        width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .profil-nav__item__main { 
+        border: solid #000;
+        border-width: 0px 0px 1px 0px;
+        width: 320px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profil-nav__item {
+        border: solid #000;
+        border-width: 0px 0px 1px 0px;
+        width: 320px;
+        margin-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+        display: block;
+    }
+    
+    .profil-nav__item:last-child {
+        border-width: 0px 0px 0px 0px;
+    }
+    
+    .profil-nav__item__button { 
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .profil-nav__item__button:hover {
+        font-size: 25px;
+        }
 
-.profile-info__subtitle__address__block { 
-    display: flex;
-}
+    
+    
+    .profil-nav__list__var { 
+        border: 1px solid #000;
+        transition: 0.2s;
+        background-color: #f6f6f6;
+        display: none;
+        z-index: 1;
+        position: absolute;
+    }
+    
+    .profil-text {
+        margin-left: 20px;
+        margin-top: 10px;
+        display: block;/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+    }
+    
+    .profil-mein__text {
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .profil-mein__title { 
+        font-size: 20px;
+        font-family: "Forum";
+    }
+    
+    .profil-mein__paragraf {
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+        max-width: 800px;
+    }
+    
+    .profile-order { 
+        margin-left: 20px;
+        margin-top: 10px;
+        display: none;
+    }
+    
+    .profile-order__list {
+        list-style-type: none;
+        padding: 0;
+        font-size: 20px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profil-order__text{ 
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
+    
+    .profile-order__item__head,
+    .profile-order__item {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-top: 1px solid #ccc;
+    }
+    
+    .profile-order__item:last-child { 
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .profile-order__item__head div,
+    .profile-order__item div {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .profile-order__item__head .profil-order__item__status,
+    .profile-order__item .profil-order__item__status {
+        flex: 1.5; /* Примените необходимую ширину для статуса */
+        text-align: center;
+    }
+    
+    .profile-info { 
+        display: none;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
 
-.profile-info__edit { 
-    padding-left: 100px; 
-}
+    .profil-info__text { 
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .profile-info__title { 
+        display: flex;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .profile-info__head  { 
+        border: 1px solid #ccc;
+    }
+    
+    .profile-info__subtitle { 
+        margin-left: 20px;  
+        
+    }
+    
+    .profile-info__subtitle__address__block { 
+        display: flex;
+    }
+    
+    
+    
+    .profile-info__edit { 
+        padding-left: 10px; 
+    }
 
-.profile-info__edit { 
-    max-height: 29px;
-    align-items: center;
-}
+    .profil-info__editimg { 
+        display: block;
+    }
+    
+    .profil-info__input{ 
+        display: none;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        
+    }
+    
+    .profile-gift { 
+        display: none;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 24px;
+        font-family: "Cormorant Garamond", serif;
+    }
 
-
-
-.profil-info__editimg { 
-    display: block;
-}
-
-.profil-info__input{ 
-    display: none;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    width: calc(100% + 50px);
-}
-
-.profile-gift { 
-    display: none;
-    margin-left: 90px;
-    font-size: 24px;
-    font-family: "Cormorant Garamond", serif;
+    .profile-gift__text {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }
