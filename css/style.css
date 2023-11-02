@@ -2148,59 +2148,175 @@ body {
 
 
 /*------------------------------------------------------------------------*/
-
-.href {
-    font-family: "Forum";
-    font-size: 18px;
-    display: flex;
-    padding-top: 200px;
-    padding-left: 20px;
+@media screen and (min-width:1200px) {
+    .href {
+        font-family: "Forum";
+        font-size: 18px;
+        display: flex;
+        padding-top: 200px;
+        padding-left: 20px;
+    }
+    
+    .href-title {
+        color: #9d9f1e;
+    }
+    
+    .href-subtitle {
+        color: #000;
+    }
+    
+    .href-subtitle_1 {
+        color: #9d9f1e;
+    }
+    
+    .name-window {
+        color: #000;
+        font-size: 30px;
+        font-family: "Forum";
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .product-add__cart {
+        display: none;
+        position: fixed;
+        top: 90px; /* Расположение снизу */
+        right: 75px; /* Расположение справа */
+        background-color: #696969; /* Цвет фона */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0; /* Начальная непрозрачность */
+        transition: opacity 0.5s; /* Плавное изменение непрозрачности */
+    }
+    
+    .product-add__wish { 
+        display: none;
+        position: fixed;
+        top: 90px; /* Расположение снизу */
+        right: 80px; /* Расположение справа */
+        background-color: #696969; /* Цвет фона */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0; /* Начальная непрозрачность */
+        transition: opacity 0.5s; /* Плавное изменение непрозрачности */
+    }
+    
 }
 
-.href-title {
-    color: #9d9f1e;
+@media screen and (min-width:768px) and (max-width:1199px){
+    .href {
+        font-family: "Forum";
+        font-size: 18px;
+        display: flex;
+        padding-top: 200px;
+        padding-left: 20px;
+    }
+    
+    .href-title {
+        color: #9d9f1e;
+    }
+    
+    .href-subtitle {
+        color: #000;
+    }
+    
+    .href-subtitle_1 {
+        color: #9d9f1e;
+    }
+    
+    .name-window {
+        color: #000;
+        font-size: 30px;
+        font-family: "Forum";
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .product-add__cart {
+        display: none;
+        position: fixed;
+        top: 90px; /* Расположение снизу */
+        right: 75px; /* Расположение справа */
+        background-color: #696969; /* Цвет фона */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0; /* Начальная непрозрачность */
+        transition: opacity 0.5s; /* Плавное изменение непрозрачности */
+    }
+    
+    .product-add__wish { 
+        display: none;
+        position: fixed;
+        top: 90px; /* Расположение снизу */
+        right: 80px; /* Расположение справа */
+        background-color: #696969; /* Цвет фона */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0; /* Начальная непрозрачность */
+        transition: opacity 0.5s; /* Плавное изменение непрозрачности */
+    }
+    
 }
 
-.href-subtitle {
-    color: #000;
-}
-
-.href-subtitle_1 {
-    color: #9d9f1e;
-}
-
-.name-window {
-    color: #000;
-    font-size: 30px;
-    font-family: "Forum";
-    padding-top: 30px;
-    margin-bottom: 20px;
-}
-
-.product-add__cart {
-    display: none;
-    position: fixed;
-    top: 90px; /* Расположение снизу */
-    right: 75px; /* Расположение справа */
-    background-color: #696969; /* Цвет фона */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    opacity: 0; /* Начальная непрозрачность */
-    transition: opacity 0.5s; /* Плавное изменение непрозрачности */
-}
-
-.product-add__wish { 
-    display: none;
-    position: fixed;
-    top: 90px; /* Расположение снизу */
-    right: 150px; /* Расположение справа */
-    background-color: #696969; /* Цвет фона */
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    opacity: 0; /* Начальная непрозрачность */
-    transition: opacity 0.5s; /* Плавное изменение непрозрачности */
+@media screen and (max-width:767px) {
+    .href {
+        font-family: "Forum";
+        font-size: 18px;
+        display: flex;
+        padding-top: 100px;
+        padding-left: 20px;
+    }
+    
+    .href-title {
+        color: #9d9f1e;
+    }
+    
+    .href-subtitle {
+        color: #000;
+    }
+    
+    .href-subtitle_1 {
+        color: #9d9f1e;
+    }
+    
+    .name-window {
+        color: #000;
+        font-size: 30px;
+        font-family: "Forum";
+        padding-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .product-add__cart {
+        display: none;
+        position: fixed;
+        top: 90px; /* Расположение снизу */
+        right: 75px; /* Расположение справа */
+        background-color: #696969; /* Цвет фона */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0; /* Начальная непрозрачность */
+        transition: opacity 0.5s; /* Плавное изменение непрозрачности */
+    }
+    
+    .product-add__wish { 
+        display: none;
+        position: fixed;
+        top: 90px; /* Расположение снизу */
+        right: 80px; /* Расположение справа */
+        background-color: #696969; /* Цвет фона */
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0; /* Начальная непрозрачность */
+        transition: opacity 0.5s; /* Плавное изменение непрозрачности */
+    }
+    
 }
 
 
