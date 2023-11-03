@@ -3,6 +3,8 @@ var showItemsButton = document.getElementById("showItemsButton");
 
 // Находим все элементы списка
 var listItems = document.querySelectorAll(".profil-nav__list__var .profil-nav__item");
+var items = document.querySelector (".profil-nav__list__var");
+
 
 // Переменная для отслеживания состояния меню
 var menuVisible = false;
@@ -37,41 +39,91 @@ var giftMenu = document.querySelector(".profile-gift");
 
 // Добавляем обработчик события клика на кнопку
 showItemsButton.addEventListener("click", function(event) {
-    profilText.style.display = "block";
-    infoMenu.style.display = "none";
-    giftMenu.style.display = "none";
-    orderMenu.style.display = "none";
+    if (window.innerWidth >= 768) { 
+        orderMenu.style.display = "block";
+        profilText.style.display = "none";
+        infoMenu.style.display = "none";
+        giftMenu.style.display = "none";
+    }
+    else { 
+        if (items.style.display === "block") { 
+            items.style.display = "none";
+        }
+        else { 
+            items.style.display = "block";
+        }
+    }
+    
+    
 });
 
 
 
 // Добавляем обработчик события клика на кнопку
 showOrderButton.addEventListener("click", function() {
-    // Переключаем видимость меню "Orders"
-    if (orderMenu.style.display === "none" || orderMenu.style.display === "" ) {
-        orderMenu.style.display = "block";
-        profilText.style.display = "none";
-        infoMenu.style.display = "none";
-        giftMenu.style.display = "none";
-    } else {
-        orderMenu.style.display = "none";
-        profilText.style.display = "block";
+    if (window.innerWidth >= 768) {
+        if (orderMenu.style.display === "none" || orderMenu.style.display === "" ) {
+            orderMenu.style.display = "block";
+            profilText.style.display = "none";
+            infoMenu.style.display = "none";
+            giftMenu.style.display = "none";
+            
+        } else {
+            
+            orderMenu.style.display = "none";
+            profilText.style.display = "block";
+        }
     }
+    else { 
+        if (orderMenu.style.display === "none" || orderMenu.style.display === "" ) {
+            orderMenu.style.display = "block";
+            profilText.style.display = "none";
+            infoMenu.style.display = "none";
+            giftMenu.style.display = "none";
+            items.style.display = "none";
+        } else {
+            items.style.display = "none";
+            orderMenu.style.display = "none";
+            profilText.style.display = "block";
+        }
+    }
+    // Переключаем видимость меню "Orders"
+    
 });
 
 
 
 showInfoButton.addEventListener("click", function() {
-    // Переключаем видимость меню "Info"
-    if (infoMenu.style.display === "none" || infoMenu.style.display === "") {
-        infoMenu.style.display = "block";
-        profilText.style.display = "none";
-        orderMenu.style.display = "none";
-        giftMenu.style.display = "none";
-    } else {
-        infoMenu.style.display = "none";
-        profilText.style.display = "block";
+    if (window.innerWidth >= 768) { 
+        if (infoMenu.style.display === "none" || infoMenu.style.display === "") {
+            infoMenu.style.display = "block";
+            profilText.style.display = "none";
+            orderMenu.style.display = "none";
+            giftMenu.style.display = "none";
+            
+        } else {
+            
+            infoMenu.style.display = "none";
+            profilText.style.display = "block";
+            
+        } 
     }
+    else { 
+        if (infoMenu.style.display === "none" || infoMenu.style.display === "") {
+            infoMenu.style.display = "block";
+            profilText.style.display = "none";
+            orderMenu.style.display = "none";
+            giftMenu.style.display = "none";
+            items.style.display = "none";
+        } else {
+            items.style.display = "none";
+            infoMenu.style.display = "none";
+            profilText.style.display = "block";
+            
+        }
+    }
+    // Переключаем видимость меню "Info"
+    
 });
 
 // Обработчики событий для кнопок редактирования
@@ -128,7 +180,9 @@ showGiftButton.addEventListener("click", function() {
         profilText.style.display = "none";
         orderMenu.style.display = "none";
         infoMenu.style.display = "none";
+        items.style.display = "none";
     } else {
+        items.style.display = "none";
         giftMenu.style.display = "none";
         profilText.style.display = "block";
     }

@@ -224,6 +224,8 @@
     }
 }
 
+/* -----------------------------Planshet version----------------------------------- */
+
 @media screen and (max-width:1199px) and (min-width:768px) {
     .cart-block {
         display: flex;
@@ -447,9 +449,13 @@
     }
 }
 
+/* ------------------------mobile version---------------------------------------------- */
 
 @media screen and (max-width: 767px) {
     
+    .name-window { 
+        margin-left: 20px;
+    }
      
     .cart {
         border: 1px solid #000;

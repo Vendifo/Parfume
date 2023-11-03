@@ -1167,7 +1167,7 @@
         position: relative;
         display: flex;
         width: 100%;
-        height: 600px;
+        height: 700px;
     }
     
     .slide {
@@ -1195,7 +1195,7 @@
         position: absolute;
         
         /* Отступ снизу (настройте по вашему желанию) */
-        top: 550px;
+        top: 650px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -1251,76 +1251,20 @@
     }
     
     .main-adv__block {
-        text-align: center;
+        display: flex;
         justify-content: center;
-        margin-left: 15px;
-        
     }
 
-    .main-adv__bestsellers { 
-        display: none;
-    }
-
-    .main-adv__newrelease { 
-        display: none;
+    .bestsellers-slider {
+        display: none;        
     }
 
     .main-variant { 
-        display: flex;
-        margin-bottom: 10px;
-        
-        
-    }
-
-    
-
-    .main-adv__block__var { 
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .slider-container1 {
-        width: 100%;
-        overflow: hidden;
-        
-    }
-      
-    .slider1 {
-        display: flex;
-        transition: transform 0.3s ease-in-out;
-        
-    }
-      
-    .slide1 {
-        flex: 0 0 100%;
-        width: 100%;
-        height: 300px; /* Высота слайдов, настройте по своему усмотрению */
-        background-size: cover;
-        background-position: center;
-    }
-
-    .slider-container2 {
-        width: 100%;
-        overflow: hidden;
-    }
-      
-    .slider2 {
         display: none;
-        transition: transform 0.3s ease-in-out;
     }
-      
-    .slide2 {
-        flex: 0 0 100%;
-        width: 100%;
-        height: 300px; /* Высота слайдов, настройте по своему усмотрению */
-        background-size: cover;
-        background-position: center;
-    }
-      
-
+    
     .main-adv__bestsellers {
-        font-size: 24px;
-        border-bottom: 2px solid #000;
+        font-size: 20px;
         margin-right: 34px;
         text-decoration: none;
         color: #000;
@@ -1328,16 +1272,25 @@
         cursor: pointer;
     }
     
-    
+    .main-adv__bestsellers:hover,
+    .main-adv__bestsellers:focus {
+        font-size: 24px;
+        border-bottom: 2px solid #000;
+    }
     
     .main-adv__newrelease {
-        font-size: 24px;
-        border-bottom: 2px solid #000;
-        margin-right: 34px;
+        font-size: 20px;
+        
         text-decoration: none;
         color: #000;
         transition: font-size 0.8s ease;
         cursor: pointer;
+    }
+    
+    .main-adv__newrelease:hover,
+    .main-adv__newrelease:focus {
+        font-size: 24px;
+        border-bottom: 2px solid #000;
     }
     
     .fade-in {
@@ -1347,8 +1300,8 @@
     
     .main-adv__sub-title {
         opacity: 0;
-        display: block;
-        margin-top: 100px;
+        display: none;
+        margin-top: 50px;
         text-align: center;
         position: absolute;
     }
@@ -1356,10 +1309,9 @@
     .main-adv__title {
         font-size: 20px;
     }
-
     
     .main-adv__catalog {
-        /* Например, измените отображение карточек на горизонтальное прокручивание */
+        margin-top: 120px;
         display: flex;
         overflow-x: auto;
     }
@@ -1374,7 +1326,7 @@
     }
     
     .main-adv__product {
-        margin-left: 10%;
+        margin-right: 20px;
         width: 200px;
         transform-origin: top bottom left right ; /* Устанавливаем точку привязки в левый верхний угол */
         transition: transform 0.3s ease; /* Добавляем плавную анимацию */
@@ -1410,21 +1362,9 @@
     }
     
     .catalog-card {
-        border: 1px solid #ccc;
-    
-        height: 100%;
+        border: solid 1px #000;
+        height: 306px;
         width: 100%;
-    
-        flex-direction: column;
-        position: relative;
-        /* Добавляем позицию относительно родительского элемента */
-        cursor: pointer;
-        /* Добавляем курсор при наведении */
-    
-        /* Выравниваем текст в конец карточки по вертикали */
-        justify-content: flex-end;
-        transition: background-color 0.3s, color 0.3s;
-        /* Плавное изменение фона и цвета текста в течение 0.3 секунды */
     }
     
     .catalog-card::before {
@@ -1469,19 +1409,19 @@
     /*---------------------------------------------------------------------*/
     .main-gift {
         padding-top: 52px;
-        display: flex;
-        justify-content: space-between;
+        margin-left: 10px;
+        margin-right: 10px;
+        
     }
     
     .main-gift__left {
-        padding-left: 130px;
+        margin-bottom: 30px;
     }
     
+    
+    
     .main-gift__left__img {
-        max-width: 650px;
-        height: auto;
-        
-        padding-right: 70px;
+        width: 100%;
     }
     
     .main-gift__left__text {
@@ -1489,7 +1429,8 @@
         padding-top: 30px;
         display: flex;
         justify-content: space-between;
-        margin-left: 20px;
+        
+       
     }
     
     .main-gift__name {
@@ -1500,23 +1441,21 @@
     
     .main-gift__shop {
         display: flex;
-        font-size: 22px;
+        font-size: 18px;
         color: #c5c753;
     }
     
     .main-gift__shop__href {
         text-decoration: none;
         color: #9d9f1e;
+        
     }
     
     .main-gift__shop__href:hover {
         color: #e1e362;
     }
     
-    .main-gift__right {
-        padding-right: 50px;
-        padding-left: 20px;
-    }
+    
     
     .main-gift__line {
         margin-right: 10px;
@@ -1529,24 +1468,21 @@
     
     .main-gift_right__img {
         background-color: #000;
-        max-width: 650px;
-        
-        
-    
+
     }
     
     .main-gift__right__text {
         padding-bottom: 30px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        margin-right: 40px;
+        
+        
     }
     
     /*---------------------------------------------------------------------------------*/
     
     .line {
-        margin-top: 50px;
+        margin-top: 20px;
         width: 100%;
         height: 1px;
         background-color: #000;
@@ -1563,7 +1499,7 @@
     
     .testimonials-title__text {
         font-family: "Forum";
-        font-size: 45px;
+        font-size: 30px;
         color: #787878;
         padding-bottom: 20px;
         
@@ -1611,20 +1547,15 @@
     
     .email {
         width: 100%;
-        padding-top: 55px;
-        display: flex;
-        justify-content: space-between;
-        max-height: 300px;
-    }
-    
-    .email-img {
-        max-width: 450px;
+        padding-top: 25px;
         
     }
     
     
+    
+    
     .emai-block {
-        width: 100%;
+        
         background-color: #f3f3f3;
     }
     
@@ -1722,6 +1653,7 @@
     .blog-text {
         display: flex;
         justify-content: space-between;
+        
         padding-top: 5px;
     }
     
@@ -1734,6 +1666,7 @@
     .blog-card__list {
         padding-top: 50px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     
@@ -1742,6 +1675,7 @@
     }
     
     .blog-card__item {
+        margin-bottom: 20px;
         margin-left: 10px;
         border: solid #000;
         border-width: 1px;
