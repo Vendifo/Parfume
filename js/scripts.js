@@ -12,6 +12,12 @@ function hideTexts() {
   text2.classList.remove("fade-in");
 }
 
+text1.style.display = "block";
+  setTimeout(() => {
+    text1.style.opacity = "1";
+    text1.classList.add("fade-in");
+  }, 10);
+
 // Добавляем обработчики событий для кнопок
 bestsellers_button.addEventListener("click", function() {
   // Скрываем текущий текст
