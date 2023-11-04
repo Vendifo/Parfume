@@ -252,6 +252,10 @@
         padding: 20px;
     }
     
+    .catalog-href {
+        display: none;
+    }
+
     /*---------------------------------------------------------------------*/
     .main-gift {
         padding-top: 52px;
@@ -357,24 +361,27 @@
     
     .testimonials-container {
         width: 100%;
-        overflow: hidden;
+        
         /* Чтобы скрыть содержимое, выходящее за границы контейнера */
     }
     
     .testimonials-list {
-        display: inline-flex;
-        /* Располагать элементы горизонтально */
-        gap: 20px;
-        /* Расстояние между отзывами */
+        display: flex;
+        overflow-x: hidden;
     }
     
     .testimonials-item {
         user-select: none;
         flex: 0 0 auto;
         width: 400px;
-        /* Ширина каждого отзыва */
         padding: 10px;
+        cursor: grab; /* Изменяем курсор на "grab" при наведении для указания на возможность перетаскивания */
     }
+    
+    .testimonials-item:active {
+        cursor: grabbing; /* Изменяем курсор на "grabbing" во время перетаскивания */
+    }
+    
     
     .testimonials-text {
         font-family: "Cormorant Garamond", serif;
@@ -833,6 +840,9 @@
         padding: 20px;
     }
     
+    .catalog-href {
+        display: none;
+    }
     /*---------------------------------------------------------------------*/
     .main-gift {
         padding-top: 52px;
@@ -943,18 +953,20 @@
     }
     
     .testimonials-list {
-        display: inline-flex;
-        /* Располагать элементы горизонтально */
-        gap: 20px;
-        /* Расстояние между отзывами */
+        display: flex;
+        overflow-x: hidden;
     }
     
     .testimonials-item {
         user-select: none;
         flex: 0 0 auto;
         width: 400px;
-        /* Ширина каждого отзыва */
         padding: 10px;
+        cursor: grab; /* Изменяем курсор на "grab" при наведении для указания на возможность перетаскивания */
+    }
+    
+    .testimonials-item:active {
+        cursor: grabbing; /* Изменяем курсор на "grabbing" во время перетаскивания */
     }
     
     .testimonials-text {
@@ -1304,6 +1316,8 @@
         margin-top: 50px;
         text-align: center;
         position: absolute;
+        left: 0;
+        right: 0;
     }
     
     .main-adv__title {
@@ -1314,6 +1328,7 @@
         margin-top: 120px;
         display: flex;
         overflow-x: auto;
+        scrollbar-width: none;
     }
     
     .main-adv__catalog__oneline {
@@ -1404,7 +1419,24 @@
         margin-left: 0px;
         color: #4d2000;
         padding: 20px;
+        
     }
+
+    .catalog-href {
+        margin-top: 10px;
+        text-align: center;
+        
+    }
+
+    .catalog-shop {
+        font-family: "Cormorant Garamont";
+        color: #000;
+        font-size: 20px;
+        border: solid 1px #000;
+        padding: 5px 20px 5px 20px;
+        
+    }
+    
     
     /*---------------------------------------------------------------------*/
     .main-gift {
@@ -1512,18 +1544,20 @@
     }
     
     .testimonials-list {
-        display: inline-flex;
-        /* Располагать элементы горизонтально */
-        gap: 20px;
-        /* Расстояние между отзывами */
+        display: flex;
+        overflow-x: hidden;
     }
     
     .testimonials-item {
         user-select: none;
         flex: 0 0 auto;
         width: 400px;
-        /* Ширина каждого отзыва */
         padding: 10px;
+        cursor: grab; /* Изменяем курсор на "grab" при наведении для указания на возможность перетаскивания */
+    }
+    
+    .testimonials-item:active {
+        cursor: grabbing; /* Изменяем курсор на "grabbing" во время перетаскивания */
     }
     
     .testimonials-text {
@@ -1665,9 +1699,8 @@
     
     .blog-card__list {
         padding-top: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        
+        
     }
     
     .blog-card__img {
@@ -1675,13 +1708,14 @@
     }
     
     .blog-card__item {
+        width: 300px;
         margin-bottom: 20px;
-        margin-left: 10px;
+        margin-left: auto;
+        margin-right: auto;
         border: solid #000;
         border-width: 1px;
         cursor: pointer;
         transition: 0.9s;
-        
     }
     
     .blog-card__item:hover {

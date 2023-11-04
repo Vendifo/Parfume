@@ -1,84 +1,67 @@
-const testimonialsContainer = document.querySelector('.testimonials-container');
-const testimonialsList = document.querySelector('.testimonials-list');
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialsList = document.querySelector(".testimonials-list");
+  const scrollStep = 200; // Укажите количество пикселей для автоматической прокрутки
 
-let isDragging = false;
-let startPosition = 0;
-let currentTranslateX = 0;
-let previousTranslateX = 0;
-let velocity = 0;
+  let isDragging = false;
+  let startX, scrollLeft;
 
-// Получите ширину контейнера и списка
-const containerWidth = testimonialsContainer.clientWidth;
-const listWidth = testimonialsList.scrollWidth;
+  testimonialsList.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - testimonialsList.offsetLeft;
+    scrollLeft = testimonialsList.scrollLeft;
+  });
 
-const startDrag = (event) => {
-  isDragging = true;
-  startPosition = event.clientX || event.touches[0].clientX;
-  previousTranslateX = currentTranslateX;
-  velocity = 0;
-  testimonialsList.style.transition = 'none';
-};
+  testimonialsList.addEventListener("mouseup", () => {
+    isDragging = false;
+  });
 
-const drag = (event) => {
-  if (!isDragging) return;
+  testimonialsList.addEventListener("mouseleave", () => {
+    isDragging = false;
+  });
 
-  const currentPosition = event.clientX || event.touches[0].clientX;
-  currentTranslateX = previousTranslateX + currentPosition - startPosition;
+  testimonialsList.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - testimonialsList.offsetLeft;
+    const walk = (x - startX) * 2; // Вы можете настроить скорость прокрутки
+    testimonialsList.scrollLeft = scrollLeft - walk;
+  });
 
-  // Проверка, можно ли скроллить вправо или влево
-  if (currentTranslateX > 0) {
-    currentTranslateX = 0; // Нельзя скроллить влево за границу
-  } else if (currentTranslateX < containerWidth - listWidth) {
-    currentTranslateX = containerWidth - listWidth; // Нельзя скроллить вправо за границу
+  testimonialsList.addEventListener("touchstart", (e) => {
+    isDragging = true;
+    startX = e.touches[0].pageX - testimonialsList.offsetLeft;
+    scrollLeft = testimonialsList.scrollLeft;
+  });
+
+  testimonialsList.addEventListener("touchend", () => {
+    isDragging = false;
+  });
+
+  testimonialsList.addEventListener("touchmove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - testimonialsList.offsetLeft;
+    const walk = (x - startX) * 2; // Вы можете настроить скорость прокрутки
+    testimonialsList.scrollLeft = scrollLeft - walk;
+  });
+
+  function autoScroll() {
+    const currentScrollLeft = testimonialsList.scrollLeft;
+    const targetScrollLeft = currentScrollLeft + scrollStep;
+
+    // Плавно прокручиваем
+    const animationDuration = 500; // Укажите длительность анимации в миллисекундах
+    const animationInterval = 10; // Укажите интервал обновления анимации
+
+    const scrollAnimation = setInterval(function () {
+      if (testimonialsList.scrollLeft < targetScrollLeft) {
+        testimonialsList.scrollLeft += 1;
+      } else {
+        clearInterval(scrollAnimation);
+      }
+    }, animationInterval);
   }
 
-  testimonialsList.style.transform = `translateX(${currentTranslateX}px)`;
-};
-
-const endDrag = () => {
-  if (!isDragging) return;
-  isDragging = false;
-
-  // Расчет скорости для инерции
-  const currentTime = new Date().getTime();
-  const timeDiff = currentTime - previousTimestamp;
-  const distance = currentTranslateX - previousTranslateX;
-  velocity = distance / timeDiff;
-
-  // Ваша логика здесь (например, проверка, сколько элементов должно быть видно)
-
-  testimonialsList.style.transition = 'transform 0.3s ease-in-out';
-  testimonialsList.style.transform = `translateX(${currentTranslateX}px)`;
-};
-
-testimonialsContainer.addEventListener('mousedown', startDrag);
-document.addEventListener('mousemove', drag);
-document.addEventListener('mouseup', endDrag);
-
-testimonialsContainer.addEventListener('touchstart', startDrag);
-document.addEventListener('touchmove', drag);
-document.addEventListener('touchend', endDrag);
-
-let previousTimestamp = 0;
-
-function animateScroll() {
-  if (!isDragging) {
-    // Применение инерции с уменьшенной скоростью
-    currentTranslateX += velocity * 0.01; // Уменьшите коэффициент для меньшей скорости инерции
-
-    // Проверка, можно ли скроллить вправо или влево
-    if (currentTranslateX > 0) {
-      currentTranslateX = 0; // Нельзя скроллить влево за границу
-    } else if (currentTranslateX < containerWidth - listWidth) {
-      currentTranslateX = containerWidth - listWidth; // Нельзя скроллить вправо за границу
-    }
-
-    testimonialsList.style.transition = 'transform 0.3s ease-in-out';
-    testimonialsList.style.transform = `translateX(${currentTranslateX}px)`;
-  }
-
-  previousTimestamp = new Date().getTime();
-  requestAnimationFrame(animateScroll);
-}
-
-animateScroll();
+  // Запускаем автоматическую прокрутку каждые 5 секунд (пример)
+  setInterval(autoScroll, 5000);
+});
