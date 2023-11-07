@@ -2,8 +2,9 @@ const cartItems = document.querySelectorAll(".cart-item");
 const totalPriceElement = document.getElementById("totalPrice");
 const cartPayCounts = document.querySelectorAll(".cart-info__count p:last-child");
 
-// Объявляем переменную для суммы всех скидок
+// Объявляем переменные для суммы всех скидок и общего количества товаров
 let totalDiscount = 0;
+let totalItemCount = 0;
 
 // Для каждого .cart-item устанавливаем обработчики событий
 cartItems.forEach((cartItem, index) => {
@@ -18,10 +19,9 @@ cartItems.forEach((cartItem, index) => {
   let pastPrice = parseInt(pastPriceElement.textContent.replace(/\D/g, ""));
   let nowPrice = parseInt(nowPriceElement.textContent.replace(/\D/g, ""));
   let discount = parseInt(discountElement.textContent.match(/\d+/));
-  
 
   decrementButton.addEventListener("click", () => {
-    if (count > 0) {
+    if (count > 1) {
       count -= 1;
       updateCountAndPrices(index, nowPrice, count);
     }
@@ -39,6 +39,7 @@ cartItems.forEach((cartItem, index) => {
     discountElement.textContent = `Скидка ${(pastPrice - nowPrice) * count}р`;
     cartPayCounts[index].textContent = nowPrice * count + "р";
     updateTotalDiscount();
+    updateTotalItemCount(); // Обновляем общее количество товаров
   }
 
   updateCountAndPrices(index, nowPrice, count);
@@ -54,6 +55,19 @@ function updateTotalDiscount() {
   });
 
   updateTotalPrice();
+}
+
+function updateTotalItemCount() {
+  totalItemCount = 0;
+  cartItems.forEach((cartItem) => {
+    const countElement = cartItem.querySelector(".cart-count");
+    const count = parseInt(countElement.textContent);
+    totalItemCount += count;
+  });
+
+  // Обновляем элемент с id "totalItemCount" на странице
+  const totalItemCountElement = document.getElementById("totalItemCount");
+  totalItemCountElement.textContent = totalItemCount;
 }
 
 // Функция для обновления общей стоимости
@@ -78,7 +92,12 @@ function updateTotalPrice() {
 
   // Обновляем элемент totalPrice
   totalPriceElement.textContent = total.toLocaleString() + "р";
+
+  // Обновляем элемент с id "totalItemCount" на странице
+  const totalItemCountElement = document.getElementById("totalItemCount");
+  totalItemCountElement.textContent = totalItemCount ;
 }
 
 // Инициализация
+updateTotalItemCount();
 updateTotalDiscount();
