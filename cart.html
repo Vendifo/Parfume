@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,16 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/cart.css">
 </head>
+
 <body>
     <div class="wrapper">
         <header class="header">
             <div class="hamburger-menu">
                 <input id="menu__toggle" type="checkbox" />
                 <label class="menu__btn" for="menu__toggle">
-                  <span></span>
+                    <span></span>
                 </label>
-              
+
                 <ul class="menu__box">
                     <li><a class="menu__item" href="#">Главная</a></li>
                     <li><a class="menu__item" href="#">Профиль</a></li>
@@ -25,168 +27,228 @@
                     <li><a class="menu__item" href="#">Каталог</a></li>
                     <li><a class="menu__item" href="#">Категории</a></li>
                     <li><a class="menu__item" href="#">Блог</a></li>
-                    <div class="menu-aboutus" >
-                      <li><a class="menu__aboutus-text" href="#">@2023 Zeyd Parfumes</a></li>
-                      
+                    <div class="menu-aboutus">
+                        <li><a class="menu__aboutus-text" href="#">@2023 Zeyd Parfumes</a></li>
+
                     </div>
-                    
-                  </ul>
-              </div>
-            <div class="header-logo"   >
-               <a href="/index.html"><p class="header-logo__text" >Zeyd Perfumes</p></a>
+
+                </ul>
             </div>
-            <ul class="header-nav__list" >
-                
-                <a class="header-nav__item" href="/wishlist.html"><li ><img src="/img/heart1.svg" alt="#"></li></a>
-                <a class="header-nav__item"  href="/cart.html"><li><img src="/img/bag 1.svg" alt="#"></li></a>
-                <a class="header-nav__item"  href="/my account.html"><li ><img src="/img/person 1.svg"   alt="#"></li></a>
+            <div class="header-logo">
+                <a href="/index.html">
+                    <p class="header-logo__text">Zeyd Perfumes</p>
+                </a>
+            </div>
+            <ul class="header-nav__list">
+
+                <a class="header-nav__item" href="/wishlist.html">
+                    <li><img src="/img/heart1.svg" alt="#"></li>
+                </a>
+                <a class="header-nav__item" href="/cart.html">
+                    <li><img src="/img/bag 1.svg" alt="#"></li>
+                </a>
+                <a class="header-nav__item" href="/my account.html">
+                    <li><img src="/img/person 1.svg" alt="#"></li>
+                </a>
             </ul>
         </header>
     </div>
-    
-        <main>
-            <div class="wrapper" >
-                <div class="href">
-                    <a class="href-title" href="/index.html">Home <a class="href-subtitle" >/Cart</a></a>
-                </div>
-                <h1 class="name-window" >Cart</h1>
-                <div class="cart-block" >
-                    <div class="cart">
-                        <div class="cart-product__title">
-                            <div class="cart-product__title__wrapper" >
-                                <input class="cart-checkbox" id="mainCheckbox" type="checkbox">
-                                <p class="cart-select">Select all</p>
-                                <p class="cart-delete">Delete selected</p>
-                            </div>
-                        </div>
-                        <div class="cart-product">
-                            <div class="cart-name__product">
-                                <div class="secondaryCheckbox" ><input class="cart-checkbox secondaryCheckbox"  id="secondaryCheckbox1" type="checkbox"></div>
-                                <img class="cart-product__img" src="/img/image 17.png" alt="">
-                                <div class="cart-info" >
-                                    <a href="product.html">
-                                        <p class="cart-product__name">Baccarat</p>
-                                    </a>
-                                    <div class="counter">
-                                        <button class="decrement">-</button>
-                                        <span class="value">0</span>
-                                        <button class="increment">+</button>
-                                    </div>
-                                    
-                                    <div class="cart-price__ruble" >
-                                        <span class="total-price">12000</span>
-                                        <img class="currency_ruble"  src="/img/currency_ruble.svg" alt="">
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="cart-cancel">
-                                    <img class="cart-cancel" src="img/cancel.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
-                       
-                        <div class="cart-product">
-                            <div class="cart-name__product">
-                                <div class="secondaryCheckbox" ><input class="cart-checkbox secondaryCheckbox"  id="secondaryCheckbox2" type="checkbox"></div>
-                                <img class="cart-product__img" src="/img/image 17.png" alt="">
-                                <div class="cart-info" >
-                                    <a href="product.html">
-                                        <p class="cart-product__name">Baccarat</p>
-                                    </a>
-                                    <div class="counter">
-                                        <button class="decrement1">-</button>
-                                        <span class="value1">0</span>
-                                        <button class="increment1">+</button>
-                                    </div>
-                                    
-                                    <div class="cart-price__ruble" >
-                                        <span class="total-price1">12000</span>
-                                        <img class="currency_ruble"  src="/img/currency_ruble.svg" alt="">
-                                        
-                                    </div>
-                                    
-                                </div>
-                                <div class="cart-cancel">
-                                    <img class="cart-cancel" src="img/cancel.svg" alt="">
-                                </div>
-                            </div>
-                        </div>
 
-                        
-                    </div>
-                    <div class="cart-total">
-                        <form action="/payment.html" target="_blank">
-                        <div class="cart-total__title" >
-                            <button class="cart-total__button" >
-                            
-                                <h1 class="cart-total__button__text" >Place an order</h1>
-                            </button>
-                        </div>
-                        </form>
-                        <p class="cart-total__text__order" >Order amount</p>
-                        <div class="cart-total__product__count" >
-                            <p  class="cart-total__product__count__text" >Products:</p>
-                            <p  class="cart-total__product__count__number" >   2 pcs</p>
-                        </div>
-                        <div class="cart-total__line" ></div>
-                        <div class="cart-total__price" >
-                            <p class="cart-total__price__text" >total</p>
-                            <div class="cart-total__price__text__number">
-                                <p class="cart-total__price__ruble" id="cart-total__price"></p>
-                                <img class="cart-total__price__img" src="/img/currency_ruble.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <main class="main">
+        <div class="wrapper">
+            <div class="href">
+                <a class="href-title" href="/index.html">Home<a>/Cart</a></a>
             </div>
-        </main>
+            <div class="cart">
 
+                <div class="cart product">
 
-        <footer class="footer" >
-            <div class="wrapper">
-                <div class="footer-nav">
-                    <ul class="footer-nav__list">
-                        <li class="footer-nav__item">
-                            <h1 class="footer-nav-title">ZEYD PARFUMES</h1>
-                            <div class="footer-nav__img__list">
-                                <img class="footer-nav__item__img" src="/img/image 18.svg" alt="">
-                                <img class="footer-nav__item__img" src="/img/telegram 3.svg" alt="">
-                                <img class="footer-nav__item__img" src="/img/instagram 3.svg" alt="">
-                                <img class="footer-nav__item__img" src="/img/twitter 3.svg" alt="">
+                    <ul class="cart-list">
+                        <div class="cart-title">
+                            <p>КОРЗИНА</p>
+                            <p>Удалить всё</p>
+                        </div>
+                        <li class="cart-item" data-item-id="1">
+
+                            <img class="cart-item__img" src="/img/Bacarrat.png" alt="">
+                            <div class="cart-item__info">
+                                <h1>Baccarat яблочный вкус</h1>
+                                <p>200 мл</p>
                             </div>
+                            <div class="cart-item__features">
+                                <button class="cart-item__button">
+                                    <img class="cart-item__features__cancel" src="/img/Cancel-cart.svg" alt="">
+                                </button>
+                                <div class="cart-counter">
+                                    <button id="dicrement" class="cart-dicrement">-</button>
+                                    <p class="cart-count">1</p>
+                                    <button id="increment" class="cart-increment">+</button>
+                                </div>
+                                <p class="cart-item__discount">2000</p>
+                                <div class="cart-item__price">
+                                    <p class="cart-item__past__price">10000</p>
+                                    <p class="cart-item__now__price">3000</p>
+                                </div>
+                            </div>
+
                         </li>
-                        <div class="collum" ></div>
-                        <li class="footer-nav__item">
-                            <h1 class="footer-nav-title">NAVIGATION</h1>
-                            <a class="footer-nav__subtitle" href="">Home</a>
-                            <a class="footer-nav__subtitle" href="">About us</a>
-                            <a class="footer-nav__subtitle" href="">Shop</a>
-                            <a class="footer-nav__subtitle" href="">Blog</a>
-                            <a class="footer-nav__subtitle" href="">Category</a>
+                        <li class="cart-item" data-item-id="2">
+
+                            <img class="cart-item__img" src="/img/Bacarrat.png" alt="">
+                            <div class="cart-item__info">
+                                <h1>Baccarat яблочный вкус</h1>
+                                <p>200 мл</p>
+                            </div>
+                            <div class="cart-item__features">
+                                <button class="cart-item__button">
+                                    <img class="cart-item__features__cancel" src="/img/Cancel-cart.svg" alt="">
+                                </button>
+                                <div class="cart-counter">
+                                    <button  class="cart-dicrement">-</button>
+                                    <p class="cart-count">1</p>
+                                    <button  class="cart-increment">+</button>
+                                </div>
+                                <p class="cart-item__discount">Скидка 2000р</p>
+                                <div class="cart-item__price">
+                                    <p class="cart-item__past__price">10000p</p>
+                                    <p class="cart-item__now__price">7500p</p>
+                                </div>
+                            </div>
+
                         </li>
-                        <div class="collum" ></div>
-                        <li class="footer-nav__item">
-                            <h1 class="footer-nav-title">CONTACT</h1>
-                            <a class="footer-nav__subtitle" href="">8800 555 35 35</a>
-                            <a class="footer-nav__subtitle" href="">Email</a>
-                            
+                        <li class="cart-item" data-item-id="3">
+
+                            <img class="cart-item__img" src="/img/Bacarrat.png" alt="">
+                            <div class="cart-item__info">
+                                <h1>Baccarat яблочный вкус</h1>
+                                <p>200 мл</p>
+                            </div>
+                            <div class="cart-item__features">
+                                <button class="cart-item__button">
+                                    <img class="cart-item__features__cancel" src="/img/Cancel-cart.svg" alt="">
+                                </button>
+                                <div class="cart-counter">
+                                    <button class="cart-dicrement">-</button>
+                                    <p class="cart-count">1</p>
+                                    <button class="cart-increment">+</button>
+                                </div>
+                                <p class="cart-item__discount">Скидка 1000р</p>
+                                <div class="cart-item__price">
+                                    <p class="cart-item__past__price">10000p</p>
+                                    <p class="cart-item__now__price">8000p</p>
+                                </div>
+                            </div>
+
                         </li>
-                        <div class="collum" ></div>
-                        <li class="footer-nav__item">
-                            <h1 class="footer-nav-title">MY ACCOUNT</h1>
-                            <a class="footer-nav__subtitle" href="">Login or register</a>
-                            <a class="footer-nav__subtitle" href="">My account</a>
-                            <a class="footer-nav__subtitle" href="">wishlist</a>
-                            
+                        <li class="cart-item" data-item-id="4">
+
+                            <img class="cart-item__img" src="/img/Bacarrat.png" alt="">
+                            <div class="cart-item__info">
+                                <h1>Baccarat яблочный вкус</h1>
+                                <p>200 мл</p>
+                            </div>
+                            <div class="cart-item__features">
+                                <button class="cart-item__button">
+                                    <img class="cart-item__features__cancel" src="/img/Cancel-cart.svg" alt="">
+                                </button>
+                                <div class="cart-counter">
+                                    <button class="cart-dicrement">-</button>
+                                    <p class="cart-count">1</p>
+                                    <button class="cart-increment">+</button>
+                                </div>
+                                <p class="cart-item__discount">Скидка 2000р</p>
+                                <div class="cart-item__price">
+                                    <p class="cart-item__past__price">10000p</p>
+                                    <p class="cart-item__now__price">8000p</p>
+                                </div>
+                            </div>
+
                         </li>
-                        
-                        
                     </ul>
                 </div>
+                <div class="cart-pay">
+                    <div class="cart-info">
+                        <h1 class="cart-info__title">Сумма заказа</h1>
+                        <div class="cart-info__count" data-item-id="1">
+                            <p>Baccarat</p>
+                            <p class="cart-price__product">0</p>
+                        </div>
+                        <div class="cart-info__count" data-item-id="2">
+                            <p>Baccarat</p>
+                            <p class="cart-price__product">0</p>
+                        </div>
+                        <div class="cart-info__count" data-item-id="3">
+                            <p>Baccarat</p>
+                            <p class="cart-price__product">0</p>
+                        </div>
+                        <div class="cart-info__count" data-item-id="4">
+                            <p>Baccarat</p>
+                            <p class="cart-price__product">0</p>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="cart-info__discount">
+                        <p>Скидка </p>
+                        <p class="cart-info__discount__item">2000</p>
+                    </div>
+                    <div class="cart-info__buy">
+                        <div class="cart-info__price">
+                            <p>Итого, 3 товара</p>
+                            <p id="totalPrice"></p>
+                        </div>
+                        <div class="cart-info__button__wrapper"><a class="cart-info__button" href="/payment.html"><button class="cart-info__button">Оплатить</button></a></div>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </div>
+    </main>
 
-    <script src="/js/counter.js" ></script>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-nav">
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">ZEYD PARFUMES</h1>
+                        <div class="footer-nav__img__list">
+                            <img class="footer-nav__item__img" src="/img/image 18.svg" alt="">
+                            <img class="footer-nav__item__img" src="/img/telegram 3.svg" alt="">
+                            <img class="footer-nav__item__img" src="/img/instagram 3.svg" alt="">
+                            <img class="footer-nav__item__img" src="/img/twitter 3.svg" alt="">
+                        </div>
+                    </li>
+                    <div class="collum"></div>
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">NAVIGATION</h1>
+                        <a class="footer-nav__subtitle" href="">Home</a>
+                        <a class="footer-nav__subtitle" href="">About us</a>
+                        <a class="footer-nav__subtitle" href="">Shop</a>
+                        <a class="footer-nav__subtitle" href="">Blog</a>
+                        <a class="footer-nav__subtitle" href="">Category</a>
+                    </li>
+                    <div class="collum"></div>
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">CONTACT</h1>
+                        <a class="footer-nav__subtitle" href="">8800 555 35 35</a>
+                        <a class="footer-nav__subtitle" href="">Email</a>
+
+                    </li>
+                    <div class="collum"></div>
+                    <li class="footer-nav__item">
+                        <h1 class="footer-nav-title">MY ACCOUNT</h1>
+                        <a class="footer-nav__subtitle" href="">Login or register</a>
+                        <a class="footer-nav__subtitle" href="">My account</a>
+                        <a class="footer-nav__subtitle" href="">wishlist</a>
+
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/cart.js"></script>
 </body>
+
 </html>
