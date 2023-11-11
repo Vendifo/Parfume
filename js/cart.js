@@ -101,3 +101,66 @@ function updateTotalPrice() {
 // Инициализация
 updateTotalItemCount();
 updateTotalDiscount();
+
+
+
+const floatingButton = document.querySelector('.floating-button');
+const popupWindow = document.getElementById('popupWindow');
+let isMenuOpen = false;
+
+if (window.innerWidth < 1199) {
+  floatingButton.addEventListener('click', (event) => {
+    isMenuOpen = !isMenuOpen;
+    
+    // Предотвращаем всплытие события, чтобы оно не дошло до document
+    event.stopPropagation();
+  
+    // Переключаем видимость popup-window при клике на floating-button
+    popupWindow.style.display = 'block';
+  
+    // Добавляем задержку для срабатывания анимации
+    setTimeout(() => {
+      // Плавно изменяем прозрачность при отображении/скрытии
+      popupWindow.style.opacity = '1';
+      
+      // Скрываем/отображаем floating-button в зависимости от видимости popup-window
+      floatingButton.style.display = 'none';
+      
+    }, 50);
+    
+  });
+  
+  window.addEventListener('scroll', () => {
+    // Проверяем, открыто ли меню
+    if (!isMenuOpen) {
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight;
+      if (isAtBottom) {
+        // Если пользователь в самом низу страницы и меню не открыто, скрыть floating button
+        floatingButton.style.display = 'none';
+        popupWindow.style.display = 'block';
+      } else {
+        // Если пользователь не в самом низу страницы, показать floating button
+        floatingButton.style.display = 'block';
+        popupWindow.style.display = 'none';
+      }
+    }
+  });
+  
+  // Добавьте обработчик события на закрытие меню, если это необходимо
+  // Например, можно закрыть меню при клике вне его области или при нажатии на другие элементы страницы
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!popupWindow.contains(target) && target !== floatingButton) {
+      // Закрыть меню, если пользователь кликнул вне его области или на другие элементы страницы
+      isMenuOpen = false;
+      
+      popupWindow.style.display = 'none';
+      floatingButton.style.display = 'block';
+    }
+  });
+} 
+
+
+
+
+
