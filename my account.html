@@ -66,7 +66,7 @@
                     <p >Имя аккаунта</p>
                 </div>
                 <div class="account-img__gear">
-                    <img src="/img/gear.svg" alt="">
+                    <button id="changeData"><img class="account-img__gear" src="/img/gear.svg" alt=""></button>
                 </div>
             </div>
             <div class="account-href">
@@ -109,35 +109,135 @@
                 </div>
             </div>
             <div class="account-container">
+                <div class="account-container__title">
+                    
+                    <p id="warning" class="warning"></p>
+                </div>
                 <div class="account-container__ld">
                     <h1>Ваш профиль</h1>
                     <div class="account-container__block__name">
-                        <p>Фамилия Имя Отчество</p>
-                        <div class="account-container__block">
-                            <p>Кузнецов Денис Андреевич</p>
+                        <p>Фамилия</p>
+                        
+                        <div id="nameText" class="account-container__block">
+                            <p id="nameData">Кузнецов</p>
+                        </div>
+                        <div id="nameInput" class="account-container__block__input">
+                            <input id="nameInputData" class="account-container__input" type="text">
+                        </div>
+                        
+                    </div>
+                    <div class="account-container__block__second__name">
+                        <p>Имя</p>
+                        <div id="snameText" class="account-container__block">
+                            <p id="snameData">Денис</p>
+                        </div>
+                        <div id="snameInput" class="account-container__block__input">
+                            <input id="snameInputData" class="account-container__input" type="text">
+                        </div>
+                    </div>
+                    <div class="account-container__block__father__name">
+                        <p>Отчество</p>
+                        <div id="fnameText" class="account-container__block">
+                            <p id="fnameData">Андреевич</p>
+                        </div>
+                        <div id="fnameInput" class="account-container__block__input">
+                            <input id="fnameInputData" class="account-container__input" type="text">
                         </div>
                     </div>
                     <div class="account-container__block__email">
                         <p>e-mail</p>
-                        <div class="account-container__block">
-                            <p>asd asdasdas.@yandex.ru</p>
+                        <div  id="emailText" class="account-container__block">
+                            <p id="emailData">asdasdasdas@yandex.ru</p>
+                        </div>
+                        <div id="emailInput" class="account-container__block__input">
+                            <input id="emailInputData" class="account-container__input" type="text">
                         </div>
                     </div>
+                    
                     <div class="account-container__block__phone">
                         <p>Телефон</p>
-                        <div class="account-container__block">
-                            <p>+7 (___) ___-__-__ </p>
+                        <div  id="phoneText" class="account-container__block">
+                            <p id="phoneData">79245556677</p>
+                        </div>
+                        <div id="phoneInput" class="account-container__block__input">
+                            <input id="phoneInputData" class="account-container__input" type="text">
                         </div>
                     </div>
+                    
                     <div class="account-container__block__address">
-                        <p>Адрес</p>
-                        <div class="account-container__block">
-                            <p>Россия, г. Пупкино,  c. Подзалупкино, дом. 69</p>
+                        <p >Адрес</p>
+                        <div id="addressText" class="account-container__block">
+                            <p id="addressData">Россия, г. Пупкино, c. Подзалупкино, дом. 69</p>
                         </div>
+                        <div id="addressInput" class="account-container__block__input">
+                            <input id="addressInputData" class="account-container__input" type="text">
+                        </div>
+                    </div>
+                    <div id="saveChangesButton" class="account-container__save__change">
+                        <button  class="account-container__save__change__button">Сохранить изменения</button>
                     </div>
                 </div>
                 <div class="account-container__now">
+                    <h1>Текущие заказы</h1>
+                    <div class="account-container__list">
+                        <div class="account-container__product">
+                            <div class="account-container__product__img">
+                                <img src="/img/now1.svg" alt="">
+                            </div>
+                            <div class="account-container__product__disc">
+                                <p>Baccarat</p>
+                                <p>200мл</p>
+                                <p>Вкус: яблочный</p>
+                            </div>
+                            <div>
+                                <p>Заказ отправлен: 04.11.2023</p>
+                                <p>Время ожидания: 3 - 5 дней</p>
+                                <p>Пунк выдачи: Г. Москва. ул Филёвский бул.39</p>
+                            </div>
+                            <div class="account-container__product__price">
+                                <p>10000р</p>
+                            </div>
+                        </div>
+                        <div class="account-container__product">
+                            <div class="account-container__product__img">
+                                <img src="/img/Bacarrat.png" alt="">
+                            </div>
+                            <div class="account-container__product__disc">
+                                <p>Baccarat</p>
+                                <p>200мл</p>
+                                <p>Вкус: яблочный</p>
+                            </div>
+                            <div>
+                                <p>Заказ отправлен: 04.11.2023</p>
+                                <p>Время ожидания: 3 - 5 дней</p>
+                                <p>Пунк выдачи: Г. Москва. ул Филёвский бул.39</p>
+                            </div>
+                            <div class="account-container__product__price">
+                                <p>12000р</p>
+                            </div>
+                        </div>
+                        <div class="account-container__product">
+                            <div class="account-container__product__img">
+                                <img src="/img/Rectangle 54.svg" alt="">
+                            </div>
+                            <div class="account-container__product__disc">
+                                <p>Baccarat</p>
+                                <p>900мл</p>
+                                <p>Вкус: апельсин</p>
+                            </div>
+                            <div>
+                                <p>Заказ отправлен: 04.11.2023</p>
+                                <p>Время ожидания: 3 - 5 дней</p>
+                                <p>Пунк выдачи: Г. Москва. ул Филёвский бул.39</p>
+                            </div>
+                            <div class="account-container__product__price">
+                                <p>19900р</p>
+                            </div>
+                        </div>
+                        
 
+                    </div>
+                    <a class="account-container__shop" href="/shop.html"><button>Перейти в католог</button></a>
                 </div>
                 <div class="account-container__his">
 

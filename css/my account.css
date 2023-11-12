@@ -22,7 +22,7 @@
         align-items: center; /* выравнивание по центру по вертикали */
         justify-content: center;
         width: 25px;
-        height: 30px;
+        height: 35px;
         margin-left: 5px;
     }
 
@@ -73,18 +73,30 @@
     }
 
     .account-container { 
-        background-color: #fcfcfc;
-        border-left: 1px solid #242424;
+        border-left: 1px solid #8f8f8f;
         border-right: 1px solid #242424;
-        display: flex;
-        width: 60%;
+        box-shadow: 10px 0 10px -5px rgba(245, 232, 232, 0.5), -10px 0 10px -5px rgba(240, 223, 223, 0.5);
+        display: block;
+        width: 75%;
         margin: auto;
         margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
+
+    .account-container__title { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
     }
 
     .account-container__ld { 
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
+        /* ------------------------- */
+        display: none;
     }
 
     .account-container__block__name { 
@@ -107,8 +119,73 @@
         margin-left: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
-        background-color: #968383;
+        background: linear-gradient(rgb(231, 230, 230), rgb(250, 248, 249));
+        border: #000 solid 1px;
     }
 
+    .account-container__block__input { 
+        margin-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        size: 400px;
+        background-color: #e0c4c4;
+        display: none;
+    }
 
+    .warning { 
+        display: none;
+    }
+
+    .account-container__save__change { 
+        justify-content: flex-end;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .account-container__save__change__button { 
+        border: #000 solid 1px;
+        background-color: #e4e3e3;
+        box-shadow: 1px  1px 5px rgb(0, 0, 0);
+    }
+
+    .account-container__now { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+    }
+
+    .account-container__product { 
+        display: flex;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 22px;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        align-items: center;
+        border-bottom: 1px solid #a5a5a5;
+    }
+
+    .account-container__product:last-child { 
+        border-bottom: 0px solid #fff;
+    }
+
+    .account-container__product__img  { 
+        width: 130px;
+        height: 173px;
+        margin: 11px 0px 0px 10px;
+        padding-right: 5px;
+    }
+
+    
+
+    .account-container__product__price { 
+        font-size: 35px;
+    }
+
+    .account-container__shop { 
+        color: #fff;
+        background-color: #000;
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 288px;
+        height: 50px;
+    }
 }
