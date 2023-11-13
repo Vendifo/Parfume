@@ -97,6 +97,7 @@
         font-size: 30px;
         /* ------------------------- */
         display: none;
+        /* -------------------------- */
     }
 
     .account-container__block__name { 
@@ -151,6 +152,9 @@
     .account-container__now { 
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
     }
 
     .account-container__product { 
@@ -165,6 +169,10 @@
 
     .account-container__product:last-child { 
         border-bottom: 0px solid #fff;
+    }
+
+    .account-container__product__disc__name { 
+        color: #000;
     }
 
     .account-container__product__img  { 
@@ -188,4 +196,32 @@
         width: 288px;
         height: 50px;
     }
+
+    .account-container__his { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
+    .account-container__pass__list__input { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+    }
+
+    .account-container__pass__block { 
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+
+    .account-container__pass__change  { 
+        height: 60px;
+        width: 600px;
+        background-color: #D9D9D9;
+    }
+
+    
+
+    
 }
