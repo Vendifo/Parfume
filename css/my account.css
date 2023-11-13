@@ -95,9 +95,7 @@
     .account-container__ld { 
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
-        /* ------------------------- */
-        display: none;
-        /* -------------------------- */
+        
     }
 
     .account-container__block__name { 
@@ -118,8 +116,10 @@
 
     .account-container__block { 
         margin-left: 20px;
+        
         padding-top: 10px;
         padding-bottom: 10px;
+        
         background: linear-gradient(rgb(231, 230, 230), rgb(250, 248, 249));
         border: #000 solid 1px;
     }
@@ -205,23 +205,105 @@
         /* -------------------------- */
     }
 
+    .account-container__pass { 
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
     .account-container__pass__list__input { 
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
     }
 
     .account-container__pass__block { 
-        margin-left: 12%;
+        margin-left: 25%;
         margin-right: 12%;
     }
 
     .account-container__pass__change  { 
-        height: 60px;
-        width: 600px;
+        height: 40px;
+        width:80%;
         background-color: #D9D9D9;
+        padding-left: 10px;
     }
 
-    
+    .account-container__pass__warning{ 
+        margin-left: 25%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        color: #dd2828;
+        display: none;
+    }
 
-    
+    .account-container__pass__save { 
+        border: 1px solid #484848;
+        margin-left: 31%;
+        margin-right: 25%;
+        margin-top: 20px;
+        background-color: #000;
+        color: #fff;
+        height: 60px;
+        width: 40%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+    }
+
+    .account-container__pass_conf{
+        margin-left: 25%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        color: #28dd5b;
+        display: none;
+    }
+
+    .account-container__quit { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        position: fixed; /* Фиксированная позиция на экране */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный цвет фона */
+        color: white; /* Цвет текста поверхностного элемента */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    .account-container__quit__window { 
+        border: 1px solid #6c6c6c;
+        background-color: #999797;
+        width: 30%;
+        height: 200px;
+        padding-left: auto;
+    }
+
+    .account-container__quit__window__title { 
+        padding-left: 35%;
+        padding-top: 30px;
+    }
+
+    .account-container__quit__window__button { 
+        display: flex;
+        justify-content: space-between;
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-top: 50px;
+    }
+
+    .account-container__quit__window__choose__yes { 
+        background-color: #dd2828;
+        color: #D9D9D9;
+        width: 40%;
+        text-align: center;
+    }
+
+    .account-container__quit__window__choose__no { 
+        background-color: #28dd5b;
+        width: 40%;
+        text-align: center;
+    }
 }

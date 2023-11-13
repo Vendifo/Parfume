@@ -109,11 +109,8 @@
                 </div>
             </div>
             <div class="account-container">
-                <div class="account-container__title">
-                    
-                    <p id="warning" class="warning"></p>
-                </div>
-                <div class="account-container__ld">
+                
+                <div id="account-ld" class="account-container__ld">
                     <h1>Ваш профиль</h1>
                     <div class="account-container__block__name">
                         <p>Фамилия</p>
@@ -177,7 +174,7 @@
                         <button  class="account-container__save__change__button">Сохранить изменения</button>
                     </div>
                 </div>
-                <div class="account-container__now">
+                <div id="account-now" class="account-container__now">
                     <h1>Текущие заказы</h1>
                     <div class="account-container__list">
                         <div class="account-container__product">
@@ -245,7 +242,7 @@
                     </div>
                     <a class="account-container__shop" href="/shop.html"><button>Перейти в католог</button></a>
                 </div>
-                <div class="account-container__his">
+                <div id="account-his" class="account-container__his">
                     <h1>История заказов</h1>
                     <div class="account-container__list">
                         <div class="account-container__product">
@@ -261,7 +258,7 @@
                             </div>
                             <div>
                                 <p>Заказ отправлен: 04.11.2023</p>
-                                <p>Время ожидания: 3 - 5 дней</p>
+                                <p>Заказ доставлен: 07.11.2023</p>
                                 <p>Пунк выдачи: Г. Москва. ул Филёвский бул.39</p>
                             </div>
                             <div class="account-container__product__price">
@@ -301,7 +298,7 @@
                             </div>
                             <div>
                                 <p>Заказ отправлен: 04.11.2023</p>
-                                <p>Время ожидания: 3 - 5 дней</p>
+                                <p>Заказ доставлен: 07.11.2023</p>
                                 <p>Пунк выдачи: Г. Москва. ул Филёвский бул.39</p>
                             </div>
                             <div class="account-container__product__price">
@@ -312,7 +309,7 @@
                     <a class="account-container__shop" href="/shop.html"><button>Заказать еще</button></a>
                 </div>
                 
-                <div class="account-container__pass">
+                <div id="account-pass" class="account-container__pass">
                     <div>
                         <div class="account-container__pass__list__input">
                             <div class="account-container__pass__block">
@@ -321,18 +318,45 @@
                             </div>
                             <div class="account-container__pass__block">
                                 <p>Введите новый пароль</p>
-                                <input class="account-container__pass__change" type="text">
+                                <input id="newPassword1" class="account-container__pass__change" type="text">
                             </div>
                             <div class="account-container__pass__block">
                                 <p>Подтвердите новый пароль</p>
-                                <input class="account-container__pass__change" type="text">
+                                <input id="newPassword2" class="account-container__pass__change" type="text">
                             </div>
                         </div>
-                        <div clas>
-                            <button>Сохранить изменения</button>
+                        <div id="passwordMiss" class="account-container__pass__warning">
+                            <p>Пароли не совпадают</p>
                         </div>
+                        <div >
+                            <button id="savePassword" class="account-container__pass__save">Сохранить изменения</button>
+                        </div>
+                        
                     </div>
                 </div>
+                
+            </div>
+            <div id="passwordConf" class="account-container__pass_conf">
+                <p>Пароль сохранён!</p>
+            </div>
+            <div id="quitWindow" class="account-container__quit">
+                <div class="account-container__quit__window">
+                    <p class="account-container__quit__window__title">Вы уверены?</p>
+                    <div class="account-container__quit__window__button">
+                        <a class="account-container__quit__window__choose__yes" href="index.html">
+                            <button>
+                                Да
+                            </button>
+                        </a>
+                            <button id="quitWindowNo" class="account-container__quit__window__choose__no">
+                                Нет
+                            </button>
+                    </div>
+                </div>
+            </div>
+            <div class="account-container__title">
+                    
+                <p id="warning" class="warning"></p>
             </div>
         </div>
     </main>

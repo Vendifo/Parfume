@@ -1,4 +1,53 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const accountNowButton = document.getElementById ('account-button__now');
+    const accountHisButton = document.getElementById ('account-button__his');
+    const accountPassButton = document.getElementById ('account-button__pass');
+    const accountLdButton = document.getElementById ('account-button__ld');
+    
+    const accountNow = document.getElementById ('account-now');
+    const accountHis = document.getElementById ('account-his');
+    const accountPass = document.getElementById ('account-pass');
+    const accountLd = document.getElementById ('account-ld');
+
+    accountLdButton.addEventListener ( 'click', () => {
+        accountNow.style.display = 'none';
+        accountLd.style.display = 'block';
+        accountHis.style.display = 'none';
+        accountPass.style.display = 'none';
+    });
+
+    accountNowButton.addEventListener ( 'click', () => {
+        accountNow.style.display = 'block';
+        accountLd.style.display = 'none';
+        accountHis.style.display = 'none';
+        accountPass.style.display = 'none';
+    });
+
+    accountHisButton.addEventListener ( 'click', () => {
+        accountNow.style.display = 'none';
+        accountLd.style.display = 'none';
+        accountHis.style.display = 'block';
+        accountPass.style.display = 'none';
+    });
+
+    accountPassButton.addEventListener ( 'click', () => {
+        accountNow.style.display = 'none';
+        accountLd.style.display = 'none';
+        accountHis.style.display = 'none';
+        accountPass.style.display = 'block';
+    });
+
+    const accountQuitButton = document.getElementById ('account-button__quit');
+    const quitWindow = document.getElementById('quitWindow');
+    const quitWindowNo = document.getElementById ('quitWindowNo');
+
+    accountQuitButton.addEventListener('click', () => { 
+        quitWindow.style.display = 'flex';
+    });
+    quitWindowNo.addEventListener('click', () => {
+        quitWindow.style.display = 'none';
+    });
+
     const changeDataButton = document.getElementById('changeData');
     const saveChangesButton = document.getElementById('saveChangesButton');
 
@@ -166,6 +215,32 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 5000); // 5000 миллисекунд (5 секунд)
     });
 // ......................................................
+    var password1 = document.getElementById('newPassword1');
+    var password2 = document.getElementById('newPassword2');
+    var passwordMismatch = document.getElementById('passwordMiss');
+    const savePassword = document.getElementById('savePassword');
+    const passwordConf = document.getElementById('passwordConf');
+
+            // Слушатель изменения значений в полях ввода пароля
     
-// ооооооооооооооооооооооооооооооооооооооооооооооо
+    password2.addEventListener('input', checkPasswordMatch);
+
+    function checkPasswordMatch() {
+                // Сравниваем значения введенных паролей
+        if (password1.value !== password2.value) {
+                    // Если пароли не совпадают, показываем предупреждение
+            passwordMismatch.style.display = 'block';
+        } else {
+                    // Если пароли совпадают, скрываем предупреждение
+            passwordMismatch.style.display = 'none';
+        }
+    }
+    savePassword.addEventListener('click', () => {
+        passwordConf.style.display = 'block';
+        setTimeout(() => {
+            passwordConf.style.display = 'none';
+        }, 5000); // 5000 миллисекунд (5 секунд)
+    });
+
+    
 });

@@ -1,92 +1,17 @@
-/* ---------BASIK-CODE-------------------- */
-/* ---------BASIK-CODE-------------------- */
-body {
-  color: #000;
-  font-family: 'Cormorant Garamond';
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
+.category-text {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 36px;
 }
 
-/* ----------SECTION-PARAGRAF------------------------ */
-/* ----------SECTION-PARAGRAF------------------------ */
-.category__paragraf__wrapper {
-  margin-top: 35px;
+.category-title {
+    font-family: "Forum";
 }
 
-.category__paragraf__h1 {
-  display: flex;
-  justify-content: center;
-  font-family: 'Forum';
-  font-size: 36px;
-  font-weight: 400;
-  margin-bottom: 44px;
-}
-
-.category__paragraf__explore {
-  display: flex;
-  justify-content: center;
-}
-
-.category__explore__text {
-  max-width: 68%;
-  text-align: center;
-  font-family: 'Cormorant Garamond';
-  font-size: 36px;
-}
-.category__section__title {
-  margin-bottom: 61px;
-}
-/* -------------SECTION-CATALOG------------------------- */
-/* -------------SECTION-CATALOG------------------------ */
-
-.category__catalog__wrapper-A {
-display: flex;
-/* max-width: 1660px;
-max-height: 1080px; */
-margin-bottom: 40px;
-}
-.category__catalog__wrapper-B {
-  display: flex;
-}
-
-.category__catalog__wrapper .category__catalog__wrapper-inner{
-  margin-bottom: 40px;
-}
-
-.category__catalog__item-modOne {
-  display: inline;
-}
-
-.category__catalog__item-modOne img {
-  width: 540px;
-  /* height: 520px; */
-  margin-bottom: 40px;
-}
-.category__catalog__item-modTwo img {
-  width: 540px;
-  /* height: 520px; */
-}
-.category__catalog__item-modThree {
-  margin-left: 20px;
-  /* height: 1080px; */
-}
-.category__catalog__item-modThree img {
-/* height: 100%; */
-  width: 1100px;
-}
-.category__catalog__item-modFour {
-  width: 1098px;
-/* height: 520px; */
-overflow: hidden;
-margin-right: 20px;
-}
-.category__catalog__item-modFour img {
-  position: relative;
-  top: -51%;
-}
-.category__catalog__item-modFive img {
-  width: 540px;
-/* height: 520px; */
+.category-subtitle {
+    padding-top: 30px;
+    font-size: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+    font-family: "Cormorant Garamond";
 }
