@@ -1,47 +1,47 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const accountNowButton = document.getElementById ('account-button__now');
-    const accountHisButton = document.getElementById ('account-button__his');
-    const accountPassButton = document.getElementById ('account-button__pass');
-    const accountLdButton = document.getElementById ('account-button__ld');
-    
-    const accountNow = document.getElementById ('account-now');
-    const accountHis = document.getElementById ('account-his');
-    const accountPass = document.getElementById ('account-pass');
-    const accountLd = document.getElementById ('account-ld');
+    const accountNowButton = document.getElementById('account-button__now');
+    const accountHisButton = document.getElementById('account-button__his');
+    const accountPassButton = document.getElementById('account-button__pass');
+    const accountLdButton = document.getElementById('account-button__ld');
 
-    accountLdButton.addEventListener ( 'click', () => {
+    const accountNow = document.getElementById('account-now');
+    const accountHis = document.getElementById('account-his');
+    const accountPass = document.getElementById('account-pass');
+    const accountLd = document.getElementById('account-ld');
+
+    accountLdButton.addEventListener('click', () => {
         accountNow.style.display = 'none';
         accountLd.style.display = 'block';
         accountHis.style.display = 'none';
         accountPass.style.display = 'none';
     });
 
-    accountNowButton.addEventListener ( 'click', () => {
+    accountNowButton.addEventListener('click', () => {
         accountNow.style.display = 'block';
         accountLd.style.display = 'none';
         accountHis.style.display = 'none';
         accountPass.style.display = 'none';
     });
 
-    accountHisButton.addEventListener ( 'click', () => {
+    accountHisButton.addEventListener('click', () => {
         accountNow.style.display = 'none';
         accountLd.style.display = 'none';
         accountHis.style.display = 'block';
         accountPass.style.display = 'none';
     });
 
-    accountPassButton.addEventListener ( 'click', () => {
+    accountPassButton.addEventListener('click', () => {
         accountNow.style.display = 'none';
         accountLd.style.display = 'none';
         accountHis.style.display = 'none';
         accountPass.style.display = 'block';
     });
 
-    const accountQuitButton = document.getElementById ('account-button__quit');
+    const accountQuitButton = document.getElementById('account-button__quit');
     const quitWindow = document.getElementById('quitWindow');
-    const quitWindowNo = document.getElementById ('quitWindowNo');
+    const quitWindowNo = document.getElementById('quitWindowNo');
 
-    accountQuitButton.addEventListener('click', () => { 
+    accountQuitButton.addEventListener('click', () => {
         quitWindow.style.display = 'flex';
     });
     quitWindowNo.addEventListener('click', () => {
@@ -95,34 +95,72 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Добавьте аналогичные переменные для email, телефона, адреса и т.д.
 
+
+
     changeDataButton.addEventListener('click', () => {
+        if (accountLd.style.display === 'block') {
+            nameText.style.display = 'none';
+            nameInput.style.display = 'block';
+
+            snameText.style.display = 'none';
+            snameInput.style.display = 'block';
+
+            fnameText.style.display = 'none';
+            fnameInput.style.display = 'block';
+
+            emailText.style.display = 'none';
+            emailInput.style.display = 'block';
+
+            phoneText.style.display = 'none';
+            phoneInput.style.display = 'block';
+
+            addressText.style.display = 'none';
+            addressInput.style.display = 'block';
+
+            saveChangesButton.style.display = 'flex';
+
+            nameInputData.value = prevName;
+            snameInputData.value = prevSname;
+            fnameInputData.value = prevFname;
+            emailInputData.value = prevEmail;
+            phoneInputData.value = prevPhone;
+            addressInputData.value = prevAddress;
+        }
+        else if (accountLd.style.display === 'none') {
+            accountNow.style.display = 'none';
+            accountLd.style.display = 'block';
+            accountHis.style.display = 'none';
+            accountPass.style.display = 'none';
+
+            nameText.style.display = 'none';
+            nameInput.style.display = 'block';
+
+            snameText.style.display = 'none';
+            snameInput.style.display = 'block';
+
+            fnameText.style.display = 'none';
+            fnameInput.style.display = 'block';
+
+            emailText.style.display = 'none';
+            emailInput.style.display = 'block';
+
+            phoneText.style.display = 'none';
+            phoneInput.style.display = 'block';
+
+            addressText.style.display = 'none';
+            addressInput.style.display = 'block';
+
+            saveChangesButton.style.display = 'flex';
+
+            nameInputData.value = prevName;
+            snameInputData.value = prevSname;
+            fnameInputData.value = prevFname;
+            emailInputData.value = prevEmail;
+            phoneInputData.value = prevPhone;
+            addressInputData.value = prevAddress;
+        }
         // Переключаем видимость элементов
-        nameText.style.display = 'none';
-        nameInput.style.display = 'block';
 
-        snameText.style.display = 'none';
-        snameInput.style.display = 'block';
-
-        fnameText.style.display = 'none';
-        fnameInput.style.display = 'block';
-
-        emailText.style.display = 'none';
-        emailInput.style.display = 'block';
-
-        phoneText.style.display = 'none';
-        phoneInput.style.display = 'block';
-
-        addressText.style.display = 'none';
-        addressInput.style.display = 'block';
-
-        saveChangesButton.style.display = 'flex';
-
-        nameInputData.value = prevName;
-        snameInputData.value = prevSname;
-        fnameInputData.value = prevFname;
-        emailInputData.value = prevEmail;
-        phoneInputData.value = prevPhone;
-        addressInputData.value = prevAddress;
     });
 
     saveChangesButton.addEventListener('click', () => {
@@ -195,43 +233,50 @@ document.addEventListener('DOMContentLoaded', function () {
     phoneInputData.addEventListener('input', function () {
         // Очищаем введенные данные от всего, кроме цифр
         const cleanedValue = this.value.replace(/\D/g, '');
-        warningMessage.textContent = `Введите корректный формат номера`;
-        warningMessage.style.display = 'block';
-        phoneInput.style.backgroundColor = '#a13d3d';
-
-        // Обрезаем значение до 10 символов
+    
+        // Проверяем, если введено более 11 цифр, то игнорируем
+        if (cleanedValue.length > 11) {
+            this.value = prevPhone; // Восстанавливаем предыдущее значение
+            return;
+        }
+    
+        // Проверяем, если есть буквы во введенных данных
+        if (/[^0-9]/.test(cleanedValue)) {
+            
+            return;
+        }
+    
+        // Обрезаем значение до 11 символов
         const truncatedValue = cleanedValue.slice(0, 11);
-
+    
         // Заменяем текущее значение в поле ввода очищенным и обрезанным
         this.value = truncatedValue;
-
-        // Сохраняем текущее значение перед изменением
+    
+        // Проверяем, если пользователь пытается ввести более 11 чисел
+        if (cleanedValue.length > 11) {
+            
+        } 
         prevPhone = truncatedValue;
-
-        setTimeout(() => {
-            warningMessage.textContent = '';
-            warningMessage.style.display = 'none';
-            phoneInput.style.backgroundColor = ''; // Возвращаем исходный цвет
-        }, 5000); // 5000 миллисекунд (5 секунд)
+        
     });
-// ......................................................
+    // ......................................................
     var password1 = document.getElementById('newPassword1');
     var password2 = document.getElementById('newPassword2');
     var passwordMismatch = document.getElementById('passwordMiss');
     const savePassword = document.getElementById('savePassword');
     const passwordConf = document.getElementById('passwordConf');
 
-            // Слушатель изменения значений в полях ввода пароля
-    
+    // Слушатель изменения значений в полях ввода пароля
+
     password2.addEventListener('input', checkPasswordMatch);
 
     function checkPasswordMatch() {
-                // Сравниваем значения введенных паролей
+        // Сравниваем значения введенных паролей
         if (password1.value !== password2.value) {
-                    // Если пароли не совпадают, показываем предупреждение
+            // Если пароли не совпадают, показываем предупреждение
             passwordMismatch.style.display = 'block';
         } else {
-                    // Если пароли совпадают, скрываем предупреждение
+            // Если пароли совпадают, скрываем предупреждение
             passwordMismatch.style.display = 'none';
         }
     }
@@ -242,5 +287,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 5000); // 5000 миллисекунд (5 секунд)
     });
 
-    
+    const showPasswordCheckbox = document.getElementById('showPassword');
+    const passwordInputs = document.querySelectorAll('.account-container__pass__change');
+
+    passwordInputs.forEach(function (input) {
+        input.type = 'password';
+    });
+
+    showPasswordCheckbox.addEventListener('change', function () {
+        const showPassword = this.checked;
+
+        passwordInputs.forEach(function (input) {
+            input.type = showPassword ? 'text' : 'password';
+        });
+    });
+
 });

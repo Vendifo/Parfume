@@ -24,7 +24,10 @@
         width: 25px;
         height: 35px;
         margin-left: 5px;
+        
     }
+
+    
 
     .account-href { 
         margin-top: 23px;
@@ -95,8 +98,10 @@
     .account-container__ld { 
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
-        
+        display: block;
     }
+
+    
 
     .account-container__block__name { 
         font-size: 25px;
@@ -131,6 +136,10 @@
         size: 400px;
         background-color: #e0c4c4;
         display: none;
+    }
+
+    .account-container__input { 
+        width: 100%;
     }
 
     .warning { 
@@ -271,18 +280,21 @@
         justify-content: center;
         align-items: center;
         z-index: 9999;
+        
     }
 
     .account-container__quit__window { 
         border: 1px solid #6c6c6c;
+        border-radius: 10px;
         background-color: #999797;
         width: 30%;
         height: 200px;
         padding-left: auto;
+        transition: 0.3s;
     }
 
     .account-container__quit__window__title { 
-        padding-left: 35%;
+        padding-left: 40%;
         padding-top: 30px;
     }
 
@@ -295,15 +307,31 @@
     }
 
     .account-container__quit__window__choose__yes { 
-        background-color: #dd2828;
-        color: #D9D9D9;
+        background-color: #000000;
+        color: #d1d0d0;
         width: 40%;
         text-align: center;
+        color: #D9D9D9;
+        border-radius: 10px;
+        transition: 0.1s;
     }
 
     .account-container__quit__window__choose__no { 
-        background-color: #28dd5b;
+        background-color: #000000;
         width: 40%;
         text-align: center;
+        color: #D9D9D9;
+        border-radius: 10px;
+        transition: 0.1s;
     }
+
+    .account-container__quit__window__choose__no:hover { 
+        border: 1px solid #28dd5b;
+    }
+
+    .account-container__quit__window__choose__yes:hover { 
+        border: 2px solid rgb(189, 143, 142);
+    }
+
+    
 }

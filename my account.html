@@ -68,6 +68,7 @@
                 <div class="account-img__gear">
                     <button id="changeData"><img class="account-img__gear" src="/img/gear.svg" alt=""></button>
                 </div>
+                
             </div>
             <div class="account-href">
                 <p >Личный кабинет </p>
@@ -110,7 +111,7 @@
             </div>
             <div class="account-container">
                 
-                <div id="account-ld" class="account-container__ld">
+                <div id="account-ld" class="account-container__ld" style="display: block;">
                     <h1>Ваш профиль</h1>
                     <div class="account-container__block__name">
                         <p>Фамилия</p>
@@ -328,7 +329,10 @@
                         <div id="passwordMiss" class="account-container__pass__warning">
                             <p>Пароли не совпадают</p>
                         </div>
-                        <div >
+                        <div>
+                            <label>
+                                <input type="checkbox" id="showPassword"> Показать пароль
+                            </label>
                             <button id="savePassword" class="account-container__pass__save">Сохранить изменения</button>
                         </div>
                         
