@@ -9,11 +9,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const accountPass = document.getElementById('account-pass');
     const accountLd = document.getElementById('account-ld');
 
+    const hrefTitle = document.getElementById ('hrefTitle');
+
+    function updateHrefTitle (title) { 
+        hrefTitle.textContent = title;
+    }
+
     accountLdButton.addEventListener('click', () => {
         accountNow.style.display = 'none';
         accountLd.style.display = 'block';
         accountHis.style.display = 'none';
         accountPass.style.display = 'none';
+        updateHrefTitle('Личные данные');
     });
 
     accountNowButton.addEventListener('click', () => {
@@ -21,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         accountLd.style.display = 'none';
         accountHis.style.display = 'none';
         accountPass.style.display = 'none';
+        updateHrefTitle('Текущие заказы');
     });
 
     accountHisButton.addEventListener('click', () => {
@@ -28,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         accountLd.style.display = 'none';
         accountHis.style.display = 'block';
         accountPass.style.display = 'none';
+        updateHrefTitle('История заказов');
     });
 
     accountPassButton.addEventListener('click', () => {
@@ -35,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
         accountLd.style.display = 'none';
         accountHis.style.display = 'none';
         accountPass.style.display = 'block';
+        updateHrefTitle('Сменить пароль');
     });
 
     const accountQuitButton = document.getElementById('account-button__quit');
@@ -301,5 +311,6 @@ document.addEventListener('DOMContentLoaded', function () {
             input.type = showPassword ? 'text' : 'password';
         });
     });
+
 
 });

@@ -27,7 +27,9 @@
         
     }
 
-    
+    .account-subtitle { 
+        display:flex;
+    }
 
     .account-href { 
         margin-top: 23px;
@@ -49,10 +51,12 @@
         justify-content: center;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
+        
     }
 
     .account-navigation div { 
         margin-left: 19px;
+        border-bottom: 1px solid #5c5c5c;
     }
 
     .account-navigation__img__ld  { 
@@ -134,12 +138,14 @@
         padding-top: 10px;
         padding-bottom: 10px;
         size: 400px;
-        background-color: #e0c4c4;
+        background-color: #e7d7d7;
         display: none;
+        border: 1px solid #000 ;
     }
 
     .account-container__input { 
         width: 100%;
+        
     }
 
     .warning { 
@@ -287,20 +293,20 @@
         border: 1px solid #6c6c6c;
         border-radius: 10px;
         background-color: #999797;
-        width: 30%;
+        
         height: 200px;
         padding-left: auto;
         transition: 0.3s;
     }
 
     .account-container__quit__window__title { 
-        padding-left: 40%;
+        text-align: center;
         padding-top: 30px;
     }
 
     .account-container__quit__window__button { 
         display: flex;
-        justify-content: space-between;
+        
         padding-left: 140px;
         padding-right: 140px;
         padding-top: 50px;
@@ -309,16 +315,17 @@
     .account-container__quit__window__choose__yes { 
         background-color: #000000;
         color: #d1d0d0;
-        width: 40%;
+        width: 80px;
         text-align: center;
         color: #D9D9D9;
         border-radius: 10px;
         transition: 0.1s;
+        margin-right: 30px;
     }
 
     .account-container__quit__window__choose__no { 
         background-color: #000000;
-        width: 40%;
+        width: 80px;
         text-align: center;
         color: #D9D9D9;
         border-radius: 10px;
@@ -334,4 +341,709 @@
     }
 
     
+}
+
+@media screen and (max-width:1199px) and (min-width:768px) {
+    .account-title { 
+        display: flex;
+        font-family: "Forum";
+        font-size: 35px;
+        align-items: center;
+        
+    }
+
+    .account-img { 
+        margin-left: 20px;
+    }
+
+    .account-img__person { 
+        width: 40px;
+        height: 40px;
+    }
+
+    .account-title__name { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        align-items: center; /* выравнивание по центру по вертикали */
+        justify-content: center;
+    }
+
+    .account-subtitle { 
+        display: flex;
+    }
+    
+    .account-img__gear { 
+        margin-top: auto;
+        align-items: center; /* выравнивание по центру по вертикали */
+        justify-content: center;
+        width: 25px;
+        height: 35px;
+        margin-left: 5px;
+        
+    }
+
+    
+
+    .account-href { 
+        margin-top: 23px;
+        display: flex;
+        font-family: "Forum";
+        font-size: 20px;
+        color: #666666;
+        align-items: center; /* выравнивание по центру по вертикали */
+       
+    }
+
+    .account-href__tire { 
+        font-size: 40px;
+    }
+
+    .account-navigation{ 
+        display: flex;
+        align-items: center; /* выравнивание по центру по вертикали */
+        justify-content: center;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+    }
+
+    .account-navigation div { 
+        margin-left: 19px;
+    }
+
+    .account-navigation__img__ld  { 
+        height: 40px;
+    }
+
+    .account-navigation__img__pass{
+        height: 40px;
+    }
+
+    .account-navigation__img__now{
+        height: 40px;
+    }
+    
+    .account-navigation__img__his { 
+        height: 45px;
+    }
+
+    .account-navigation__img__quit { 
+        height: 35px;
+    }
+
+    .account-container { 
+        border-left: 1px solid #8f8f8f;
+        border-right: 1px solid #242424;
+        box-shadow: 10px 0 10px -5px rgba(245, 232, 232, 0.5), -10px 0 10px -5px rgba(240, 223, 223, 0.5);
+        display: block;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
+
+    .account-container__title { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .account-container__ld { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        display: block;
+    }
+
+    
+
+    .account-container__block__name { 
+        font-size: 25px;
+    }
+
+    .account-container__block__email { 
+        font-size: 25px;
+    }
+
+    .account-container__block__phone { 
+        font-size: 25px;
+    }
+
+    .account-container__block__address { 
+        font-size: 25px;
+    }
+
+    .account-container__block { 
+        margin-left: 20px;
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        background: linear-gradient(rgb(231, 230, 230), rgb(250, 248, 249));
+        border: #000 solid 1px;
+    }
+
+    .account-container__block__input { 
+        margin-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        size: 400px;
+        background-color: #e0c4c4;
+        display: none;
+    }
+
+    .account-container__input { 
+        width: 100%;
+    }
+
+    .warning { 
+        display: none;
+    }
+
+    .account-container__save__change { 
+        justify-content: flex-end;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .account-container__save__change__button { 
+        border: #000 solid 1px;
+        background-color: #e4e3e3;
+        box-shadow: 1px  1px 5px rgb(0, 0, 0);
+    }
+
+    .account-container__now { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
+    .account-container__product { 
+        display: flex;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        align-items: center;
+        border-bottom: 1px solid #a5a5a5;
+    }
+
+    .account-container__product:last-child { 
+        border-bottom: 0px solid #fff;
+    }
+
+    .account-container__product__disc__name { 
+        color: #000;
+    }
+
+    .account-container__product__img  { 
+        width: 100px;
+        height: 143px;
+        margin: 11px 0px 0px 10px;
+        padding-right: 5px;
+        align-items: center;
+    }
+
+    
+
+    .account-container__product__price { 
+        font-size: 25px;
+    }
+
+    .account-container__shop { 
+        color: #fff;
+        background-color: #000;
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 288px;
+        height: 50px;
+    }
+
+    .account-container__his { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
+    .account-container__pass { 
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
+    .account-container__pass__list__input { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+    }
+
+    .account-container__pass__block { 
+        margin-left: 25%;
+        margin-right: 12%;
+    }
+
+    .account-container__pass__change  { 
+        height: 40px;
+        width:80%;
+        background-color: #D9D9D9;
+        padding-left: 10px;
+    }
+
+    .account-container__pass__warning{ 
+        margin-left: 25%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        color: #dd2828;
+        display: none;
+    }
+
+    .account-container__pass__save { 
+        border: 1px solid #484848;
+        margin-left: 31%;
+        margin-right: 25%;
+        margin-top: 20px;
+        background-color: #000;
+        color: #fff;
+        height: 60px;
+        width: 40%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+    }
+
+    .account-container__pass_conf{
+        margin-left: 25%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        color: #28dd5b;
+        display: none;
+    }
+
+    .account-container__quit { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        position: fixed; /* Фиксированная позиция на экране */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный цвет фона */
+        color: white; /* Цвет текста поверхностного элемента */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        
+    }
+
+    .account-container__quit__window { 
+        border: 1px solid #6c6c6c;
+        border-radius: 10px;
+        background-color: #999797;
+        
+        height: 200px;
+        padding-left: auto;
+        transition: 0.3s;
+    }
+
+    .account-container__quit__window__title { 
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .account-container__quit__window__button { 
+        display: flex;
+        
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-top: 50px;
+    }
+
+    .account-container__quit__window__choose__yes { 
+        background-color: #000000;
+        color: #d1d0d0;
+        width: 80px;
+        text-align: center;
+        color: #D9D9D9;
+        border-radius: 10px;
+        transition: 0.1s;
+        margin-right: 30px;
+    }
+
+    .account-container__quit__window__choose__no { 
+        background-color: #000000;
+        width: 80px;
+        text-align: center;
+        color: #D9D9D9;
+        border-radius: 10px;
+        transition: 0.1s;
+    }
+
+    .account-container__quit__window__choose__no:hover { 
+        border: 1px solid #28dd5b;
+    }
+
+    .account-container__quit__window__choose__yes:hover { 
+        border: 2px solid rgb(189, 143, 142);
+    }
+}
+
+@media screen and (max-width:767px) and (min-width:300px) { 
+    .account-title { 
+        display: flex;
+        font-family: "Forum";
+        font-size: 35px;
+        align-items: center;
+        
+    }
+
+    .account-img { 
+        margin-left: 20px;
+    }
+
+    .account-img__person { 
+        width: 40px;
+        height: 40px;
+    }
+
+    .account-title__name { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        align-items: center; /* выравнивание по центру по вертикали */
+        justify-content: center;
+    }
+
+    .account-subtitle { 
+        display: flex;
+    }
+    
+    .account-img__gear { 
+        margin-top: auto;
+        align-items: center; /* выравнивание по центру по вертикали */
+        justify-content: center;
+        width: 25px;
+        height: 35px;
+        margin-left: 5px;
+        
+    }
+
+    
+
+    .account-href { 
+        margin-top: 23px;
+        display: flex;
+        font-family: "Forum";
+        font-size: 20px;
+        color: #666666;
+        align-items: center; /* выравнивание по центру по вертикали */
+       
+    }
+
+    .account-href__tire { 
+        font-size: 40px;
+    }
+
+    .account-href__arrow { 
+        height: 25px;
+        width: 25px;
+        padding-left: 5px;
+    }
+
+    .account-navigation{ 
+        display: flex;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        
+    }
+
+    .account-navigation div { 
+        margin-left: 19px;
+    }
+
+    .account-navigation__ld { 
+        display: flex;
+    }
+
+    .account-navigation__img__ld  { 
+        height: 40px;
+    }
+
+    .account-navigation__img__pass{
+        height: 40px;
+    }
+
+    .account-navigation__img__now{
+        height: 40px;
+    }
+    
+    .account-navigation__img__his { 
+        height: 45px;
+    }
+
+    .account-navigation__img__quit { 
+        height: 35px;
+    }
+
+    .account-container { 
+        border-left: 1px solid #8f8f8f;
+        border-right: 1px solid #242424;
+        box-shadow: 10px 0 10px -5px rgba(245, 232, 232, 0.5), -10px 0 10px -5px rgba(240, 223, 223, 0.5);
+        display: block;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+    }
+
+    .account-container__title { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .account-container__ld { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        display: block;
+    }
+
+    
+
+    .account-container__block__name { 
+        font-size: 25px;
+    }
+
+    .account-container__block__email { 
+        font-size: 25px;
+    }
+
+    .account-container__block__phone { 
+        font-size: 25px;
+    }
+
+    .account-container__block__address { 
+        font-size: 25px;
+    }
+
+    .account-container__block { 
+        margin-left: 20px;
+        
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        background: linear-gradient(rgb(231, 230, 230), rgb(250, 248, 249));
+        border: #000 solid 1px;
+    }
+
+    .account-container__block__input { 
+        margin-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        size: 400px;
+        background-color: #e0c4c4;
+        display: none;
+    }
+
+    .account-container__input { 
+        width: 100%;
+    }
+
+    .warning { 
+        display: none;
+    }
+
+    .account-container__save__change { 
+        justify-content: flex-end;
+        margin-top: 10px;
+        display: none;
+    }
+
+    .account-container__save__change__button { 
+        border: #000 solid 1px;
+        background-color: #e4e3e3;
+        box-shadow: 1px  1px 5px rgb(0, 0, 0);
+    }
+
+    .account-container__now { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
+    .account-container__product { 
+        display: flex;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 19px;
+        justify-content: space-between;
+        padding-bottom: 5px;
+        align-items: center;
+        border-bottom: 1px solid #a5a5a5;
+    }
+
+    .account-container__product:last-child { 
+        border-bottom: 0px solid #fff;
+    }
+
+    .account-container__product__disc__name { 
+        color: #000;
+    }
+
+    .account-container__product__img  { 
+        width: 100px;
+        height: 143px;
+        margin: 11px 0px 0px 10px;
+        padding-right: 5px;
+        align-items: center;
+    }
+
+    
+
+    .account-container__product__price { 
+        font-size: 25px;
+    }
+
+    .account-container__shop { 
+        color: #fff;
+        background-color: #000;
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 288px;
+        height: 50px;
+    }
+
+    .account-container__his { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 30px;
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
+    .account-container__pass { 
+        /* ------------------------- */
+        display: none;
+        /* -------------------------- */
+    }
+
+    .account-container__pass__list__input { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+    }
+
+    .account-container__pass__block { 
+        margin-left: 25%;
+        margin-right: 12%;
+    }
+
+    .account-container__pass__change  { 
+        height: 40px;
+        width:80%;
+        background-color: #D9D9D9;
+        padding-left: 10px;
+    }
+
+    .account-container__pass__warning{ 
+        margin-left: 25%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        color: #dd2828;
+        display: none;
+    }
+
+    .account-container__pass__save { 
+        border: 1px solid #484848;
+        margin-left: 31%;
+        margin-right: 25%;
+        margin-top: 20px;
+        background-color: #000;
+        color: #fff;
+        height: 60px;
+        width: 40%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+    }
+
+    .account-container__pass_conf{
+        margin-left: 25%;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        color: #28dd5b;
+        display: none;
+    }
+
+    .account-container__quit { 
+        font-family: "Cormorant Garamond", serif;
+        font-size: 25px;
+        position: fixed; /* Фиксированная позиция на экране */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный цвет фона */
+        color: white; /* Цвет текста поверхностного элемента */
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        
+    }
+
+    .account-container__quit__window { 
+        border: 1px solid #6c6c6c;
+        border-radius: 10px;
+        background-color: #999797;
+        
+        height: 200px;
+        padding-left: auto;
+        transition: 0.3s;
+    }
+
+    .account-container__quit__window__title { 
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .account-container__quit__window__button { 
+        display: flex;
+        
+        padding-left: 140px;
+        padding-right: 140px;
+        padding-top: 50px;
+    }
+
+    .account-container__quit__window__choose__yes { 
+        background-color: #000000;
+        color: #d1d0d0;
+        width: 80px;
+        text-align: center;
+        color: #D9D9D9;
+        border-radius: 10px;
+        transition: 0.1s;
+        margin-right: 30px;
+    }
+
+    .account-container__quit__window__choose__no { 
+        background-color: #000000;
+        width: 80px;
+        text-align: center;
+        color: #D9D9D9;
+        border-radius: 10px;
+        transition: 0.1s;
+    }
+
+    .account-container__quit__window__choose__no:hover { 
+        border: 1px solid #28dd5b;
+    }
+
+    .account-container__quit__window__choose__yes:hover { 
+        border: 2px solid rgb(189, 143, 142);
+    }
 }

@@ -60,13 +60,15 @@
             <div class="account-title">
                 <h1>Профиль пользователя</h1>
                 <div class="account-img">
-                    <img src="/img/account-img.svg" alt="">
+                    <img class="account-img__person" src="/img/account-img.svg" alt="">
                 </div>
-                <div class="account-title__name">
-                    <p >Имя аккаунта</p>
-                </div>
-                <div class="account-img__gear">
-                    <button id="changeData"><img class="account-img__gear" src="/img/gear.svg" alt=""></button>
+                <div class="account-subtitle">
+                    <div class="account-title__name">
+                        <p >Имя аккаунта</p>
+                    </div>
+                    <div class="account-img__gear">
+                        <button id="changeData"><img class="account-img__gear" src="/img/gear.svg" alt=""></button>
+                    </div>
                 </div>
                 
             </div>
@@ -74,36 +76,37 @@
                 <p >Личный кабинет </p>
                 <p class="account-href__tire">-</p>
                 <div>
-                    <p> Персональные данные</p>
+                    <p id="hrefTitle">Личные данные</p>
                 </div>
+                
             </div>
-            <div class="account-navigation">
+            <div id="navigation" class="account-navigation">
                 <div class="account-navigation__ld">
-                    <button id="account-button__ld">
+                    <button id="account-button__ld" class="account-button__ld">
                         <img class="account-navigation__img__ld" src="/img/acc-ld.svg" alt="">
-                        <p>Личные данные</p>
+                        <p class="account-button__ld__title">Личные данные</p>
                     </button>
                 </div>
                 <div class="account-navigation__now">
-                    <button id="account-button__now">
+                    <button id="account-button__now" class="account-button__ld">
                         <img class="account-navigation__img__now" src="/img/acc-now.svg" alt="">
                         <p>Текущие заказы</p>
                     </button>
                 </div>
                 <div class="account-navigation__his">
-                    <button id="account-button__his">
+                    <button id="account-button__his" class="account-button__ld">
                         <img class="account-navigation__img__his" src="/img/acc-his.svg" alt="">
                         <p>История заказов</p>
                     </button>
                 </div>
                 <div class="account-navigation__pass">
-                    <button id="account-button__pass">
+                    <button id="account-button__pass" class="account-button__ld">
                         <img class="account-navigation__img__pass" src="/img/acc-pass.svg" alt="">
                         <p>Сменить пароль</p>
                     </button>
                 </div>
                 <div class="account-navigation__quit">
-                    <button id="account-button__quit">
+                    <button id="account-button__quit" class="account-button__ld">
                         <img class="account-navigation__img__quit" src="/img/acc-quit.svg" alt="">
                         <p>Выйти из аккаунта</p>
                     </button>
