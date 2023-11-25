@@ -328,7 +328,7 @@
         margin-right: 19px;
     }
 
-    .aboutus-newrelease__product:nth-child(3n) {
+    .aboutus-newrelease__product:nth-child(2n) {
         margin-right: 0;
     }
 
@@ -384,7 +384,7 @@
         margin-right: 19px;
     }
 
-    .aboutus-bestsellers__product:nth-child(3n) {
+    .aboutus-bestsellers__product:nth-child(2n) {
         margin-right: 0;
     }
 
@@ -445,6 +445,7 @@
         font-size: 19px; 
         background-image: url(/img/aboutus-back.svg);
         background-size: 100%;
+        background-repeat: no-repeat;
         display: inline-block; /* Размещение текста внутри блока и обтекание картинки */
         vertical-align: top; /* Выравнивание текста по верхнему краю */
     }
