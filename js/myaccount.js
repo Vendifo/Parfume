@@ -1,51 +1,89 @@
+const accountLd = document.getElementById('account-ld');
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Показываем окно account-ld с анимацией
+    accountLd.classList.add('show');
+});
+
 document.addEventListener('DOMContentLoaded', function () {
+    const accountLdButton = document.getElementById('account-button__ld');
     const accountNowButton = document.getElementById('account-button__now');
     const accountHisButton = document.getElementById('account-button__his');
     const accountPassButton = document.getElementById('account-button__pass');
-    const accountLdButton = document.getElementById('account-button__ld');
+    
+
+    const ldTitle = document.getElementById('ld-title');
+    const nowTitle = document.getElementById('now-title');
+    const hisTitle = document.getElementById('his-title');
+    const passTitle = document.getElementById('pass-title');
 
     const accountNow = document.getElementById('account-now');
     const accountHis = document.getElementById('account-his');
     const accountPass = document.getElementById('account-pass');
-    const accountLd = document.getElementById('account-ld');
 
-    const hrefTitle = document.getElementById ('hrefTitle');
+    const changeDataButton = document.getElementById('changeData');
+    const saveChangesButton = document.getElementById('saveChangesButton');
+    
 
-    function updateHrefTitle (title) { 
+    const hrefTitle = document.getElementById('hrefTitle');
+
+    function updateHrefTitle(title) {
         hrefTitle.textContent = title;
     }
 
-    accountLdButton.addEventListener('click', () => {
-        accountNow.style.display = 'none';
-        accountLd.style.display = 'block';
-        accountHis.style.display = 'none';
-        accountPass.style.display = 'none';
+    function showLd() {
+        hideAll();
+        accountLd.classList.add('show');
         updateHrefTitle('Личные данные');
-    });
-
-    accountNowButton.addEventListener('click', () => {
-        accountNow.style.display = 'block';
-        accountLd.style.display = 'none';
-        accountHis.style.display = 'none';
-        accountPass.style.display = 'none';
+        ldTitle.style.borderBottom = '1px solid #000';
+        changeDataButton.style.display = 'block';
+    }
+    
+    function showNow() {
+        hideAll();
+        accountNow.classList.add('show');
         updateHrefTitle('Текущие заказы');
-    });
-
-    accountHisButton.addEventListener('click', () => {
-        accountNow.style.display = 'none';
-        accountLd.style.display = 'none';
-        accountHis.style.display = 'block';
-        accountPass.style.display = 'none';
+        nowTitle.style.borderBottom = '1px solid #000';
+        changeDataButton.style.display = 'none';
+    }
+    
+    function showHis() {
+        hideAll();
+        accountHis.classList.add('show');
         updateHrefTitle('История заказов');
-    });
-
-    accountPassButton.addEventListener('click', () => {
-        accountNow.style.display = 'none';
-        accountLd.style.display = 'none';
-        accountHis.style.display = 'none';
-        accountPass.style.display = 'block';
+        hisTitle.style.borderBottom = '1px solid #000';
+        changeDataButton.style.display = 'none';
+    }
+    
+    function showPass() {
+        hideAll();
+        accountPass.classList.add('show');
         updateHrefTitle('Сменить пароль');
-    });
+        passTitle.style.borderBottom = '1px solid #000';
+        changeDataButton.style.display = 'none';
+    }
+    
+    function hideAll() {
+        const allAccounts = [accountNow, accountLd, accountHis, accountPass];
+        allAccounts.forEach(account => {
+            account.classList.remove('show');
+        });
+    
+        const allTitles = [ldTitle, nowTitle, hisTitle, passTitle];
+        allTitles.forEach(title => {
+            title.style.borderBottom = 'none';
+        });
+    }
+    
+    // Показываем окно account-ld при загрузке страницы
+    
+    
+    accountLdButton.addEventListener('click', showLd);
+    accountNowButton.addEventListener('click', showNow);
+    accountHisButton.addEventListener('click', showHis);
+    accountPassButton.addEventListener('click', showPass);
+
+    
 
     const accountQuitButton = document.getElementById('account-button__quit');
     const quitWindow = document.getElementById('quitWindow');
@@ -57,9 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
     quitWindowNo.addEventListener('click', () => {
         quitWindow.style.display = 'none';
     });
-
-    const changeDataButton = document.getElementById('changeData');
-    const saveChangesButton = document.getElementById('saveChangesButton');
 
     const nameText = document.getElementById('nameText');
     const nameInput = document.getElementById('nameInput');
@@ -243,31 +278,31 @@ document.addEventListener('DOMContentLoaded', function () {
     phoneInputData.addEventListener('input', function () {
         // Очищаем введенные данные от всего, кроме цифр
         const cleanedValue = this.value.replace(/\D/g, '');
-    
+
         // Проверяем, если введено более 11 цифр, то игнорируем
         if (cleanedValue.length > 11) {
             this.value = prevPhone; // Восстанавливаем предыдущее значение
             return;
         }
-    
+
         // Проверяем, если есть буквы во введенных данных
         if (/[^0-9]/.test(cleanedValue)) {
-            
+
             return;
         }
-    
+
         // Обрезаем значение до 11 символов
         const truncatedValue = cleanedValue.slice(0, 11);
-    
+
         // Заменяем текущее значение в поле ввода очищенным и обрезанным
         this.value = truncatedValue;
-    
+
         // Проверяем, если пользователь пытается ввести более 11 чисел
         if (cleanedValue.length > 11) {
-            
-        } 
+
+        }
         prevPhone = truncatedValue;
-        
+
     });
     // ......................................................
     var password1 = document.getElementById('newPassword1');

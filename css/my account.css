@@ -1,85 +1,93 @@
 @media screen and (min-width:1200px) {
-    .account-title { 
+    .account-title {
         display: flex;
         font-family: "Forum";
         font-size: 35px;
         align-items: center;
     }
 
-    .account-img { 
+    .account-img {
         margin-left: 20px;
     }
 
-    .account-title__name { 
+    .account-title__name {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
-        align-items: center; /* выравнивание по центру по вертикали */
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
     }
-    
-    .account-img__gear { 
+
+    .account-img__gear {
         margin-top: auto;
-        align-items: center; /* выравнивание по центру по вертикали */
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
         width: 25px;
         height: 35px;
         margin-left: 5px;
-        
+
     }
 
-    .account-subtitle { 
-        display:flex;
+    .account-subtitle {
+        display: flex;
     }
 
-    .account-href { 
+    .account-href {
         margin-top: 23px;
         display: flex;
         font-family: "Forum";
         font-size: 20px;
         color: #666666;
-        align-items: center; /* выравнивание по центру по вертикали */
-       
+        align-items: center;
+        /* выравнивание по центру по вертикали */
+
     }
 
-    .account-href__tire { 
+    .account-href__tire {
         font-size: 40px;
     }
 
-    .account-navigation{ 
+    .account-navigation {
         display: flex;
-        align-items: center; /* выравнивание по центру по вертикали */
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
         font-family: "Cormorant Garamond", serif;
-        font-size: 25px;
-        
+        font-size: 35px;
+
     }
 
-    .account-navigation div { 
+    .account-button__ld__title {
+        border-bottom: 1px solid #000;
+    }
+
+    .account-navigation div {
         margin-left: 19px;
-        border-bottom: 1px solid #5c5c5c;
+
     }
 
-    .account-navigation__img__ld  { 
+    .account-navigation__img__ld {
         height: 40px;
     }
 
-    .account-navigation__img__pass{
+    .account-navigation__img__pass {
         height: 40px;
     }
 
-    .account-navigation__img__now{
+    .account-navigation__img__now {
         height: 40px;
     }
-    
-    .account-navigation__img__his { 
+
+    .account-navigation__img__his {
         height: 45px;
     }
 
-    .account-navigation__img__quit { 
+    .account-navigation__img__quit {
         height: 35px;
     }
 
-    .account-container { 
+    .account-container {
         border-left: 1px solid #8f8f8f;
         border-right: 1px solid #242424;
         box-shadow: 10px 0 10px -5px rgba(245, 232, 232, 0.5), -10px 0 10px -5px rgba(240, 223, 223, 0.5);
@@ -92,87 +100,102 @@
         padding-bottom: 20px;
     }
 
-    .account-container__title { 
+    .account-container__ld,
+    .account-container__now,
+    .account-container__his,
+    .account-container__pass {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .show {
+        /* Если будут проблемы в бэке увеличь значение */
+        max-height: 1000px;
+        /* любое большое значение, чтобы охватить все возможные высоты контента */
+    }
+
+    .account-container__title {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         display: flex;
         justify-content: space-between;
     }
 
-    .account-container__ld { 
+    .account-container__ld {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         display: block;
     }
 
-    
 
-    .account-container__block__name { 
+
+    .account-container__block__name {
         font-size: 25px;
     }
 
-    .account-container__block__email { 
+    .account-container__block__email {
         font-size: 25px;
     }
 
-    .account-container__block__phone { 
+    .account-container__block__phone {
         font-size: 25px;
     }
 
-    .account-container__block__address { 
+    .account-container__block__address {
         font-size: 25px;
     }
 
-    .account-container__block { 
+    .account-container__block {
         margin-left: 20px;
-        
+
         padding-top: 10px;
         padding-bottom: 10px;
-        
+
         background: linear-gradient(rgb(231, 230, 230), rgb(250, 248, 249));
         border: #000 solid 1px;
     }
 
-    .account-container__block__input { 
+    .account-container__block__input {
         margin-left: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
         size: 400px;
         background-color: #e7d7d7;
         display: none;
-        border: 1px solid #000 ;
+        border: 1px solid #000;
     }
 
-    .account-container__input { 
+    .account-container__input {
         width: 100%;
-        
+
     }
 
-    .warning { 
+    .warning {
         display: none;
     }
 
-    .account-container__save__change { 
+    .account-container__save__change {
         justify-content: flex-end;
         margin-top: 10px;
         display: none;
     }
 
-    .account-container__save__change__button { 
+    .account-container__save__change__button {
         border: #000 solid 1px;
         background-color: #e4e3e3;
-        box-shadow: 1px  1px 5px rgb(0, 0, 0);
+        box-shadow: 1px 1px 5px rgb(0, 0, 0);
     }
 
-    .account-container__now { 
+    .account-container__now {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__product { 
+    .account-container__product {
         display: flex;
         font-family: "Cormorant Garamond", serif;
         font-size: 22px;
@@ -182,28 +205,28 @@
         border-bottom: 1px solid #a5a5a5;
     }
 
-    .account-container__product:last-child { 
+    .account-container__product:last-child {
         border-bottom: 0px solid #fff;
     }
 
-    .account-container__product__disc__name { 
+    .account-container__product__disc__name {
         color: #000;
     }
 
-    .account-container__product__img  { 
+    .account-container__product__img {
         width: 130px;
         height: 173px;
         margin: 11px 0px 0px 10px;
         padding-right: 5px;
     }
 
-    
 
-    .account-container__product__price { 
+
+    .account-container__product__price {
         font-size: 35px;
     }
 
-    .account-container__shop { 
+    .account-container__shop {
         color: #fff;
         background-color: #000;
         margin-top: 20px;
@@ -212,38 +235,38 @@
         height: 50px;
     }
 
-    .account-container__his { 
+    .account-container__his {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__pass { 
+    .account-container__pass {
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__pass__list__input { 
+    .account-container__pass__list__input {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
     }
 
-    .account-container__pass__block { 
+    .account-container__pass__block {
         margin-left: 25%;
         margin-right: 12%;
     }
 
-    .account-container__pass__change  { 
+    .account-container__pass__change {
         height: 40px;
-        width:80%;
+        width: 80%;
         background-color: #D9D9D9;
         padding-left: 10px;
     }
 
-    .account-container__pass__warning{ 
+    .account-container__pass__warning {
         margin-left: 25%;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
@@ -251,7 +274,7 @@
         display: none;
     }
 
-    .account-container__pass__save { 
+    .account-container__pass__save {
         border: 1px solid #484848;
         margin-left: 31%;
         margin-right: 25%;
@@ -264,7 +287,7 @@
         font-size: 25px;
     }
 
-    .account-container__pass_conf{
+    .account-container__pass_conf {
         margin-left: 25%;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
@@ -272,47 +295,50 @@
         display: none;
     }
 
-    .account-container__quit { 
+    .account-container__quit {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
-        position: fixed; /* Фиксированная позиция на экране */
+        position: fixed;
+        /* Фиксированная позиция на экране */
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный цвет фона */
-        color: white; /* Цвет текста поверхностного элемента */
+        background: rgba(0, 0, 0, 0.3);
+        /* Полупрозрачный черный цвет фона */
+        color: white;
+        /* Цвет текста поверхностного элемента */
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 9999;
-        
+
     }
 
-    .account-container__quit__window { 
+    .account-container__quit__window {
         border: 1px solid #6c6c6c;
         border-radius: 10px;
         background-color: #999797;
-        
+
         height: 200px;
         padding-left: auto;
         transition: 0.3s;
     }
 
-    .account-container__quit__window__title { 
+    .account-container__quit__window__title {
         text-align: center;
         padding-top: 30px;
     }
 
-    .account-container__quit__window__button { 
+    .account-container__quit__window__button {
         display: flex;
-        
+
         padding-left: 140px;
         padding-right: 140px;
         padding-top: 50px;
     }
 
-    .account-container__quit__window__choose__yes { 
+    .account-container__quit__window__choose__yes {
         background-color: #000000;
         color: #d1d0d0;
         width: 80px;
@@ -323,7 +349,7 @@
         margin-right: 30px;
     }
 
-    .account-container__quit__window__choose__no { 
+    .account-container__quit__window__choose__no {
         background-color: #000000;
         width: 80px;
         text-align: center;
@@ -332,105 +358,109 @@
         transition: 0.1s;
     }
 
-    .account-container__quit__window__choose__no:hover { 
+    .account-container__quit__window__choose__no:hover {
         border: 1px solid #28dd5b;
     }
 
-    .account-container__quit__window__choose__yes:hover { 
+    .account-container__quit__window__choose__yes:hover {
         border: 2px solid rgb(189, 143, 142);
     }
 
-    
+
 }
 
 @media screen and (max-width:1199px) and (min-width:768px) {
-    .account-title { 
+    .account-title {
         display: flex;
         font-family: "Forum";
         font-size: 35px;
         align-items: center;
-        
+
     }
 
-    .account-img { 
+    .account-img {
         margin-left: 20px;
     }
 
-    .account-img__person { 
+    .account-img__person {
         width: 40px;
         height: 40px;
     }
 
-    .account-title__name { 
+    .account-title__name {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
-        align-items: center; /* выравнивание по центру по вертикали */
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
     }
 
-    .account-subtitle { 
+    .account-subtitle {
         display: flex;
     }
-    
-    .account-img__gear { 
+
+    .account-img__gear {
         margin-top: auto;
-        align-items: center; /* выравнивание по центру по вертикали */
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
         width: 25px;
         height: 35px;
         margin-left: 5px;
-        
+
     }
 
-    
 
-    .account-href { 
+
+    .account-href {
         margin-top: 23px;
         display: flex;
         font-family: "Forum";
         font-size: 20px;
         color: #666666;
-        align-items: center; /* выравнивание по центру по вертикали */
-       
+        align-items: center;
+        /* выравнивание по центру по вертикали */
+
     }
 
-    .account-href__tire { 
+    .account-href__tire {
         font-size: 40px;
     }
 
-    .account-navigation{ 
+    .account-navigation {
         display: flex;
-        align-items: center; /* выравнивание по центру по вертикали */
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
     }
 
-    .account-navigation div { 
+    .account-navigation div {
         margin-left: 19px;
     }
 
-    .account-navigation__img__ld  { 
+    .account-navigation__img__ld {
         height: 40px;
     }
 
-    .account-navigation__img__pass{
+    .account-navigation__img__pass {
         height: 40px;
     }
 
-    .account-navigation__img__now{
+    .account-navigation__img__now {
         height: 40px;
     }
-    
-    .account-navigation__img__his { 
+
+    .account-navigation__img__his {
         height: 45px;
     }
 
-    .account-navigation__img__quit { 
+    .account-navigation__img__quit {
         height: 35px;
     }
 
-    .account-container { 
+    .account-container {
         border-left: 1px solid #8f8f8f;
         border-right: 1px solid #242424;
         box-shadow: 10px 0 10px -5px rgba(245, 232, 232, 0.5), -10px 0 10px -5px rgba(240, 223, 223, 0.5);
@@ -443,48 +473,63 @@
         padding-bottom: 20px;
     }
 
-    .account-container__title { 
+    .account-container__ld,
+    .account-container__now,
+    .account-container__his,
+    .account-container__pass {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .show {
+        /* Если будут проблемы в бэке увеличь значение */
+        max-height: 1000px;
+        /* любое большое значение, чтобы охватить все возможные высоты контента */
+    }
+
+    .account-container__title {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         display: flex;
         justify-content: space-between;
     }
 
-    .account-container__ld { 
+    .account-container__ld {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         display: block;
     }
 
-    
 
-    .account-container__block__name { 
+
+    .account-container__block__name {
         font-size: 25px;
     }
 
-    .account-container__block__email { 
+    .account-container__block__email {
         font-size: 25px;
     }
 
-    .account-container__block__phone { 
+    .account-container__block__phone {
         font-size: 25px;
     }
 
-    .account-container__block__address { 
+    .account-container__block__address {
         font-size: 25px;
     }
 
-    .account-container__block { 
+    .account-container__block {
         margin-left: 20px;
-        
+
         padding-top: 10px;
         padding-bottom: 10px;
-        
+
         background: linear-gradient(rgb(231, 230, 230), rgb(250, 248, 249));
         border: #000 solid 1px;
     }
 
-    .account-container__block__input { 
+    .account-container__block__input {
         margin-left: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -493,35 +538,35 @@
         display: none;
     }
 
-    .account-container__input { 
+    .account-container__input {
         width: 100%;
     }
 
-    .warning { 
+    .warning {
         display: none;
     }
 
-    .account-container__save__change { 
+    .account-container__save__change {
         justify-content: flex-end;
         margin-top: 10px;
         display: none;
     }
 
-    .account-container__save__change__button { 
+    .account-container__save__change__button {
         border: #000 solid 1px;
         background-color: #e4e3e3;
-        box-shadow: 1px  1px 5px rgb(0, 0, 0);
+        box-shadow: 1px 1px 5px rgb(0, 0, 0);
     }
 
-    .account-container__now { 
+    .account-container__now {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__product { 
+    .account-container__product {
         display: flex;
         font-family: "Cormorant Garamond", serif;
         font-size: 19px;
@@ -531,15 +576,15 @@
         border-bottom: 1px solid #a5a5a5;
     }
 
-    .account-container__product:last-child { 
+    .account-container__product:last-child {
         border-bottom: 0px solid #fff;
     }
 
-    .account-container__product__disc__name { 
+    .account-container__product__disc__name {
         color: #000;
     }
 
-    .account-container__product__img  { 
+    .account-container__product__img {
         width: 100px;
         height: 143px;
         margin: 11px 0px 0px 10px;
@@ -547,13 +592,13 @@
         align-items: center;
     }
 
-    
 
-    .account-container__product__price { 
+
+    .account-container__product__price {
         font-size: 25px;
     }
 
-    .account-container__shop { 
+    .account-container__shop {
         color: #fff;
         background-color: #000;
         margin-top: 20px;
@@ -562,38 +607,38 @@
         height: 50px;
     }
 
-    .account-container__his { 
+    .account-container__his {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__pass { 
+    .account-container__pass {
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__pass__list__input { 
+    .account-container__pass__list__input {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
     }
 
-    .account-container__pass__block { 
+    .account-container__pass__block {
         margin-left: 25%;
         margin-right: 12%;
     }
 
-    .account-container__pass__change  { 
+    .account-container__pass__change {
         height: 40px;
-        width:80%;
+        width: 80%;
         background-color: #D9D9D9;
         padding-left: 10px;
     }
 
-    .account-container__pass__warning{ 
+    .account-container__pass__warning {
         margin-left: 25%;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
@@ -601,7 +646,7 @@
         display: none;
     }
 
-    .account-container__pass__save { 
+    .account-container__pass__save {
         border: 1px solid #484848;
         margin-left: 31%;
         margin-right: 25%;
@@ -614,7 +659,7 @@
         font-size: 25px;
     }
 
-    .account-container__pass_conf{
+    .account-container__pass_conf {
         margin-left: 25%;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
@@ -622,47 +667,50 @@
         display: none;
     }
 
-    .account-container__quit { 
+    .account-container__quit {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
-        position: fixed; /* Фиксированная позиция на экране */
+        position: fixed;
+        /* Фиксированная позиция на экране */
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный цвет фона */
-        color: white; /* Цвет текста поверхностного элемента */
+        background: rgba(0, 0, 0, 0.3);
+        /* Полупрозрачный черный цвет фона */
+        color: white;
+        /* Цвет текста поверхностного элемента */
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 9999;
-        
+
     }
 
-    .account-container__quit__window { 
+    .account-container__quit__window {
         border: 1px solid #6c6c6c;
         border-radius: 10px;
         background-color: #999797;
-        
+
         height: 200px;
         padding-left: auto;
         transition: 0.3s;
     }
 
-    .account-container__quit__window__title { 
+    .account-container__quit__window__title {
         text-align: center;
         padding-top: 30px;
     }
 
-    .account-container__quit__window__button { 
+    .account-container__quit__window__button {
         display: flex;
-        
+
         padding-left: 140px;
         padding-right: 140px;
         padding-top: 50px;
     }
 
-    .account-container__quit__window__choose__yes { 
+    .account-container__quit__window__choose__yes {
         background-color: #000000;
         color: #d1d0d0;
         width: 80px;
@@ -673,7 +721,7 @@
         margin-right: 30px;
     }
 
-    .account-container__quit__window__choose__no { 
+    .account-container__quit__window__choose__no {
         background-color: #000000;
         width: 80px;
         text-align: center;
@@ -682,112 +730,114 @@
         transition: 0.1s;
     }
 
-    .account-container__quit__window__choose__no:hover { 
+    .account-container__quit__window__choose__no:hover {
         border: 1px solid #28dd5b;
     }
 
-    .account-container__quit__window__choose__yes:hover { 
+    .account-container__quit__window__choose__yes:hover {
         border: 2px solid rgb(189, 143, 142);
     }
 }
 
-@media screen and (max-width:767px) and (min-width:300px) { 
-    .account-title { 
+@media screen and (max-width:767px) and (min-width:300px) {
+    .account-title {
         display: flex;
         font-family: "Forum";
-        font-size: 35px;
+        font-size: 20px;
         align-items: center;
-        
+
     }
 
-    .account-img { 
-        margin-left: 20px;
+    .account-img {
+        margin-left: 10px;
     }
 
-    .account-img__person { 
+    .account-img__person {
         width: 40px;
         height: 40px;
     }
 
-    .account-title__name { 
+    .account-title__name {
         font-family: "Cormorant Garamond", serif;
-        font-size: 25px;
-        align-items: center; /* выравнивание по центру по вертикали */
+        font-size: 20px;
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
     }
 
-    .account-subtitle { 
+    .account-subtitle {
         display: flex;
     }
-    
-    .account-img__gear { 
+
+    .account-img {
         margin-top: auto;
-        align-items: center; /* выравнивание по центру по вертикали */
+        align-items: center;
+        /* выравнивание по центру по вертикали */
         justify-content: center;
         width: 25px;
         height: 35px;
         margin-left: 5px;
-        
+        display: block;
+        transition: left 0.5s, opacity 0.5s;
     }
 
-    
-
-    .account-href { 
+    .account-href {
         margin-top: 23px;
         display: flex;
         font-family: "Forum";
         font-size: 20px;
         color: #666666;
-        align-items: center; /* выравнивание по центру по вертикали */
-       
+        align-items: center;
+        /* выравнивание по центру по вертикали */
+
     }
 
-    .account-href__tire { 
+    .account-href__tire {
         font-size: 40px;
     }
 
-    .account-href__arrow { 
+    .account-href__arrow {
         height: 25px;
         width: 25px;
         padding-left: 5px;
     }
 
-    .account-navigation{ 
-        display: flex;
+    .account-navigation {
+        display: block;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
-        
+        margin-left: auto;
     }
 
-    .account-navigation div { 
+    .account-navigation div {
         margin-left: 19px;
     }
 
-    .account-navigation__ld { 
-        display: flex;
+    .account-navigation__ld {
+        display: block;
     }
 
-    .account-navigation__img__ld  { 
+    .account-navigation__img__ld {
         height: 40px;
     }
 
-    .account-navigation__img__pass{
+    .account-navigation__img__pass {
         height: 40px;
     }
 
-    .account-navigation__img__now{
+    .account-navigation__img__now {
         height: 40px;
     }
-    
-    .account-navigation__img__his { 
+
+    .account-navigation__img__his {
         height: 45px;
     }
 
-    .account-navigation__img__quit { 
+    .account-navigation__img__quit {
         height: 35px;
     }
 
-    .account-container { 
+    .account-container {
         border-left: 1px solid #8f8f8f;
         border-right: 1px solid #242424;
         box-shadow: 10px 0 10px -5px rgba(245, 232, 232, 0.5), -10px 0 10px -5px rgba(240, 223, 223, 0.5);
@@ -800,48 +850,63 @@
         padding-bottom: 20px;
     }
 
-    .account-container__title { 
+    .account-container__ld,
+    .account-container__now,
+    .account-container__his,
+    .account-container__pass {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .show {
+        /* Если будут проблемы в бэке увеличь значение */
+        max-height: 1000px;
+        /* любое большое значение, чтобы охватить все возможные высоты контента */
+    }
+
+    .account-container__title {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         display: flex;
         justify-content: space-between;
     }
 
-    .account-container__ld { 
+    .account-container__ld {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         display: block;
     }
 
-    
 
-    .account-container__block__name { 
+
+    .account-container__block__name {
         font-size: 25px;
     }
 
-    .account-container__block__email { 
+    .account-container__block__email {
         font-size: 25px;
     }
 
-    .account-container__block__phone { 
+    .account-container__block__phone {
         font-size: 25px;
     }
 
-    .account-container__block__address { 
+    .account-container__block__address {
         font-size: 25px;
     }
 
-    .account-container__block { 
+    .account-container__block {
         margin-left: 20px;
-        
+
         padding-top: 10px;
         padding-bottom: 10px;
-        
+
         background: linear-gradient(rgb(231, 230, 230), rgb(250, 248, 249));
         border: #000 solid 1px;
     }
 
-    .account-container__block__input { 
+    .account-container__block__input {
         margin-left: 20px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -850,35 +915,35 @@
         display: none;
     }
 
-    .account-container__input { 
+    .account-container__input {
         width: 100%;
     }
 
-    .warning { 
+    .warning {
         display: none;
     }
 
-    .account-container__save__change { 
+    .account-container__save__change {
         justify-content: flex-end;
         margin-top: 10px;
         display: none;
     }
 
-    .account-container__save__change__button { 
+    .account-container__save__change__button {
         border: #000 solid 1px;
         background-color: #e4e3e3;
-        box-shadow: 1px  1px 5px rgb(0, 0, 0);
+        box-shadow: 1px 1px 5px rgb(0, 0, 0);
     }
 
-    .account-container__now { 
+    .account-container__now {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__product { 
+    .account-container__product {
         display: flex;
         font-family: "Cormorant Garamond", serif;
         font-size: 19px;
@@ -888,15 +953,15 @@
         border-bottom: 1px solid #a5a5a5;
     }
 
-    .account-container__product:last-child { 
+    .account-container__product:last-child {
         border-bottom: 0px solid #fff;
     }
 
-    .account-container__product__disc__name { 
+    .account-container__product__disc__name {
         color: #000;
     }
 
-    .account-container__product__img  { 
+    .account-container__product__img {
         width: 100px;
         height: 143px;
         margin: 11px 0px 0px 10px;
@@ -904,13 +969,13 @@
         align-items: center;
     }
 
-    
 
-    .account-container__product__price { 
+
+    .account-container__product__price {
         font-size: 25px;
     }
 
-    .account-container__shop { 
+    .account-container__shop {
         color: #fff;
         background-color: #000;
         margin-top: 20px;
@@ -919,38 +984,38 @@
         height: 50px;
     }
 
-    .account-container__his { 
+    .account-container__his {
         font-family: "Cormorant Garamond", serif;
         font-size: 30px;
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__pass { 
+    .account-container__pass {
         /* ------------------------- */
-        display: none;
+        display: block;
         /* -------------------------- */
     }
 
-    .account-container__pass__list__input { 
+    .account-container__pass__list__input {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
     }
 
-    .account-container__pass__block { 
+    .account-container__pass__block {
         margin-left: 25%;
         margin-right: 12%;
     }
 
-    .account-container__pass__change  { 
+    .account-container__pass__change {
         height: 40px;
-        width:80%;
+        width: 80%;
         background-color: #D9D9D9;
         padding-left: 10px;
     }
 
-    .account-container__pass__warning{ 
+    .account-container__pass__warning {
         margin-left: 25%;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
@@ -958,7 +1023,7 @@
         display: none;
     }
 
-    .account-container__pass__save { 
+    .account-container__pass__save {
         border: 1px solid #484848;
         margin-left: 31%;
         margin-right: 25%;
@@ -971,7 +1036,7 @@
         font-size: 25px;
     }
 
-    .account-container__pass_conf{
+    .account-container__pass_conf {
         margin-left: 25%;
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
@@ -979,47 +1044,50 @@
         display: none;
     }
 
-    .account-container__quit { 
+    .account-container__quit {
         font-family: "Cormorant Garamond", serif;
         font-size: 25px;
-        position: fixed; /* Фиксированная позиция на экране */
+        position: fixed;
+        /* Фиксированная позиция на экране */
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.3); /* Полупрозрачный черный цвет фона */
-        color: white; /* Цвет текста поверхностного элемента */
+        background: rgba(0, 0, 0, 0.3);
+        /* Полупрозрачный черный цвет фона */
+        color: white;
+        /* Цвет текста поверхностного элемента */
         display: none;
         justify-content: center;
         align-items: center;
         z-index: 9999;
-        
+
     }
 
-    .account-container__quit__window { 
+    .account-container__quit__window {
         border: 1px solid #6c6c6c;
         border-radius: 10px;
         background-color: #999797;
-        
+
         height: 200px;
         padding-left: auto;
         transition: 0.3s;
     }
 
-    .account-container__quit__window__title { 
+    .account-container__quit__window__title {
         text-align: center;
         padding-top: 30px;
     }
 
-    .account-container__quit__window__button { 
+    .account-container__quit__window__button {
         display: flex;
-        
+
         padding-left: 140px;
         padding-right: 140px;
         padding-top: 50px;
     }
 
-    .account-container__quit__window__choose__yes { 
+    .account-container__quit__window__choose__yes {
         background-color: #000000;
         color: #d1d0d0;
         width: 80px;
@@ -1030,7 +1098,7 @@
         margin-right: 30px;
     }
 
-    .account-container__quit__window__choose__no { 
+    .account-container__quit__window__choose__no {
         background-color: #000000;
         width: 80px;
         text-align: center;
@@ -1039,11 +1107,11 @@
         transition: 0.1s;
     }
 
-    .account-container__quit__window__choose__no:hover { 
+    .account-container__quit__window__choose__no:hover {
         border: 1px solid #28dd5b;
     }
 
-    .account-container__quit__window__choose__yes:hover { 
+    .account-container__quit__window__choose__yes:hover {
         border: 2px solid rgb(189, 143, 142);
     }
 }
