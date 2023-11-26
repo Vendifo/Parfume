@@ -245,8 +245,8 @@ function changeImage(button) {
 function addToCart() {
   var cartMessage = document.getElementById("cartMessage");
   
-  // Показать сообщение
-  cartMessage.style.display = "block";
+  if (cartMessage.style.display != "block") { 
+    cartMessage.style.display = "block";
 
   // Задать непрозрачность на 1 (плавное появление)
   cartMessage.style.opacity = "1";
@@ -261,4 +261,15 @@ function addToCart() {
           cartMessage.style.display = "none";
       }, 500); // Время анимации в миллисекундах (0.5 секунды)
   }, 3000); // Время отображения сообщения в миллисекундах (3 секунды)
+  }
+  else { 
+    
+    setTimeout (function() {
+      cartMessage.style.display = "none";
+    }, 5000)
+
+  }
+
+  // Показать сообщение
+  
 }

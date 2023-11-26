@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+
     const products = document.querySelectorAll('.aboutus-newrelease__product');
     const itemsPerPage = 3;
     const itemsPerPagePhone = 2;
@@ -198,4 +198,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    showProducts();
+    showBestsellersProducts();
 });
+
+

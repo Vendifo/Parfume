@@ -68,7 +68,7 @@ body {
   .header-logo__text {
     font-size: 40px;
     text-decoration: none;
-    color: #000;
+    color: #A08040;
   }
 
   .header-nav__list {
@@ -535,3 +535,81 @@ body {
         transition-duration: .25s;
       }
   }
+
+
+@media screen and (min-width : 1199px) {
+  .product-add__cart { 
+    display: none;
+    position: fixed;
+    top: 75px; /* или любое другое значение в px, чтобы задать верхнее расстояние */
+    right: 75px; /* или любое другое значение в px, чтобы задать правое расстояние */
+    background-color: #888; /* серый цвет фона */
+    color: #fff; /* цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+  .product-add__wish { 
+    display: none;
+    position: fixed;
+    top: 75px; /* или любое другое значение в px, чтобы задать верхнее расстояние */
+    right: 75px; /* или любое другое значение в px, чтобы задать правое расстояние */
+    background-color: #cabcbc; /* серый цвет фона */
+    color: #201e1e; /* цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+}
+@media screen and (min-width:768px) and (max-width:1199px){
+  .product-add__cart { 
+    display: none;
+    position: fixed;
+    top: 75px; /* или любое другое значение в px, чтобы задать верхнее расстояние */
+    right: 75px; /* или любое другое значение в px, чтобы задать правое расстояние */
+    background-color: #888; /* серый цвет фона */
+    color: #fff; /* цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+  .product-add__wish { 
+    display: none;
+    position: fixed;
+    top: 75px; /* или любое другое значение в px, чтобы задать верхнее расстояние */
+    right: 75px; /* или любое другое значение в px, чтобы задать правое расстояние */
+    background-color: #cabcbc; /* серый цвет фона */
+    color: #201e1e; /* цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+}
+@media screen and (min-width:300px) and (max-width:767px) {
+  .product-add__cart { 
+    display: none;
+    position: fixed;
+    top: 75px; /* или любое другое значение в px, чтобы задать верхнее расстояние */
+    right: 75px; /* или любое другое значение в px, чтобы задать правое расстояние */
+    background-color: #888; /* серый цвет фона */
+    color: #fff; /* цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+
+  .product-add__wish { 
+    display: none;
+    position: fixed;
+    top: 75px; /* или любое другое значение в px, чтобы задать верхнее расстояние */
+    right: 75px; /* или любое другое значение в px, чтобы задать правое расстояние */
+    background-color: #cabcbc; /* серый цвет фона */
+    color: #201e1e; /* цвет текста */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 999;
+  }
+}
