@@ -741,7 +741,7 @@
 
 @media screen and (max-width:767px) and (min-width:300px) {
     .account-title {
-        display: flex;
+        display: block;
         font-family: "Forum";
         font-size: 20px;
         align-items: center;
@@ -759,7 +759,7 @@
 
     .account-title__name {
         font-family: "Cormorant Garamond", serif;
-        font-size: 20px;
+        font-size: 25px;
         align-items: center;
         /* выравнивание по центру по вертикали */
         justify-content: center;
@@ -767,6 +767,9 @@
 
     .account-subtitle {
         display: flex;
+        align-items: center;
+        /* выравнивание по центру по вертикали */
+       
     }
 
     .account-img {
@@ -781,11 +784,17 @@
         transition: left 0.5s, opacity 0.5s;
     }
 
+    .account-img__gear {
+        width: 25px;
+        height: 35px;
+        margin-left: 5px;
+    }
+
     .account-href {
         margin-top: 23px;
         display: flex;
         font-family: "Forum";
-        font-size: 20px;
+        font-size: 15px;
         color: #666666;
         align-items: center;
         /* выравнивание по центру по вертикали */
@@ -861,7 +870,7 @@
 
     .show {
         /* Если будут проблемы в бэке увеличь значение */
-        max-height: 1000px;
+        max-height: 2000px;
         /* любое большое значение, чтобы охватить все возможные высоты контента */
     }
 
@@ -944,7 +953,7 @@
     }
 
     .account-container__product {
-        display: flex;
+        display: block;
         font-family: "Cormorant Garamond", serif;
         font-size: 19px;
         justify-content: space-between;
@@ -955,6 +964,12 @@
 
     .account-container__product:last-child {
         border-bottom: 0px solid #fff;
+    }
+
+    .account-container__product__disc { 
+        display: flex;
+        font-size: 22px;
+        justify-content: space-between;
     }
 
     .account-container__product__disc__name {
@@ -1004,7 +1019,7 @@
     }
 
     .account-container__pass__block {
-        margin-left: 25%;
+        margin-left: 12%;
         margin-right: 12%;
     }
 
@@ -1021,6 +1036,11 @@
         font-size: 25px;
         color: #dd2828;
         display: none;
+    }
+
+    .account-pass__checkbox { 
+        margin-left: 12%;
+        margin-top: 20px;
     }
 
     .account-container__pass__save {
